@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>PyCharm常用快捷键</title>
+      <link href="/2020/07/17/pycharm-keymap-shortcut/"/>
+      <url>/2020/07/17/pycharm-keymap-shortcut/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>使用快捷键能提高开发效率</p></blockquote><blockquote><p>熟练使用快捷键能提高开发效率</p></blockquote><table><thead><tr><th>快捷键</th><th>用处</th></tr></thead><tbody><tr><td>ctrl + 鼠标单击</td><td>跳转到变量、类或方法名的声明</td></tr><tr><td>ctrl + /</td><td>单行注释</td></tr><tr><td>ctrl + shift +/</td><td>多行注释</td></tr><tr><td>ctrl + d</td><td>删除选定的行</td></tr><tr><td>ctrl + z</td><td>撤销</td></tr><tr><td>ctrl + o</td><td>当前代码的结构</td></tr><tr><td>ctrl + f</td><td>在当前代码中搜索</td></tr><tr><td>ctrl + h</td><td>全局搜索</td></tr><tr><td>ctrl + shift + r</td><td>快速搜索，可指定搜索范围</td></tr><tr><td>alt + 左/右</td><td>跳转到下一个、前一个编辑的选项卡</td></tr><tr><td>alt + 上/下</td><td>向上/下调换两行代码</td></tr><tr><td>tab</td><td>往后移动4个空格</td></tr><tr><td>shift + tab</td><td>往前缩进4个空格</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> -[软件使用技巧] </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PyCharm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>极客时间算法训练营学习笔记-第2课：训练准备和复杂度分析</title>
       <link href="/2020/07/16/geektime-algorithm-02/"/>
       <url>/2020/07/16/geektime-algorithm-02/</url>
