@@ -18,7 +18,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Tag: 日语入门 - silentlight&#39;blog</title>
+  <title>Tag: 算法 - silentlight&#39;blog</title>
   
 
   
@@ -553,8 +553,8 @@
         
           
   <h2 class="title">
-    <a href="/2020/07/19/nihongo-xinbiaori-01/">
-      五十音图
+    <a href="/2020/07/20/leetcode-01/">
+      Leetcode - 两数之和
     </a>
   </h2>
 
@@ -579,9 +579,9 @@
               
   
   <div class='new-meta-item category'>
-    <a href='/categories/%E6%97%A5%E8%AF%AD%E5%AD%A6%E4%B9%A0/' rel="nofollow">
+    <a href='/categories/Leetcode/' rel="nofollow">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>日语学习</p>
+      <p>Leetcode</p>
     </a>
   </div>
 
@@ -592,7 +592,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jul 19, 2020</p>
+    <p>发布于：Jul 20, 2020</p>
   </a>
 </div>
 
@@ -603,7 +603,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>54 words</p>
+      <p>75 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -633,106 +633,16 @@
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="五十音图"><a href="#五十音图" class="headerlink" title="五十音图"></a>五十音图</h3><table>
-<thead>
-<tr>
-<th></th>
-<th align="center">あ段</th>
-<th align="center">い段</th>
-<th align="center">う段</th>
-<th align="center">え段</th>
-<th align="center">お段</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>あ行</td>
-<td align="center">あ ア</td>
-<td align="center">い イ</td>
-<td align="center">う ウ</td>
-<td align="center">え エ</td>
-<td align="center">お オ</td>
-</tr>
-<tr>
-<td>か行</td>
-<td align="center">か カ</td>
-<td align="center">き キ</td>
-<td align="center">く ク</td>
-<td align="center">け ケ</td>
-<td align="center">こ コ</td>
-</tr>
-<tr>
-<td>さ行</td>
-<td align="center">さサ</td>
-<td align="center">し</td>
-<td align="center">す</td>
-<td align="center">せ</td>
-<td align="center">そ</td>
-</tr>
-<tr>
-<td>た行</td>
-<td align="center">た</td>
-<td align="center">ち</td>
-<td align="center">つ</td>
-<td align="center">て</td>
-<td align="center">と</td>
-</tr>
-<tr>
-<td>な行</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td>は行</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td>ま行</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td>や行</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td>ら行</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td>わ行</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
+        <blockquote>
+<p>题目链接：<a href="https://leetcode-cn.com/problems/two-sum/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/two-sum/</a></p>
+</blockquote>
+<p>解法一：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i + <span class="number">1</span>;j &lt; nums.length; j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[i] + nums[j] == target)&#123;</span><br><span class="line">                    res[<span class="number">0</span>] = i;</span><br><span class="line">                    res[<span class="number">1</span>] = j;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>改进解法：</p>
+<p>……………………………………………………</p>
 
       
     </div>
