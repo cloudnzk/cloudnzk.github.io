@@ -16,9 +16,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>极客时间算法训练营学习笔记-第1课：数据结构与算法总览 - silentlight&#39;blog</title>
+  <title>Leetcode - 两数之和 - silentlight&#39;blog</title>
   
-    <meta name="keywords" content="极客时间训练营">
+    <meta name="keywords" content="算法,刷题">
   
 
   
@@ -492,7 +492,7 @@
 
 <div id="pjax-data" style="display: none">
   <div id="pjax-ispage">true</div>
-  <div id="pjax-pageTitle">极客时间算法训练营学习笔记-第1课：数据结构与算法总览</div>
+  <div id="pjax-pageTitle">Leetcode - 两数之和</div>
   <div id="pjax-enable-cover">true</div>
   
   
@@ -540,8 +540,8 @@
         
           
   <h1 class="title">
-    <a href="/2020/07/15/geektime-algorithm-01/">
-      极客时间算法训练营学习笔记-第1课：数据结构与算法总览
+    <a href="/2020/07/20/leetcode-02/">
+      Leetcode - 两数之和
     </a>
   </h1>
 
@@ -566,9 +566,9 @@
               
   
   <div class='new-meta-item category'>
-    <a href='/categories/%E5%88%B7%E9%A2%98/' rel="nofollow">
+    <a href='/categories/Leetcode/' rel="nofollow">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>刷题</p>
+      <p>Leetcode</p>
     </a>
   </div>
 
@@ -579,7 +579,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jul 15, 2020</p>
+    <p>发布于：Jul 20, 2020</p>
   </a>
 </div>
 
@@ -603,7 +603,10 @@
         <div class="article-entry" itemprop="articleBody">
           
           
-          <h2 id="刷题方法"><a href="#刷题方法" class="headerlink" title="刷题方法"></a>刷题方法</h2><p><img src="https://s1.ax1x.com/2020/07/15/UwU2OU.jpg" alt="刷题方法"></p>
+          <blockquote>
+<p>题目链接：<a href="https://leetcode-cn.com/problems/valid-anagram/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/valid-anagram/</a></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isAnagram</span><span class="params">(String s, String t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">        <span class="keyword">int</span>[] b = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            a[s.charAt(i) - <span class="number">97</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; t.length(); j++) &#123;</span><br><span class="line">            b[t.charAt(j) - <span class="number">97</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="number">26</span>; k++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (a[k] != b[k]) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
             <div class='article_footer'>
@@ -640,7 +643,7 @@
           
         
           
-            <p>本文永久链接是：<a href=https://cloudnzk.github.io/2020/07/15/geektime-algorithm-01/>https://cloudnzk.github.io/2020/07/15/geektime-algorithm-01/</a></p>
+            <p>本文永久链接是：<a href=https://cloudnzk.github.io/2020/07/20/leetcode-02/>https://cloudnzk.github.io/2020/07/20/leetcode-02/</a></p>
           
         
       </blockquote>
@@ -663,10 +666,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-19T21:57:41+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-29T19:37:37+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jul 19, 2020</p>
+    <p>更新于：Jul 29, 2020</p>
   </a>
 </div>
 
@@ -675,7 +678,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4%E8%AE%AD%E7%BB%83%E8%90%A5/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>极客时间训练营</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%AE%97%E6%B3%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>算法</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%88%B7%E9%A2%98/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>刷题</p></a></div>
 
 
         
@@ -693,24 +696,14 @@
         
           <div class="prev-next">
             
-              <a class='prev' href='/2020/07/16/geektime-algorithm-02/'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>极客时间算法训练营学习笔记-第2课：训练准备和复杂度分析</p>
-                <p class='content'>训练环境配置
-浏览器：Chrome
-
-搜索引擎：Google
-
-Windows：Windows Terminal
-
-IDE：VSCode,IntelliJ,Pycharm
-
-Plugins：Le...</p>
-              </a>
             
-            
-              <a class='next' href='/2020/07/14/hello-world/'>
-                <p class='title'>Hello World<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
+              <a class='next' href='/2020/07/20/leetcode-01/'>
+                <p class='title'>Leetcode - 两数之和<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>
+题目链接：https://leetcode-cn.com/problems/two-sum/
+
+解法一：
+1234567891011121314class Solution &#123;   ...</p>
               </a>
             
           </div>
@@ -735,20 +728,6 @@ Plugins：Le...</p>
     
 
 
-
-  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
-    
-  <header>
-    
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#刷题方法"><span class="toc-text">刷题方法</span></a></li></ol>
-    </div>
-  </section>
 
 
   
