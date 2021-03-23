@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "silentlight'blog • All posts by \"软件使用技巧\" category",
+    "description": "",
+    "home_page_url": "http://silentlight.tk",
+    "items": [
+        {
+            "id": "http://silentlight.tk/2020/07/17/pycharm-keymap-shortcut/",
+            "url": "http://silentlight.tk/2020/07/17/pycharm-keymap-shortcut/",
+            "title": "PyCharm常用快捷键",
+            "date_published": "2020-07-17T11:58:14.000Z",
+            "content_html": "<blockquote>\n<p>熟练使用快捷键能提高开发效率</p>\n</blockquote>\n<table>\n<thead>\n<tr>\n<th>快捷键</th>\n<th>用处</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>ctrl + 鼠标单击</td>\n<td>跳转到变量、类或方法名的声明</td>\n</tr>\n<tr>\n<td>ctrl + /</td>\n<td>单行注释</td>\n</tr>\n<tr>\n<td>ctrl + shift +/</td>\n<td>多行注释</td>\n</tr>\n<tr>\n<td>ctrl + d</td>\n<td>删除选定的行</td>\n</tr>\n<tr>\n<td>ctrl + z</td>\n<td>撤销</td>\n</tr>\n<tr>\n<td>ctrl + o</td>\n<td>当前代码的结构</td>\n</tr>\n<tr>\n<td>ctrl + f</td>\n<td>在当前代码中搜索</td>\n</tr>\n<tr>\n<td>ctrl + h</td>\n<td>全局搜索</td>\n</tr>\n<tr>\n<td>ctrl + shift + r</td>\n<td>快速搜索，可指定搜索范围</td>\n</tr>\n<tr>\n<td>alt + 左/右</td>\n<td>跳转到下一个、前一个编辑的选项卡</td>\n</tr>\n<tr>\n<td>alt + 上/下</td>\n<td>向上/下调换两行代码</td>\n</tr>\n<tr>\n<td>tab</td>\n<td>往后移动4个空格</td>\n</tr>\n<tr>\n<td>shift + tab</td>\n<td>往前缩进4个空格</td>\n</tr>\n</tbody></table>\n",
+            "tags": [
+                "PyCharm"
+            ]
+        }
+    ]
+}

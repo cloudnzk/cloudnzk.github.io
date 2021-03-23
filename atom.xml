@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://silentlight.tk</id>
+    <title>silentlight&#39;blog</title>
+    <link href="http://silentlight.tk" />
+    <updated>2021-03-22T11:23:00.000Z</updated>
+    <category term="学习笔记" />
+    <category term="极客时间训练营" />
+    <category term="学习计划" />
+    <category term="PyCharm" />
+    <entry>
+        <id>http://silentlight.tk/2021/03/22/JavaScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/</id>
+        <title>JavaScript基础笔记</title>
+        <link rel="alternate" href="http://silentlight.tk/2021/03/22/JavaScript%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/"/>
+        <content type="html">&lt;h2 id=&#34;JavaScript简介&#34;&gt;&lt;a href=&#34;#JavaScript简介&#34; class=&#34;headerlink&#34; title=&#34;JavaScript简介&#34;&gt;&lt;/a&gt;JavaScript简介&lt;/h2&gt;&lt;p&gt;1.什么是JavaScript&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;JavaScript 是一门跨平台、面向对象的脚本语言，它能使网页可交互（例如拥有复杂的动画，可点击的按钮，通俗的菜单等）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2.JavaScript的构成&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ECMAScript（JavaScript标准）&lt;/li&gt;
+&lt;li&gt;DOM&lt;/li&gt;
+&lt;li&gt;BOM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;3.JS的特点&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解释型语言&lt;/li&gt;
+&lt;li&gt;类似于C、Java的语法结构&lt;/li&gt;
+&lt;li&gt;动态语言&lt;/li&gt;
+&lt;li&gt;基于原型的面向对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;4.JavaScript中的hello world&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;comment&#34;&gt;/* &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;        下面三条语句顺序执行&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;         */&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        alert(&lt;span class=&#34;string&#34;&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;comment&#34;&gt;// 可以在body中输出一段内容&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;built_in&#34;&gt;document&lt;/span&gt;.write(&lt;span class=&#34;string&#34;&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;comment&#34;&gt;//向控制台输出内容&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;built_in&#34;&gt;console&lt;/span&gt;.log(&lt;span class=&#34;string&#34;&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;5.JS编写位置&lt;/p&gt;
+&lt;p&gt;写在标签里，缺点是结构和行为相耦合，不方便维护&lt;/p&gt;
+&lt;p&gt;例如写在标签的onclick属性中&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;button&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;onclick&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;alert(&amp;#x27;Hello World!&amp;#x27;);&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;button&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;写在链接的href属性中&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;href&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;javascript:alert(&amp;#x27;Hello World!&amp;#x27;);&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+
+
+&lt;p&gt;写在内部script标签里&lt;/p&gt;
+&lt;p&gt;外部js文件引入&lt;/p&gt;
+&lt;p&gt;script标签一旦用于引入外部文件了，就不能编写代码了，即使编写浏览器也会忽略&lt;/p&gt;
+&lt;p&gt;JS基本语法&lt;/p&gt;
+&lt;p&gt;注释，与Java的相同。&lt;/p&gt;
+</content>
+        <category term="学习笔记" />
+        <updated>2021-03-22T11:23:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://silentlight.tk/2021/03/22/todolist/</id>
+        <title>TODOlist</title>
+        <link rel="alternate" href="http://silentlight.tk/2021/03/22/todolist/"/>
+        <content type="html">&lt;h2 id=&#34;2021-03-待办&#34;&gt;&lt;a href=&#34;#2021-03-待办&#34; class=&#34;headerlink&#34; title=&#34;2021.03 待办&#34;&gt;&lt;/a&gt;2021.03 待办&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; CSS收尾，总结&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; JS基础&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 美化博客，学习markdown排版&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 学习记笔记&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 完成自然辨证法作业，工程伦理思考下怎么上去讲&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 日语入门&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="学习计划" />
+        <updated>2021-03-22T11:01:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://silentlight.tk/2021/03/22/learn_frontend/</id>
+        <title>前端学习路线和学习方法总结</title>
+        <link rel="alternate" href="http://silentlight.tk/2021/03/22/learn_frontend/"/>
+        <content type="html">&lt;h2 id=&#34;阶段1：HTML，CSS，JavaScript三件套入门&#34;&gt;&lt;a href=&#34;#阶段1：HTML，CSS，JavaScript三件套入门&#34; class=&#34;headerlink&#34; title=&#34;阶段1：HTML，CSS，JavaScript三件套入门&#34;&gt;&lt;/a&gt;阶段1：HTML，CSS，JavaScript三件套入门&lt;/h2&gt;&lt;p&gt;这个阶段的重心是入门，为后面打好基础，以及良好的编码风格。&lt;/p&gt;
+&lt;h3 id=&#34;学习路线&#34;&gt;&lt;a href=&#34;#学习路线&#34; class=&#34;headerlink&#34; title=&#34;学习路线&#34;&gt;&lt;/a&gt;学习路线&lt;/h3&gt;&lt;p&gt;参见GitHub上的frontend roadmap，照着这个学没错的。把必学的先学&lt;/p&gt;
+&lt;h3 id=&#34;学习方法&#34;&gt;&lt;a href=&#34;#学习方法&#34; class=&#34;headerlink&#34; title=&#34;学习方法&#34;&gt;&lt;/a&gt;学习方法&lt;/h3&gt;&lt;p&gt;视频入门+文档补充+博客为辅+面经和书籍打基础&lt;/p&gt;
+&lt;p&gt;每学一个阶段，记录下笔记。看看面经记笔记。写的博客要有深度性&lt;/p&gt;
+&lt;h3 id=&#34;学习内容&#34;&gt;&lt;a href=&#34;#学习内容&#34; class=&#34;headerlink&#34; title=&#34;学习内容&#34;&gt;&lt;/a&gt;学习内容&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; HTML&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; CSS&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; JavaScript&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; ES6&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; jQuery&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Ajax&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Git/GitHub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;学习时间&#34;&gt;&lt;a href=&#34;#学习时间&#34; class=&#34;headerlink&#34; title=&#34;学习时间&#34;&gt;&lt;/a&gt;学习时间&lt;/h3&gt;&lt;p&gt;2~3个月时间完成该阶段，因为还有其它事情要做&lt;br&gt;不需要完全都会，学习JS还有很长的路要走&lt;/p&gt;
+&lt;h3 id=&#34;学习任务&#34;&gt;&lt;a href=&#34;#学习任务&#34; class=&#34;headerlink&#34; title=&#34;学习任务&#34;&gt;&lt;/a&gt;学习任务&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;掌握HTML，CSS，JavaScript基础&lt;/li&gt;
+&lt;li&gt;在不依赖前端框架的前提下，使用原生代码完成一个网站的开发。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;学习要点&#34;&gt;&lt;a href=&#34;#学习要点&#34; class=&#34;headerlink&#34; title=&#34;学习要点&#34;&gt;&lt;/a&gt;学习要点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;关于视频：视频要跳着看，会了的就不用看了，看看文档就OK了；如果可以的话最好1.25或1.5倍速看；记录下哪个分P的视频值得重看，方便再刷。&lt;/li&gt;
+&lt;li&gt;学视频和看书要跟着敲一下代码，只看不做是不行的。听完之后要做一下笔记吸收消化。&lt;/li&gt;
+&lt;li&gt;写代码的时候会出现各种问题，要记录下这些问题，出现的原因，解决的办法等等。   &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;阶段2：前端框架Vue和React学习，项目磨炼&#34;&gt;&lt;a href=&#34;#阶段2：前端框架Vue和React学习，项目磨炼&#34; class=&#34;headerlink&#34; title=&#34;阶段2：前端框架Vue和React学习，项目磨炼&#34;&gt;&lt;/a&gt;阶段2：前端框架Vue和React学习，项目磨炼&lt;/h2&gt;&lt;p&gt;这个阶段的重心是项目&lt;/p&gt;
+</content>
+        <category term="学习计划" />
+        <updated>2021-03-22T09:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://silentlight.tk/2020/07/17/pycharm-keymap-shortcut/</id>
+        <title>PyCharm常用快捷键</title>
+        <link rel="alternate" href="http://silentlight.tk/2020/07/17/pycharm-keymap-shortcut/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;熟练使用快捷键能提高开发效率&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;用处&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;ctrl + 鼠标单击&lt;/td&gt;
+&lt;td&gt;跳转到变量、类或方法名的声明&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ctrl + /&lt;/td&gt;
+&lt;td&gt;单行注释&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ctrl + shift +/&lt;/td&gt;
+&lt;td&gt;多行注释&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ctrl + d&lt;/td&gt;
+&lt;td&gt;删除选定的行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ctrl + z&lt;/td&gt;
+&lt;td&gt;撤销&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ctrl + o&lt;/td&gt;
+&lt;td&gt;当前代码的结构&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ctrl + f&lt;/td&gt;
+&lt;td&gt;在当前代码中搜索&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ctrl + h&lt;/td&gt;
+&lt;td&gt;全局搜索&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ctrl + shift + r&lt;/td&gt;
+&lt;td&gt;快速搜索，可指定搜索范围&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alt + 左/右&lt;/td&gt;
+&lt;td&gt;跳转到下一个、前一个编辑的选项卡&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;alt + 上/下&lt;/td&gt;
+&lt;td&gt;向上/下调换两行代码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;tab&lt;/td&gt;
+&lt;td&gt;往后移动4个空格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;shift + tab&lt;/td&gt;
+&lt;td&gt;往前缩进4个空格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+</content>
+        <category term="PyCharm" />
+        <updated>2020-07-17T11:58:14.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://silentlight.tk/2020/07/16/geektime-algorithm-02/</id>
+        <title>极客时间算法训练营学习笔记-第2课：训练准备和复杂度分析</title>
+        <link rel="alternate" href="http://silentlight.tk/2020/07/16/geektime-algorithm-02/"/>
+        <content type="html">&lt;h3 id=&#34;训练环境配置&#34;&gt;&lt;a href=&#34;#训练环境配置&#34; class=&#34;headerlink&#34; title=&#34;训练环境配置&#34;&gt;&lt;/a&gt;训练环境配置&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;浏览器：Chrome&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;搜索引擎：Google&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows：Windows Terminal&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;IDE：&lt;strong&gt;VSCode&lt;/strong&gt;,IntelliJ,Pycharm&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Plugins：LeetCode plugin&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;删除题目链接中的-cn可以来到国际站，到 Discuss 区看高票题解，学习全球牛逼程序员的解题思路&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+
+&lt;h3 id=&#34;编码技巧-amp-Code-Style&#34;&gt;&lt;a href=&#34;#编码技巧-amp-Code-Style&#34; class=&#34;headerlink&#34; title=&#34;编码技巧&amp;amp;Code Style&#34;&gt;&lt;/a&gt;编码技巧&amp;amp;Code Style&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;注意编码规范，可 Google 一下，看看大公司的Code Style&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;掌握一些快捷键可以提高编码效率，搜一下 IDE 的 Top tips（使用技巧）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;自顶向下的编程方式：先解决最上层的主干逻辑（枝干），再深入细节（叶子）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;时间复杂度&#34;&gt;&lt;a href=&#34;#时间复杂度&#34; class=&#34;headerlink&#34; title=&#34;时间复杂度&#34;&gt;&lt;/a&gt;时间复杂度&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;注意：只看最高复杂度的运算&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;O(1)：常数复杂度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;O(log n)：对数复杂度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;O(n)：线性时间复杂度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;O(n ^ 2)：平方时间复杂度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;O(2 ^ n)：指数时间复杂度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;O(n!)：阶乘&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="极客时间训练营" />
+        <updated>2020-07-16T03:09:01.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://silentlight.tk/2020/07/15/geektime-algorithm-01/</id>
+        <title>极客时间算法训练营学习笔记-第1课：数据结构与算法总览</title>
+        <link rel="alternate" href="http://silentlight.tk/2020/07/15/geektime-algorithm-01/"/>
+        <content type="html">&lt;h2 id=&#34;刷题方法&#34;&gt;&lt;a href=&#34;#刷题方法&#34; class=&#34;headerlink&#34; title=&#34;刷题方法&#34;&gt;&lt;/a&gt;刷题方法&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/15/UwU2OU.jpg&#34; alt=&#34;刷题方法&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="极客时间训练营" />
+        <updated>2020-07-15T08:32:40.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://silentlight.tk/2020/07/14/hello-world/</id>
+        <title>Hello World</title>
+        <link rel="alternate" href="http://silentlight.tk/2020/07/14/hello-world/"/>
+        <content type="html">&lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h2 id=&#34;Quick-Start&#34;&gt;&lt;a href=&#34;#Quick-Start&#34; class=&#34;headerlink&#34; title=&#34;Quick Start&#34;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&#34;Create-a-new-post&#34;&gt;&lt;a href=&#34;#Create-a-new-post&#34; class=&#34;headerlink&#34; title=&#34;Create a new post&#34;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/writing.html&#34;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;Run-server&#34;&gt;&lt;a href=&#34;#Run-server&#34; class=&#34;headerlink&#34; title=&#34;Run server&#34;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/server.html&#34;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;Generate-static-files&#34;&gt;&lt;a href=&#34;#Generate-static-files&#34; class=&#34;headerlink&#34; title=&#34;Generate static files&#34;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/generating.html&#34;&gt;Generating&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;Deploy-to-remote-sites&#34;&gt;&lt;a href=&#34;#Deploy-to-remote-sites&#34; class=&#34;headerlink&#34; title=&#34;Deploy to remote sites&#34;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;More info: &lt;a href=&#34;https://hexo.io/docs/one-command-deployment.html&#34;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+</content>
+        <updated>2020-07-14T05:56:19.399Z</updated>
+    </entry>
+</feed>

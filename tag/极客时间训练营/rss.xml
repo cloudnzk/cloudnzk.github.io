@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>silentlight&#39;blog • Posts by &#34;极客时间训练营&#34; tag</title>
+        <link>http://silentlight.tk</link>
+        <description></description>
+        <language>zh-Hans</language>
+        <pubDate>Thu, 16 Jul 2020 11:09:01 +0800</pubDate>
+        <lastBuildDate>Thu, 16 Jul 2020 11:09:01 +0800</lastBuildDate>
+        <category>学习笔记</category>
+        <category>极客时间训练营</category>
+        <category>学习计划</category>
+        <category>PyCharm</category>
+        <item>
+            <guid isPermalink="true">http://silentlight.tk/2020/07/16/geektime-algorithm-02/</guid>
+            <title>极客时间算法训练营学习笔记-第2课：训练准备和复杂度分析</title>
+            <link>http://silentlight.tk/2020/07/16/geektime-algorithm-02/</link>
+            <category>极客时间训练营</category>
+            <pubDate>Thu, 16 Jul 2020 11:09:01 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;训练环境配置&#34;&gt;&lt;a href=&#34;#训练环境配置&#34; class=&#34;headerlink&#34; title=&#34;训练环境配置&#34;&gt;&lt;/a&gt;训练环境配置&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;浏览器：Chrome&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;搜索引擎：Google&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Windows：Windows Terminal&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;IDE：&lt;strong&gt;VSCode&lt;/strong&gt;,IntelliJ,Pycharm&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Plugins：LeetCode plugin&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;删除题目链接中的-cn可以来到国际站，到 Discuss 区看高票题解，学习全球牛逼程序员的解题思路&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+
+&lt;h3 id=&#34;编码技巧-amp-Code-Style&#34;&gt;&lt;a href=&#34;#编码技巧-amp-Code-Style&#34; class=&#34;headerlink&#34; title=&#34;编码技巧&amp;amp;Code Style&#34;&gt;&lt;/a&gt;编码技巧&amp;amp;Code Style&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;注意编码规范，可 Google 一下，看看大公司的Code Style&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;掌握一些快捷键可以提高编码效率，搜一下 IDE 的 Top tips（使用技巧）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;自顶向下的编程方式：先解决最上层的主干逻辑（枝干），再深入细节（叶子）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;时间复杂度&#34;&gt;&lt;a href=&#34;#时间复杂度&#34; class=&#34;headerlink&#34; title=&#34;时间复杂度&#34;&gt;&lt;/a&gt;时间复杂度&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;注意：只看最高复杂度的运算&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;O(1)：常数复杂度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;O(log n)：对数复杂度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;O(n)：线性时间复杂度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;O(n ^ 2)：平方时间复杂度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;O(2 ^ n)：指数时间复杂度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;O(n!)：阶乘&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://silentlight.tk/2020/07/15/geektime-algorithm-01/</guid>
+            <title>极客时间算法训练营学习笔记-第1课：数据结构与算法总览</title>
+            <link>http://silentlight.tk/2020/07/15/geektime-algorithm-01/</link>
+            <category>极客时间训练营</category>
+            <pubDate>Wed, 15 Jul 2020 16:32:40 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;刷题方法&#34;&gt;&lt;a href=&#34;#刷题方法&#34; class=&#34;headerlink&#34; title=&#34;刷题方法&#34;&gt;&lt;/a&gt;刷题方法&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://s1.ax1x.com/2020/07/15/UwU2OU.jpg&#34; alt=&#34;刷题方法&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
