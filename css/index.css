@@ -2816,7 +2816,7 @@ _:future,
 #article-container.post-content h6:before {
   position: absolute;
   top: calc(50% - 0.35rem);
-  color: #f47466;
+  color: #49b1f5;
   content: '\f0e7';
   line-height: 1;
   transition: all 0.2s ease-out;
