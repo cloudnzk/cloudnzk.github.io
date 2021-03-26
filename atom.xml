@@ -3,10 +3,17 @@
     <id>http://silentlight.tk</id>
     <title>silentlight&#39;blog</title>
     <link href="http://silentlight.tk" />
-    <updated>2021-03-25T13:00:00.000Z</updated>
+    <updated>2021-03-26T13:24:00.000Z</updated>
+    <entry>
+        <id>http://silentlight.tk/2021/03/26/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+        <title>CSS学习笔记</title>
+        <link rel="alternate" href="http://silentlight.tk/2021/03/26/CSS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+        <content type="html">&lt;h2 id=&#34;flex布局&#34;&gt;&lt;a href=&#34;#flex布局&#34; class=&#34;headerlink&#34; title=&#34;flex布局&#34;&gt;&lt;/a&gt;flex布局&lt;/h2&gt;&lt;h3 id=&#34;flex布局原理&#34;&gt;&lt;a href=&#34;#flex布局原理&#34; class=&#34;headerlink&#34; title=&#34;flex布局原理&#34;&gt;&lt;/a&gt;flex布局原理&lt;/h3&gt;</content>
+        <updated>2021-03-26T13:24:00.000Z</updated>
+    </entry>
     <entry>
         <id>http://silentlight.tk/2021/03/25/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
-        <title>HTML入门笔记</title>
+        <title>HTML学习笔记</title>
         <link rel="alternate" href="http://silentlight.tk/2021/03/25/HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
         <content type="html">&lt;div class=&#34;note info modern&#34;&gt;&lt;p&gt;HTML 指的是超文本标记语言 (&lt;strong&gt;H&lt;/strong&gt;yper &lt;strong&gt;T&lt;/strong&gt;ext &lt;strong&gt;M&lt;/strong&gt;arkup &lt;strong&gt;L&lt;/strong&gt;anguage) ，定义了网页内容的含义和&lt;strong&gt;结构&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;
