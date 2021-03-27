@@ -22,10 +22,39 @@
             <link>http://silentlight.tk/2021/03/26/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
             <category>JavaScript</category>
             <pubDate>Fri, 26 Mar 2021 21:24:00 +0800</pubDate>
-            <description><![CDATA[ &lt;div class=&#34;note info modern&#34;&gt;&lt;p&gt;以下为个人整理的JavaScript基础笔记&lt;br&gt;课程：&lt;a href=&#34;https://www.bilibili.com/video/BV1YW411T7GX&#34;&gt;尚硅谷最新版JavaScript基础全套教程完整版&lt;/a&gt;.李立超&lt;/p&gt;
+            <description><![CDATA[ &lt;div class=&#34;note info modern&#34;&gt;&lt;p&gt;以下为个人整理的 JavaScript 基础笔记&lt;br&gt;课程：&lt;a href=&#34;https://www.bilibili.com/video/BV1YW411T7GX&#34;&gt;尚硅谷最新版JavaScript基础全套教程完整版&lt;/a&gt;.李立超&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h1 id=&#34;JavaScript简介&#34;&gt;&lt;a href=&#34;#JavaScript简介&#34; class=&#34;headerlink&#34; title=&#34;JavaScript简介&#34;&gt;&lt;/a&gt;JavaScript简介&lt;/h1&gt; ]]></description>
+&lt;h1 id=&#34;JavaScript简介&#34;&gt;&lt;a href=&#34;#JavaScript简介&#34; class=&#34;headerlink&#34; title=&#34;JavaScript简介&#34;&gt;&lt;/a&gt;JavaScript简介&lt;/h1&gt;&lt;h2 id=&#34;JavaScript的构成&#34;&gt;&lt;a href=&#34;#JavaScript的构成&#34; class=&#34;headerlink&#34; title=&#34;JavaScript的构成&#34;&gt;&lt;/a&gt;JavaScript的构成&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;ECMAScript&lt;/strong&gt;：即ECMA-262定义的JavaScript&lt;strong&gt;标准&lt;/strong&gt;化规范。&lt;/p&gt;
+&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;p&gt;ES6新添加了一些特性，正式支持了类、模块、迭代器、生成器、箭头函数、期约、反射、代理和众多新的数据类型。&lt;/p&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;文档对象模型（DOM）：提供与网页内容交互的方法和接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;浏览器对象模型（BOM）：提供与浏览器交互的方法和接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;JavaScript的特点&#34;&gt;&lt;a href=&#34;#JavaScript的特点&#34; class=&#34;headerlink&#34; title=&#34;JavaScript的特点&#34;&gt;&lt;/a&gt;JavaScript的特点&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;解释型语言&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;类似于C、Java的语法结构&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;动态语言&lt;/p&gt;
+&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;p&gt;指程序在运行时可以改变其结构：例如新的函数、对象、甚至代码可以被引进，已有的函数可以被删除。&lt;/p&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;基于原型的面向对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;JavaScript基本语法&#34;&gt;&lt;a href=&#34;#JavaScript基本语法&#34; class=&#34;headerlink&#34; title=&#34;JavaScript基本语法&#34;&gt;&lt;/a&gt;JavaScript基本语法&lt;/h1&gt;&lt;h2 id=&#34;JavaScript的编写位置&#34;&gt;&lt;a href=&#34;#JavaScript的编写位置&#34; class=&#34;headerlink&#34; title=&#34;JavaScript的编写位置&#34;&gt;&lt;/a&gt;JavaScript的编写位置&lt;/h2&gt;&lt;div class=&#34;tabs&#34; id=&#34;&#34;&gt;&lt;ul class=&#34;nav-tabs&#34;&gt;&lt;li class=&#34;tab active&#34;&gt;&lt;button type=&#34;button&#34; data-href=&#34;#-1&#34;&gt;外部文件引入&lt;/button&gt;&lt;/li&gt;&lt;li class=&#34;tab&#34;&gt;&lt;button type=&#34;button&#34; data-href=&#34;#-2&#34;&gt;写在内部&amp;ltscript&amp;gt标签里&lt;/button&gt;&lt;/li&gt;&lt;li class=&#34;tab&#34;&gt;&lt;button type=&#34;button&#34; data-href=&#34;#-3&#34;&gt;写在标签里&lt;/button&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class=&#34;tab-contents&#34;&gt;&lt;div class=&#34;tab-item-content active&#34; id=&#34;-1&#34;&gt;&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;src&lt;/span&gt; = &lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;如何异步加载JS脚本？——《JavaScript高级程序设计》第2章&lt;/p&gt;
+&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;p&gt;（1）将所有JavaScript引用放在&lt;body&gt;元素中的页面内容后面，&lt;/body&gt;元素之前，在处理JavaScript代码之前完全渲染页面；&lt;br&gt;（2）&lt;code&gt;defer&lt;/code&gt;属性：让浏览器立即下载脚本文件，把脚本推迟到文档渲染完毕后再执行。推迟的脚本原则上按照它们被列出的次序执行；&lt;br&gt;（3）&lt;code&gt;async&lt;/code&gt;属性：表示脚本不需要等待其他脚本，同时也不阻塞文档渲染，即异步加载。异步脚本不能保证按照它们在页面中出现的次序执行。&lt;br&gt;（4）动态加载脚本&lt;/p&gt;
+&lt;/div&gt;&lt;button type=&#34;button&#34; class=&#34;tab-to-top&#34; aria-label=&#34;scroll to top&#34;&gt;&lt;i class=&#34;fas fa-arrow-up&#34;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;&lt;div class=&#34;tab-item-content&#34; id=&#34;-2&#34;&gt;&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;button type=&#34;button&#34; class=&#34;tab-to-top&#34; aria-label=&#34;scroll to top&#34;&gt;&lt;i class=&#34;fas fa-arrow-up&#34;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;&lt;div class=&#34;tab-item-content&#34; id=&#34;-3&#34;&gt;&lt;p&gt; 例如写在标签的onclick属性中：&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;button&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;onclick&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;alert(&amp;#x27;Hello World!&amp;#x27;);&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;button&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;写在链接的href属性中：&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;href&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&amp;quot;javascript:alert(&amp;#x27;Hello World!&amp;#x27;);&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;a&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;缺点是结构和行为相耦合，不方便维护。&lt;/p&gt;&lt;button type=&#34;button&#34; class=&#34;tab-to-top&#34; aria-label=&#34;scroll to top&#34;&gt;&lt;i class=&#34;fas fa-arrow-up&#34;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt; ]]></description>
         </item>
         <item>
             <guid isPermalink="true">http://silentlight.tk/2021/03/25/HTML%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</guid>

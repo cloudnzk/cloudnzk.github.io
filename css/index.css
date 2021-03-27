@@ -629,7 +629,7 @@ canvas:not(#ribbon-canvas),
   }
 }
 :root {
-  --global-font-size: 16px;
+  --global-font-size: 14px;
   --global-bg: #fff;
   --font-color: #4c4948;
   --hr-border: #a4d8fa;
@@ -986,7 +986,7 @@ blockquote footer cite:before {
 }
 #article-container pre,
 #article-container code {
-  font-size: 14px;
+  font-size: var(--global-font-size);
   font-family: consolas, Menlo, 'PingFang SC', 'Microsoft YaHei', sans-serif !important;
 }
 #article-container code {
@@ -1014,7 +1014,7 @@ blockquote footer cite:before {
 #article-container figure.highlight figcaption,
 #article-container figure.highlight .caption {
   padding: 0.3rem 0 0.1rem 0.7rem;
-  font-size: 14px;
+  font-size: var(--global-font-size);
   line-height: 1em;
 }
 #article-container figure.highlight figcaption a,
@@ -1039,7 +1039,7 @@ blockquote footer cite:before {
   height: 2.15em;
   background: var(--hltools-bg);
   color: var(--hltools-color);
-  font-size: 14px;
+  font-size: var(--global-font-size);
 }
 #article-container .highlight-tools.closed + table {
   display: none;
@@ -1136,7 +1136,7 @@ blockquote footer cite:before {
   width: 100%;
   background: var(--hlexpand-bg);
   text-align: center;
-  font-size: 14px;
+  font-size: var(--global-font-size);
   cursor: pointer;
 }
 #article-container .code-expand-btn i {
@@ -2816,7 +2816,7 @@ _:future,
 #article-container.post-content h6:before {
   position: absolute;
   top: calc(50% - 0.35rem);
-  color: #49b1f5;
+  color: #f47466;
   content: '\f0c1';
   line-height: 1;
   transition: all 0.2s ease-out;
