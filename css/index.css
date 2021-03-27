@@ -2817,7 +2817,7 @@ _:future,
   position: absolute;
   top: calc(50% - 0.35rem);
   color: #49b1f5;
-  content: '\f0e7';
+  content: '\f0c1';
   line-height: 1;
   transition: all 0.2s ease-out;
 }
