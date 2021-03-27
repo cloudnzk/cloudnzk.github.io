@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "silentlight'blog • All posts by \"笔记\" category",
+    "description": "",
+    "home_page_url": "http://silentlight.tk",
+    "items": [
+        {
+            "id": "http://silentlight.tk/2021/03/26/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/",
+            "url": "http://silentlight.tk/2021/03/26/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/",
+            "title": "JavaScript入门笔记",
+            "date_published": "2021-03-26T13:24:00.000Z",
+            "content_html": "<div class=\"note info modern\"><p>以下为个人整理的JavaScript基础笔记<br>课程：<a href=\"https://www.bilibili.com/video/BV1YW411T7GX\">尚硅谷最新版JavaScript基础全套教程完整版</a>.李立超</p>\n</div>\n\n<h1 id=\"JavaScript简介\"><a href=\"#JavaScript简介\" class=\"headerlink\" title=\"JavaScript简介\"></a>JavaScript简介</h1>",
+            "tags": [
+                "JavaScript"
+            ]
+        }
+    ]
+}
