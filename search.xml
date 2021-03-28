@@ -33,7 +33,7 @@
       <link href="CSS%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/"/>
       <url>CSS%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info modern"><p><a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS">CSS</a> 是一种样式规则语言，可将<strong>样式</strong>应用于 HTML 内容</p></div><p>插入网易云音乐分享：</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=520 height=86 src="//music.163.com/outchain/player?type=2&id=31546854&auto=1&height=66"></iframe>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info modern"><p><a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS">CSS</a> 是一种样式规则语言，可将<strong>样式</strong>应用于 HTML 内容</p></div>]]></content>
       
       
       
@@ -93,11 +93,22 @@
     
     
     <entry>
+      <title>音乐</title>
+      <link href="music/index.html"/>
+      <url>music/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note success modern no-icon flat"><p>遠い、遠い、笑えない話<br>久远、久远、无法玩笑之谈<br>いつか、ぼくが 居なくなったなら<br>哪一天、如果我 不再留于此<br>深い、深い 森に落ちた<br>在幽深、幽深的 森林中陷落迷茫<br>きみは一人で行くんだぜ<br>你会一个人 走下去的吧</p></div><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=520 height=86 src="//music.163.com/outchain/player?type=2&id=22810198&auto=1&height=66"></iframe>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>相册</title>
       <link href="photos/index.html"/>
       <url>photos/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="gallery-group-main">  <figure class="gallery-group">  <img class="gallery-group-img" src= "/img/loading.gif" data-lazy-src='https://i.loli.net/2021/03/27/G8aRUvAEQPm73zt.jpg' alt="Group Image Gallery">  <figcaption>  <div class="gallery-group-name">壁紙</div>  <p>收藏的一些壁紙</p>  <a href='/wallpaper'></a>  </figcaption>  </figure>  </div>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="gallery-group-main">  <figure class="gallery-group">  <img class="gallery-group-img" src= "/img/loading.gif" data-lazy-src='https://i.loli.net/2021/03/27/G8aRUvAEQPm73zt.jpg' alt="Group Image Gallery">  <figcaption>  <div class="gallery-group-name">壁紙</div>  <p>收藏的一些壁紙</p>  <a href='/photos/wallpaper'></a>  </figcaption>  </figure>  </div>]]></content>
       
     </entry>
     
@@ -115,9 +126,20 @@
     
     
     <entry>
+      <title>网址导航</title>
+      <link href="webstack/index.html"/>
+      <url>webstack/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>壁纸</title>
-      <link href="wallpaper/index.html"/>
-      <url>wallpaper/index.html</url>
+      <link href="photos/wallpaper/index.html"/>
+      <url>photos/wallpaper/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="justified-gallery"><p><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2021/03/28/ATDMNbJHmSc3f2r.jpg"><br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2021/03/27/6iyVR3CZKnWoYtd.jpg"><br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2021/03/27/1CofcD82ijwpeaG.jpg"><br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2021/03/27/OEA9fDRSU5o7aWM.jpg"><br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2021/03/27/urZHPSnoJMxB67g.jpg"></p>          </div>]]></content>
       
