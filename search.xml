@@ -4,19 +4,6 @@
   
     
     <entry>
-      <title>CSS入门笔记</title>
-      <link href="CSS%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/"/>
-      <url>CSS%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<div class="note info modern"><p><a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS">CSS</a> 是一种样式规则语言，可将<strong>样式</strong>应用于 HTML 内容</p></div>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>JavaScript入门笔记</title>
       <link href="JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/"/>
       <url>JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</url>
@@ -36,6 +23,19 @@
             <tag> JavaScript </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSS入门笔记</title>
+      <link href="CSS%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/"/>
+      <url>CSS%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<div class="note info modern"><p><a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS">CSS</a> 是一种样式规则语言，可将<strong>样式</strong>应用于 HTML 内容</p></div>]]></content>
+      
+      
       
     </entry>
     
@@ -67,5 +67,40 @@
     
     
   
+  
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="about/index.html"/>
+      <url>about/index.html</url>
+      
+        <content type="html"><![CDATA[<p>前端入门中：</p><ol><li>视频课入门</li><li>代码模仿，勤练习</li><li>看书/查文档补基础知识</li><li>对照前端学习路线图，每天整理笔记</li></ol><p><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2021/03/26/skbg3Zy1PxJhXuS.png" alt="frontend-1"></p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="categories/index.html"/>
+      <url>categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="tags/index.html"/>
+      <url>tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
   
 </search>
