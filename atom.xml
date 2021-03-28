@@ -9,7 +9,7 @@
         <id>http://silentlight.tk/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</id>
         <title>JavaScript入门笔记</title>
         <link rel="alternate" href="http://silentlight.tk/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/"/>
-        <content type="html">&lt;div class=&#34;note info modern&#34;&gt;&lt;p&gt;以下为个人整理的 JavaScript 基础笔记&lt;br&gt;课程：&lt;a href=&#34;https://www.bilibili.com/video/BV1YW411T7GX&#34;&gt;尚硅谷最新版JavaScript基础全套教程完整版&lt;/a&gt;.李立超&lt;/p&gt;
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info modern&#34;&gt;&lt;p&gt;以下为个人整理的 JavaScript 基础笔记&lt;br&gt;课程：&lt;a href=&#34;https://www.bilibili.com/video/BV1YW411T7GX&#34;&gt;尚硅谷最新版JavaScript基础全套教程完整版&lt;/a&gt;.李立超&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h1 id=&#34;JavaScript简介&#34;&gt;&lt;a href=&#34;#JavaScript简介&#34; class=&#34;headerlink&#34; title=&#34;JavaScript简介&#34;&gt;&lt;/a&gt;JavaScript简介&lt;/h1&gt;&lt;h2 id=&#34;JavaScript的构成&#34;&gt;&lt;a href=&#34;#JavaScript的构成&#34; class=&#34;headerlink&#34; title=&#34;JavaScript的构成&#34;&gt;&lt;/a&gt;JavaScript的构成&lt;/h2&gt;&lt;ol&gt;
@@ -88,15 +88,18 @@
         <id>http://silentlight.tk/CSS%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</id>
         <title>CSS入门笔记</title>
         <link rel="alternate" href="http://silentlight.tk/CSS%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/"/>
-        <content type="html">&lt;div class=&#34;note info modern&#34;&gt;&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Glossary/CSS&#34;&gt;CSS&lt;/a&gt; 是一种样式规则语言，可将&lt;strong&gt;样式&lt;/strong&gt;应用于 HTML 内容&lt;/p&gt;
-&lt;/div&gt;</content>
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info modern&#34;&gt;&lt;p&gt;&lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Glossary/CSS&#34;&gt;CSS&lt;/a&gt; 是一种样式规则语言，可将&lt;strong&gt;样式&lt;/strong&gt;应用于 HTML 内容&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;插入网易云音乐分享：&lt;/p&gt;
+&lt;iframe frameborder=&#34;no&#34; border=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; width=520 height=86 src=&#34;//music.163.com/outchain/player?type=2&amp;id=31546854&amp;auto=1&amp;height=66&#34;&gt;&lt;/iframe&gt;</content>
         <updated>2021-03-26T13:00:00.000Z</updated>
     </entry>
     <entry>
         <id>http://silentlight.tk/HTML%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</id>
         <title>HTML入门笔记</title>
         <link rel="alternate" href="http://silentlight.tk/HTML%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/"/>
-        <content type="html">&lt;div class=&#34;note info modern&#34;&gt;&lt;p&gt;HTML 指的是超文本标记语言 (&lt;strong&gt;H&lt;/strong&gt;yper &lt;strong&gt;T&lt;/strong&gt;ext &lt;strong&gt;M&lt;/strong&gt;arkup &lt;strong&gt;L&lt;/strong&gt;anguage) ，定义了网页内容的含义和&lt;strong&gt;结构&lt;/strong&gt;&lt;/p&gt;
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info modern&#34;&gt;&lt;p&gt;HTML 指的是超文本标记语言 (&lt;strong&gt;H&lt;/strong&gt;yper &lt;strong&gt;T&lt;/strong&gt;ext &lt;strong&gt;M&lt;/strong&gt;arkup &lt;strong&gt;L&lt;/strong&gt;anguage) ，定义了网页内容的含义和&lt;strong&gt;结构&lt;/strong&gt;&lt;/p&gt;
 &lt;/div&gt;</content>
         <updated>2021-03-25T13:00:00.000Z</updated>
     </entry>
@@ -104,7 +107,7 @@
         <id>http://silentlight.tk/hello-world/</id>
         <title>Hello World</title>
         <link rel="alternate" href="http://silentlight.tk/hello-world/"/>
-        <content type="html">&lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+        <content type="html">&lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
 
 &lt;h2 id=&#34;Quick-Start&#34;&gt;&lt;a href=&#34;#Quick-Start&#34; class=&#34;headerlink&#34; title=&#34;Quick Start&#34;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&#34;Create-a-new-post&#34;&gt;&lt;a href=&#34;#Create-a-new-post&#34; class=&#34;headerlink&#34; title=&#34;Create a new post&#34;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
