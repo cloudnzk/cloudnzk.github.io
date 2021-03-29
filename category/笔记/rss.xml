@@ -14,29 +14,37 @@
             <link>http://silentlight.tk/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</link>
             <category>JavaScript</category>
             <pubDate>Fri, 26 Mar 2021 21:24:00 +0800</pubDate>
-            <description><![CDATA[ &lt;link rel=&#34;stylesheet&#34; class=&#34;aplayer-secondary-style-marker&#34; href=&#34;\assets\css\APlayer.min.css&#34;&gt;&lt;script src=&#34;\assets\js\APlayer.min.js&#34; class=&#34;aplayer-secondary-script-marker&#34;&gt;&lt;/script&gt;&lt;div class=&#34;note info modern&#34;&gt;&lt;p&gt;以下为个人整理的 JavaScript 基础笔记&lt;br&gt;课程：&lt;a href=&#34;https://www.bilibili.com/video/BV1YW411T7GX&#34;&gt;尚硅谷最新版JavaScript基础全套教程完整版&lt;/a&gt;.李立超&lt;/p&gt;
+            <description><![CDATA[ &lt;div class=&#34;note info modern&#34;&gt;&lt;p&gt;以下为个人整理的 JavaScript 基础笔记&lt;br&gt;课程：&lt;a href=&#34;https://www.bilibili.com/video/BV1YW411T7GX&#34;&gt;尚硅谷最新版JavaScript基础全套教程完整版&lt;/a&gt;.李立超&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;h1 id=&#34;JavaScript简介&#34;&gt;&lt;a href=&#34;#JavaScript简介&#34; class=&#34;headerlink&#34; title=&#34;JavaScript简介&#34;&gt;&lt;/a&gt;JavaScript简介&lt;/h1&gt;&lt;h2 id=&#34;JavaScript的构成&#34;&gt;&lt;a href=&#34;#JavaScript的构成&#34; class=&#34;headerlink&#34; title=&#34;JavaScript的构成&#34;&gt;&lt;/a&gt;JavaScript的构成&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;ECMAScript&lt;/strong&gt;：即ECMA-262定义的JavaScript&lt;strong&gt;标准&lt;/strong&gt;化规范。&lt;/p&gt;
-&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;p&gt;ES6新添加了一些特性，正式支持了类、模块、迭代器、生成器、箭头函数、期约、反射、代理和众多新的数据类型。&lt;/p&gt;
-&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;文档对象模型（DOM）：提供与网页内容交互的方法和接口。&lt;/p&gt;
+&lt;h1 id=&#34;JavaScript简介&#34;&gt;&lt;a href=&#34;#JavaScript简介&#34; class=&#34;headerlink&#34; title=&#34;JavaScript简介&#34;&gt;&lt;/a&gt;JavaScript简介&lt;/h1&gt;&lt;h2 id=&#34;JavaScript的构成&#34;&gt;&lt;a href=&#34;#JavaScript的构成&#34; class=&#34;headerlink&#34; title=&#34;JavaScript的构成&#34;&gt;&lt;/a&gt;JavaScript的构成&lt;/h2&gt;&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;ECMAScript&lt;/strong&gt;：即ECMA-262定义的JavaScript&lt;strong&gt;标准&lt;/strong&gt;化规范&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ES6新添加了一些特性，正式支持了类、模块、迭代器、生成器、箭头函数、期约、反射、代理和众多新的数据类型。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;浏览器对象模型（BOM）：提供与浏览器交互的方法和接口。&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;文档对象模型（DOM）：提供与网页内容交互的方法和接口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;浏览器对象模型（BOM）：提供与浏览器交互的方法和接口&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;JavaScript的特点&#34;&gt;&lt;a href=&#34;#JavaScript的特点&#34; class=&#34;headerlink&#34; title=&#34;JavaScript的特点&#34;&gt;&lt;/a&gt;JavaScript的特点&lt;/h2&gt;&lt;ol&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;JavaScript的特点&#34;&gt;&lt;a href=&#34;#JavaScript的特点&#34; class=&#34;headerlink&#34; title=&#34;JavaScript的特点&#34;&gt;&lt;/a&gt;JavaScript的特点&lt;/h2&gt;&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;解释型语言&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;类似于C、Java的语法结构&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;动态语言&lt;/p&gt;
-&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;p&gt;指程序在运行时可以改变其结构：例如新的函数、对象、甚至代码可以被引进，已有的函数可以被删除。&lt;/p&gt;
-&lt;/div&gt;&lt;/li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;指程序在运行时可以改变其结构：例如新的函数、对象、甚至代码可以被引进，已有的函数可以被删除。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;基于原型的面向对象&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;/div&gt;
+
 &lt;h1 id=&#34;JavaScript基本语法&#34;&gt;&lt;a href=&#34;#JavaScript基本语法&#34; class=&#34;headerlink&#34; title=&#34;JavaScript基本语法&#34;&gt;&lt;/a&gt;JavaScript基本语法&lt;/h1&gt;&lt;h2 id=&#34;JavaScript的编写位置&#34;&gt;&lt;a href=&#34;#JavaScript的编写位置&#34; class=&#34;headerlink&#34; title=&#34;JavaScript的编写位置&#34;&gt;&lt;/a&gt;JavaScript的编写位置&lt;/h2&gt;&lt;div class=&#34;tabs&#34; id=&#34;&#34;&gt;&lt;ul class=&#34;nav-tabs&#34;&gt;&lt;li class=&#34;tab active&#34;&gt;&lt;button type=&#34;button&#34; data-href=&#34;#-1&#34;&gt;外部文件引入&lt;/button&gt;&lt;/li&gt;&lt;li class=&#34;tab&#34;&gt;&lt;button type=&#34;button&#34; data-href=&#34;#-2&#34;&gt;写在内部&amp;ltscript&amp;gt标签里&lt;/button&gt;&lt;/li&gt;&lt;li class=&#34;tab&#34;&gt;&lt;button type=&#34;button&#34; data-href=&#34;#-3&#34;&gt;写在标签里&lt;/button&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div class=&#34;tab-contents&#34;&gt;&lt;div class=&#34;tab-item-content active&#34; id=&#34;-1&#34;&gt;&lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;src&lt;/span&gt; = &lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;p&gt;如何异步加载JS脚本？——《JavaScript高级程序设计》第2章&lt;/p&gt;
@@ -86,7 +94,45 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
- ]]></description>
+
+&lt;h2 id=&#34;数据类型&#34;&gt;&lt;a href=&#34;#数据类型&#34; class=&#34;headerlink&#34; title=&#34;数据类型&#34;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;ECMAScript有6种简单数据类型（也称为原始类型）: &lt;code&gt;Undefined&lt;/code&gt;、&lt;code&gt;Null&lt;/code&gt;、&lt;code&gt;Boolean&lt;/code&gt;、&lt;code&gt;Number&lt;/code&gt;、&lt;code&gt;String&lt;/code&gt;和&lt;code&gt;Symbol&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;除了这6种数据类型外，还有一种复杂数据类型叫Object。&lt;/p&gt;
+&lt;p&gt;因为ECMAScript的类型系统是松散的，可以用typeof操作符来确定任意变量的数据类型。&lt;/p&gt;
+&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Undefined&lt;/code&gt;：未定义&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Null&lt;/code&gt;：空对象指针&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Boolean&lt;/code&gt;：布尔&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Number&lt;/code&gt;：数字&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;String&lt;/code&gt;：字符串&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Symbol&lt;/code&gt;：符号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;类型转换&#34;&gt;&lt;a href=&#34;#类型转换&#34; class=&#34;headerlink&#34; title=&#34;类型转换&#34;&gt;&lt;/a&gt;类型转换&lt;/h3&gt;&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;ol&gt;
+&lt;li&gt;将其他类型转换为 &lt;code&gt;String&lt;/code&gt; &lt;ul&gt;
+&lt;li&gt;可调用&lt;code&gt;toString()&lt;/code&gt;方法，但&lt;code&gt;null&lt;/code&gt;和&lt;code&gt;undefined&lt;/code&gt;值没有&lt;code&gt;toString()&lt;/code&gt;方法&lt;/li&gt;
+&lt;li&gt;可使用&lt;code&gt;String()&lt;/code&gt;转型函数，并将待转换的值作为其参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;将其他数据类型转换为&lt;code&gt;Number&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Number()&lt;/code&gt;，若字符串中有非数字内容，会转换为&lt;code&gt;NaN&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;parseInt()&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;专门针对&lt;strong&gt;字符串&lt;/strong&gt;。忽略前面空格，直到遇到非字符为止&lt;/li&gt;
+&lt;li&gt;对非&lt;code&gt;String&lt;/code&gt;类型使用&lt;code&gt;parseInt()&lt;/code&gt;会先转换为&lt;code&gt;String&lt;/code&gt;再操作&lt;/li&gt;
+&lt;li&gt;指定第二个参数为进制数，可转换进制（十六进制以&lt;code&gt;0x&lt;/code&gt;开头，八进制以&lt;code&gt;0&lt;/code&gt;开头，二进制以&lt;code&gt;0b&lt;/code&gt;开头）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;parseFloat()&lt;/code&gt;，转成浮点数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;将其他数据类型转换为&lt;code&gt;Boolean&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;Boolean&lt;/code&gt;函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt; ]]></description>
         </item>
     </channel>
 </rss>
