@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://silentlight.tk/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2021-03-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://silentlight.tk/music/index.html</loc>
     
     <lastmod>2021-03-28</lastmod>
@@ -71,17 +78,10 @@
     
   </url>
   
-  <url>
-    <loc>http://silentlight.tk/JavaScript%E5%85%A5%E9%97%A8%E7%AC%94%E8%AE%B0/</loc>
-    
-    <lastmod>2021-03-28</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>http://silentlight.tk/</loc>
-    <lastmod>2021-03-28</lastmod>
+    <lastmod>2021-03-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -89,7 +89,7 @@
   
   <url>
     <loc>http://silentlight.tk/tags/JavaScript/</loc>
-    <lastmod>2021-03-28</lastmod>
+    <lastmod>2021-03-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -98,7 +98,7 @@
   
   <url>
     <loc>http://silentlight.tk/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-03-28</lastmod>
+    <lastmod>2021-03-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
