@@ -182,27 +182,47 @@
 
 
 &lt;p&gt;（2）访问属性&lt;/p&gt;
-&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;ul&gt;
+&lt;ul&gt;
 &lt;li&gt;通过点号访问&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;person.name;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;person.name;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;通过括号访问&lt;/p&gt;
 &lt;p&gt;如果属性名不是一个有效的标识符，只能用括号访问。也可以通过存储在变量中的字符串来访问属性。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;person[&amp;#39;name&amp;#39;];&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/div&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;person[&lt;span class=&#34;string&#34;&gt;&amp;#x27;name&amp;#x27;&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-
+&lt;p&gt;（3）删除属性&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;delete&lt;/span&gt; person.name;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;p&gt;（3）检查对象是否包含某个属性&lt;/p&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;name&amp;#x27;&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; person)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;built_in&#34;&gt;console&lt;/span&gt;.log(&lt;span class=&#34;string&#34;&gt;&amp;#x27;&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 
 
-&lt;h2 id=&#34;创建对象&#34;&gt;&lt;a href=&#34;#创建对象&#34; class=&#34;headerlink&#34; title=&#34;创建对象&#34;&gt;&lt;/a&gt;创建对象&lt;/h2&gt;&lt;h2 id=&#34;函数&#34;&gt;&lt;a href=&#34;#函数&#34; class=&#34;headerlink&#34; title=&#34;函数&#34;&gt;&lt;/a&gt;函数&lt;/h2&gt; ]]></description>
+&lt;h2 id=&#34;创建对象&#34;&gt;&lt;a href=&#34;#创建对象&#34; class=&#34;headerlink&#34; title=&#34;创建对象&#34;&gt;&lt;/a&gt;创建对象&lt;/h2&gt;&lt;h1 id=&#34;函数&#34;&gt;&lt;a href=&#34;#函数&#34; class=&#34;headerlink&#34; title=&#34;函数&#34;&gt;&lt;/a&gt;函数&lt;/h1&gt;&lt;p&gt;函数实际上也是一种对象，它可以封装一些功能（代码），然后在任何地方、任何时间执行。&lt;/p&gt;
+&lt;h2 id=&#34;定义函数&#34;&gt;&lt;a href=&#34;#定义函数&#34; class=&#34;headerlink&#34; title=&#34;定义函数&#34;&gt;&lt;/a&gt;定义函数&lt;/h2&gt;&lt;h3 id=&#34;函数声明&#34;&gt;&lt;a href=&#34;#函数声明&#34; class=&#34;headerlink&#34; title=&#34;函数声明&#34;&gt;&lt;/a&gt;函数声明&lt;/h3&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;a,b&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; a + b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;函数表达式&#34;&gt;&lt;a href=&#34;#函数表达式&#34; class=&#34;headerlink&#34; title=&#34;函数表达式&#34;&gt;&lt;/a&gt;函数表达式&lt;/h3&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; sum = &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;a,b&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; a + b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;箭头函数&#34;&gt;&lt;a href=&#34;#箭头函数&#34; class=&#34;headerlink&#34; title=&#34;箭头函数&#34;&gt;&lt;/a&gt;箭头函数&lt;/h3&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; sum = &lt;span class=&#34;function&#34;&gt;(&lt;span class=&#34;params&#34;&gt;a,b&lt;/span&gt;) =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; a + b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;Function构造函数&#34;&gt;&lt;a href=&#34;#Function构造函数&#34; class=&#34;headerlink&#34; title=&#34;Function构造函数&#34;&gt;&lt;/a&gt;Function构造函数&lt;/h3&gt;&lt;div class=&#34;note warning modern no-icon flat&#34;&gt;&lt;p&gt;不推荐使用&lt;/p&gt;
+&lt;/div&gt;
+
+
+
+&lt;h2 id=&#34;函数参数&#34;&gt;&lt;a href=&#34;#函数参数&#34; class=&#34;headerlink&#34; title=&#34;函数参数&#34;&gt;&lt;/a&gt;函数参数&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;ECMAScript函数既不关心传入的参数个数，也不关心这些参数的数据类型。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;因为ECMAScript函数的参数会被保存在一个类似数组的&lt;code&gt;arguments&lt;/code&gt;对象中，但函数并不关心这个数组中包含什么。&lt;/p&gt;
+&lt;p&gt;因此，函数有可能接收到非法的参数，有些情况下需要对参数进行类型检查。如果函数实参个数大于形参个数，那么多出的实参不会被赋值给形参，但可以用&lt;code&gt;arguments&lt;/code&gt;对象获取值；如果函数实参个数小于形参个数，未能够初始化的形参的默认值为&lt;code&gt;undefined&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;默认参数&#34;&gt;&lt;a href=&#34;#默认参数&#34; class=&#34;headerlink&#34; title=&#34;默认参数&#34;&gt;&lt;/a&gt;默认参数&lt;/h3&gt;&lt;p&gt;用&lt;code&gt;ES6&lt;/code&gt;语法定义默认参数，只需要在函数参数后面给其赋一个默认值：&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;a = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,b = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; a + b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;参数扩展与收集&#34;&gt;&lt;a href=&#34;#参数扩展与收集&#34; class=&#34;headerlink&#34; title=&#34;参数扩展与收集&#34;&gt;&lt;/a&gt;参数扩展与收集&lt;/h3&gt; ]]></description>
         </item>
     </channel>
 </rss>
