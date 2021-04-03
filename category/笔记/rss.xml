@@ -81,7 +81,7 @@
 &lt;td&gt;no&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
-&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;ul&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;暂时性死区：在&lt;code&gt;let&lt;/code&gt;声明变量之前，该变量是不可用的，此时引用未声明的&lt;code&gt;let&lt;/code&gt;变量会抛出ReferenceError。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;用&lt;code&gt;const&lt;/code&gt;声明变量时，必须同时初始化变量，且限制该变量的引用不可变（对象的属性还是可变的）。&lt;/p&gt;
@@ -89,14 +89,28 @@
 &lt;li&gt;&lt;p&gt;省略以上关键字，可定义一个全局变量。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-
+&lt;h3 id=&#34;变量的作用域&#34;&gt;&lt;a href=&#34;#变量的作用域&#34; class=&#34;headerlink&#34; title=&#34;变量的作用域&#34;&gt;&lt;/a&gt;变量的作用域&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;作用域指一个变量的作用范围&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;（1）全局作用域&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;全局作用域在页面打开时创建，在页面关闭时销毁&lt;/li&gt;
+&lt;li&gt;在全局作用域中有一个全局对象window。全局变量都会作为window对象的属性保存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;（2）函数作用域&lt;/p&gt;
+&lt;p&gt;（3）块作用域&lt;/p&gt;
+&lt;h3 id=&#34;变量提升与函数提升&#34;&gt;&lt;a href=&#34;#变量提升与函数提升&#34; class=&#34;headerlink&#34; title=&#34;变量提升与函数提升&#34;&gt;&lt;/a&gt;变量提升与函数提升&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;变量提升：使用var声明的变量会自动提升到函数作用域顶部&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;函数提升：只有函数声明能被提升到顶部，函数表达式不可以&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;数据类型&#34;&gt;&lt;a href=&#34;#数据类型&#34; class=&#34;headerlink&#34; title=&#34;数据类型&#34;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;ECMAScript有6种简单数据类型（也称为原始类型）: &lt;code&gt;Undefined&lt;/code&gt;、&lt;code&gt;Null&lt;/code&gt;、&lt;code&gt;Boolean&lt;/code&gt;、&lt;code&gt;Number&lt;/code&gt;、&lt;code&gt;String&lt;/code&gt;和&lt;code&gt;Symbol&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;除了这6种简单数据类型外，还有一种引用数据类型叫Object。&lt;/p&gt;
 &lt;p&gt;因为ECMAScript的类型系统是松散的，可以用typeof操作符来确定任意变量的数据类型。&lt;/p&gt;
-&lt;h3 id=&#34;基本数据类型&#34;&gt;&lt;a href=&#34;#基本数据类型&#34; class=&#34;headerlink&#34; title=&#34;基本数据类型&#34;&gt;&lt;/a&gt;基本数据类型&lt;/h3&gt;&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;ul&gt;
+&lt;h3 id=&#34;基本数据类型&#34;&gt;&lt;a href=&#34;#基本数据类型&#34; class=&#34;headerlink&#34; title=&#34;基本数据类型&#34;&gt;&lt;/a&gt;基本数据类型&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Undefined&lt;/code&gt;：未定义&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Null&lt;/code&gt;：空对象指针&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Boolean&lt;/code&gt;：布尔&lt;/li&gt;
@@ -104,10 +118,8 @@
 &lt;li&gt;&lt;code&gt;String&lt;/code&gt;：字符串&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Symbol&lt;/code&gt;：符号&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-
 &lt;h3 id=&#34;引用数据类型&#34;&gt;&lt;a href=&#34;#引用数据类型&#34; class=&#34;headerlink&#34; title=&#34;引用数据类型&#34;&gt;&lt;/a&gt;引用数据类型&lt;/h3&gt;&lt;p&gt;（1）分类&lt;/p&gt;
-&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;ul&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;对象（Object）&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;数组（Array）&lt;/p&gt;
@@ -115,8 +127,6 @@
 &lt;li&gt;&lt;p&gt;函数（Function）&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-
 &lt;p&gt;其实数组和函数实际上都是对象。&lt;/p&gt;
 &lt;p&gt;（2）引用值&lt;/p&gt;
 &lt;blockquote&gt;
@@ -154,7 +164,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;ECMA-262将对象定义为一组属性的无序集合。对象中的内容就是一组名/值对，值可以是数据或者函数。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;对象的分类&#34;&gt;&lt;a href=&#34;#对象的分类&#34; class=&#34;headerlink&#34; title=&#34;对象的分类&#34;&gt;&lt;/a&gt;对象的分类&lt;/h2&gt;&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;ul&gt;
+&lt;h2 id=&#34;对象的分类&#34;&gt;&lt;a href=&#34;#对象的分类&#34; class=&#34;headerlink&#34; title=&#34;对象的分类&#34;&gt;&lt;/a&gt;对象的分类&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;内建对象：由&lt;code&gt;ES&lt;/code&gt;标准中定义的对象&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;内建对象有哪些？&lt;/p&gt;
@@ -165,10 +175,6 @@
 &lt;li&gt;&lt;p&gt;自建对象&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-
-
-
 &lt;h2 id=&#34;对象的基本操作&#34;&gt;&lt;a href=&#34;#对象的基本操作&#34; class=&#34;headerlink&#34; title=&#34;对象的基本操作&#34;&gt;&lt;/a&gt;对象的基本操作&lt;/h2&gt;&lt;p&gt;（1）创建自定义对象&lt;/p&gt;
 &lt;p&gt;使用&lt;code&gt;Object()&lt;/code&gt;构造函数实例化一个新对象，然后再给它添加属性和方法&lt;/p&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; person = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;Object&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;person.name = tom;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;person.age = &lt;span class=&#34;number&#34;&gt;30&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;person.sayName = &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;built_in&#34;&gt;console&lt;/span&gt;.log(&lt;span class=&#34;built_in&#34;&gt;this&lt;/span&gt;.name);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -178,8 +184,6 @@
 &lt;p&gt;对象字面量是封闭在花括号对&lt;code&gt;&amp;#123;&amp;#125;&lt;/code&gt;中的一个对象的零个或多个”属性名-值”对的（元素）列表&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; person = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	name: &lt;span class=&#34;string&#34;&gt;&amp;#x27;tom&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	age: &lt;span class=&#34;number&#34;&gt;30&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	sayName: &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&lt;span class=&#34;built_in&#34;&gt;console&lt;/span&gt;.log(&lt;span class=&#34;built_in&#34;&gt;this&lt;/span&gt;.name);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-
 
 &lt;p&gt;（2）访问属性&lt;/p&gt;
 &lt;ul&gt;
@@ -197,8 +201,11 @@
 &lt;p&gt;（3）删除属性&lt;/p&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;delete&lt;/span&gt; person.name;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-&lt;p&gt;（3）检查对象是否包含某个属性&lt;/p&gt;
+&lt;p&gt;（4）检查对象是否包含某个属性&lt;/p&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;name&amp;#x27;&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; person)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;built_in&#34;&gt;console&lt;/span&gt;.log(&lt;span class=&#34;string&#34;&gt;&amp;#x27;&amp;#x27;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;（5）枚举对象的属性值&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;for&lt;/span&gt;(&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; item &lt;span class=&#34;keyword&#34;&gt;in&lt;/span&gt; person)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;built_in&#34;&gt;console&lt;/span&gt;.log(item)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 
 
@@ -207,7 +214,7 @@
 
 &lt;h3 id=&#34;函数表达式&#34;&gt;&lt;a href=&#34;#函数表达式&#34; class=&#34;headerlink&#34; title=&#34;函数表达式&#34;&gt;&lt;/a&gt;函数表达式&lt;/h3&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; sum = &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;a,b&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; a + b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-&lt;h3 id=&#34;箭头函数&#34;&gt;&lt;a href=&#34;#箭头函数&#34; class=&#34;headerlink&#34; title=&#34;箭头函数&#34;&gt;&lt;/a&gt;箭头函数&lt;/h3&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; sum = &lt;span class=&#34;function&#34;&gt;(&lt;span class=&#34;params&#34;&gt;a,b&lt;/span&gt;) =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; a + b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;箭头函数&#34;&gt;&lt;a href=&#34;#箭头函数&#34; class=&#34;headerlink&#34; title=&#34;箭头函数&#34;&gt;&lt;/a&gt;箭头函数&lt;/h3&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; sum = &lt;span class=&#34;function&#34;&gt;(&lt;span class=&#34;params&#34;&gt;a,b&lt;/span&gt;) =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; a + b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;h3 id=&#34;Function构造函数&#34;&gt;&lt;a href=&#34;#Function构造函数&#34; class=&#34;headerlink&#34; title=&#34;Function构造函数&#34;&gt;&lt;/a&gt;Function构造函数&lt;/h3&gt;&lt;div class=&#34;note warning modern no-icon flat&#34;&gt;&lt;p&gt;不推荐使用&lt;/p&gt;
 &lt;/div&gt;
@@ -217,12 +224,40 @@
 &lt;h2 id=&#34;函数参数&#34;&gt;&lt;a href=&#34;#函数参数&#34; class=&#34;headerlink&#34; title=&#34;函数参数&#34;&gt;&lt;/a&gt;函数参数&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;ECMAScript函数既不关心传入的参数个数，也不关心这些参数的数据类型。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;因为ECMAScript函数的参数会被保存在一个类似数组的&lt;code&gt;arguments&lt;/code&gt;对象中，但函数并不关心这个数组中包含什么。&lt;/p&gt;
+&lt;p&gt;因为&lt;code&gt;ECMAScript&lt;/code&gt;函数的参数会被保存在一个类似数组的&lt;code&gt;arguments&lt;/code&gt;对象中，但函数并不关心这个数组中包含什么。&lt;/p&gt;
 &lt;p&gt;因此，函数有可能接收到非法的参数，有些情况下需要对参数进行类型检查。如果函数实参个数大于形参个数，那么多出的实参不会被赋值给形参，但可以用&lt;code&gt;arguments&lt;/code&gt;对象获取值；如果函数实参个数小于形参个数，未能够初始化的形参的默认值为&lt;code&gt;undefined&lt;/code&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;默认参数&#34;&gt;&lt;a href=&#34;#默认参数&#34; class=&#34;headerlink&#34; title=&#34;默认参数&#34;&gt;&lt;/a&gt;默认参数&lt;/h3&gt;&lt;p&gt;用&lt;code&gt;ES6&lt;/code&gt;语法定义默认参数，只需要在函数参数后面给其赋一个默认值：&lt;/p&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;a = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,b = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; a + b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-&lt;h3 id=&#34;参数扩展与收集&#34;&gt;&lt;a href=&#34;#参数扩展与收集&#34; class=&#34;headerlink&#34; title=&#34;参数扩展与收集&#34;&gt;&lt;/a&gt;参数扩展与收集&lt;/h3&gt; ]]></description>
+&lt;h3 id=&#34;参数扩展与收集&#34;&gt;&lt;a href=&#34;#参数扩展与收集&#34; class=&#34;headerlink&#34; title=&#34;参数扩展与收集&#34;&gt;&lt;/a&gt;参数扩展与收集&lt;/h3&gt;&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;函数作为参数&#34;&gt;&lt;a href=&#34;#函数作为参数&#34; class=&#34;headerlink&#34; title=&#34;函数作为参数&#34;&gt;&lt;/a&gt;函数作为参数&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;sum&lt;/code&gt;，只传入函数名，相当于直接使用函数对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;sum()&lt;/code&gt;，调用函数，相当于使用的是函数的返回值&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;函数返回值&#34;&gt;&lt;a href=&#34;#函数返回值&#34; class=&#34;headerlink&#34; title=&#34;函数返回值&#34;&gt;&lt;/a&gt;函数返回值&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ECMAScript中的函数不需要指定是否返回值。建议要么返回，要么不返回&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;return语句可以不带返回值，用于提前终止函数执行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;返回值可以是任意数据类型，可以是对象，&lt;strong&gt;函数&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;函数作用域&#34;&gt;&lt;a href=&#34;#函数作用域&#34; class=&#34;headerlink&#34; title=&#34;函数作用域&#34;&gt;&lt;/a&gt;函数作用域&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在函数内定义的变量不能在函数之外的任何地方访问，而在函数作用域中可以访问到全局作用域的变量&lt;/li&gt;
+&lt;li&gt;当在函数作用域操作一个变量时，先在自身作用域寻找，找不到就向上一级作用域寻找&lt;/li&gt;
+&lt;li&gt;在函数中要访问全局变量可以使用window对象，免得和函数作用域的变量冲突&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;立即执行函数&#34;&gt;&lt;a href=&#34;#立即执行函数&#34; class=&#34;headerlink&#34; title=&#34;立即执行函数&#34;&gt;&lt;/a&gt;立即执行函数&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;IIFE&lt;/strong&gt;（ 立即调用函数表达式）是一个在定义时就会立即执行的函数。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;(&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    statements&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code&gt;()&lt;/code&gt;里包含的是一个匿名函数，表示一个函数表达式。然后再用一对括号&lt;code&gt;()&lt;/code&gt;立即调用这个函数。&lt;/p&gt;
+&lt;p&gt;立即执行函数可以模拟块级作用域。&lt;/p&gt;
+ ]]></description>
         </item>
     </channel>
 </rss>
