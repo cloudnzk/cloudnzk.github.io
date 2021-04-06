@@ -209,7 +209,30 @@
 
 
 
-&lt;h2 id=&#34;创建对象&#34;&gt;&lt;a href=&#34;#创建对象&#34; class=&#34;headerlink&#34; title=&#34;创建对象&#34;&gt;&lt;/a&gt;创建对象&lt;/h2&gt;&lt;h1 id=&#34;函数&#34;&gt;&lt;a href=&#34;#函数&#34; class=&#34;headerlink&#34; title=&#34;函数&#34;&gt;&lt;/a&gt;函数&lt;/h1&gt;&lt;p&gt;函数实际上也是一种对象，它可以封装一些功能（代码），然后在任何地方、任何时间执行。&lt;/p&gt;
+&lt;h2 id=&#34;创建对象&#34;&gt;&lt;a href=&#34;#创建对象&#34; class=&#34;headerlink&#34; title=&#34;创建对象&#34;&gt;&lt;/a&gt;创建对象&lt;/h2&gt;&lt;p&gt;使用Object构造函数或对象字面量创建对象的弊端：创建具有同样接口的多个对象需要重复编写很多代码。&lt;/p&gt;
+&lt;h3 id=&#34;工厂模式&#34;&gt;&lt;a href=&#34;#工厂模式&#34; class=&#34;headerlink&#34; title=&#34;工厂模式&#34;&gt;&lt;/a&gt;工厂模式&lt;/h3&gt;&lt;p&gt;使用工厂方法可以大批量创建类似对象。&lt;/p&gt;
+&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;createPerson&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;name,age&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &lt;span class=&#34;comment&#34;&gt;//1.创建一个新对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; person = &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;Object&lt;/span&gt;();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &lt;span class=&#34;comment&#34;&gt;//2.为对象添加属性&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       person.name = name;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       person.age = age;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       person.sayName = &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           &lt;span class=&#34;built_in&#34;&gt;console&lt;/span&gt;.log(&lt;span class=&#34;built_in&#34;&gt;this&lt;/span&gt;.name);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &lt;span class=&#34;comment&#34;&gt;//3.返回对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; person;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//4.用不同的参数调用函数，即可创建对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; person1 = createPerson(&lt;span class=&#34;string&#34;&gt;&amp;#x27;tom&amp;#x27;&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;18&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; person2 = createPerson(&lt;span class=&#34;string&#34;&gt;&amp;#x27;tom2&amp;#x27;&lt;/span&gt;,&lt;span class=&#34;number&#34;&gt;18&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;工厂模式的缺点：不能区分新创建的对象的类型。因为使用工厂模式创建的对象，使用的构造函数都是Object，所以创建的对象都是Object这个类型。&lt;/p&gt;
+&lt;h3 id=&#34;构造函数&#34;&gt;&lt;a href=&#34;#构造函数&#34; class=&#34;headerlink&#34; title=&#34;构造函数&#34;&gt;&lt;/a&gt;构造函数&lt;/h3&gt;&lt;p&gt;（1）构造函数与普通函数唯一的区别就是调用方式不同。构造函数需要使用new操作符来调用。&lt;/p&gt;
+&lt;p&gt;（2）构造函数的执行流程：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;立刻创建一个新的对象&lt;/li&gt;
+&lt;li&gt;将新建的对象设置为函数中this，在构造函数中可以使用this来引用新建的对象&lt;/li&gt;
+&lt;li&gt;逐行执行函数中的代码（给新对象添加属性）&lt;/li&gt;
+&lt;li&gt;将新建的对象作为返回值返回&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;（3）定义自定义构造函数可以确保实例被标识为特定类型。&lt;/p&gt;
+&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;p&gt;使用同一个构造函数创建的对象，我们称为一类对象，也将一个构造函数称为一个类。我们将通过构造函数创建的对象，称为这个类的实例。&lt;/p&gt;
+&lt;p&gt;可以用instanceof操作符检查一个对象是否是一个类的实例。&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;（4）构造函数的主要问题在于，其定义的方法会在每个实例上都创建一遍。&lt;/p&gt;
+&lt;div class=&#34;note default modern no-icon flat&#34;&gt;&lt;p&gt;解决的办法：将函数定义移到构造函数外部，让所有对象共享同一个方法。&lt;/p&gt;
+&lt;p&gt;这样虽然解决了相同逻辑的函数重复定义的问题，但会污染全局作用域&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;函数&#34;&gt;&lt;a href=&#34;#函数&#34; class=&#34;headerlink&#34; title=&#34;函数&#34;&gt;&lt;/a&gt;函数&lt;/h1&gt;&lt;p&gt;函数实际上也是一种对象，它可以封装一些功能（代码），然后在任何地方、任何时间执行。&lt;/p&gt;
 &lt;h2 id=&#34;定义函数&#34;&gt;&lt;a href=&#34;#定义函数&#34; class=&#34;headerlink&#34; title=&#34;定义函数&#34;&gt;&lt;/a&gt;定义函数&lt;/h2&gt;&lt;h3 id=&#34;函数声明&#34;&gt;&lt;a href=&#34;#函数声明&#34; class=&#34;headerlink&#34; title=&#34;函数声明&#34;&gt;&lt;/a&gt;函数声明&lt;/h3&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;a,b&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; a + b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;h3 id=&#34;函数表达式&#34;&gt;&lt;a href=&#34;#函数表达式&#34; class=&#34;headerlink&#34; title=&#34;函数表达式&#34;&gt;&lt;/a&gt;函数表达式&lt;/h3&gt;&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;let&lt;/span&gt; sum = &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;a,b&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; a + b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -228,8 +251,6 @@
 &lt;p&gt;因此，函数有可能接收到非法的参数，有些情况下需要对参数进行类型检查。如果函数实参个数大于形参个数，那么多出的实参不会被赋值给形参，但可以用&lt;code&gt;arguments&lt;/code&gt;对象获取值；如果函数实参个数小于形参个数，未能够初始化的形参的默认值为&lt;code&gt;undefined&lt;/code&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;默认参数&#34;&gt;&lt;a href=&#34;#默认参数&#34; class=&#34;headerlink&#34; title=&#34;默认参数&#34;&gt;&lt;/a&gt;默认参数&lt;/h3&gt;&lt;p&gt;用&lt;code&gt;ES6&lt;/code&gt;语法定义默认参数，只需要在函数参数后面给其赋一个默认值：&lt;/p&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;sum&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;a = &lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;,b = &lt;span class=&#34;number&#34;&gt;2&lt;/span&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; a + b;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h3 id=&#34;参数扩展与收集&#34;&gt;&lt;a href=&#34;#参数扩展与收集&#34; class=&#34;headerlink&#34; title=&#34;参数扩展与收集&#34;&gt;&lt;/a&gt;参数扩展与收集&lt;/h3&gt;&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;h3 id=&#34;函数作为参数&#34;&gt;&lt;a href=&#34;#函数作为参数&#34; class=&#34;headerlink&#34; title=&#34;函数作为参数&#34;&gt;&lt;/a&gt;函数作为参数&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;sum&lt;/code&gt;，只传入函数名，相当于直接使用函数对象&lt;/p&gt;
@@ -250,7 +271,13 @@
 &lt;li&gt;当在函数作用域操作一个变量时，先在自身作用域寻找，找不到就向上一级作用域寻找&lt;/li&gt;
 &lt;li&gt;在函数中要访问全局变量可以使用window对象，免得和函数作用域的变量冲突&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;立即执行函数&#34;&gt;&lt;a href=&#34;#立即执行函数&#34; class=&#34;headerlink&#34; title=&#34;立即执行函数&#34;&gt;&lt;/a&gt;立即执行函数&lt;/h2&gt;&lt;blockquote&gt;
+&lt;h2 id=&#34;函数内部对象&#34;&gt;&lt;a href=&#34;#函数内部对象&#34; class=&#34;headerlink&#34; title=&#34;函数内部对象&#34;&gt;&lt;/a&gt;函数内部对象&lt;/h2&gt;&lt;h3 id=&#34;this&#34;&gt;&lt;a href=&#34;#this&#34; class=&#34;headerlink&#34; title=&#34;this&#34;&gt;&lt;/a&gt;this&lt;/h3&gt;&lt;p&gt;this引用的是函数调用的上下文对象。根据函数调用方式的不同，this会指向不同的对象：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在网页的全局上下文中调用函数时，this指向windows&lt;/li&gt;
+&lt;li&gt;以方法的形式调用时，this指向调用方法的那个对象&lt;/li&gt;
+&lt;li&gt;以构造函数调用时，this就是新创建的那个对象&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;arguments&#34;&gt;&lt;a href=&#34;#arguments&#34; class=&#34;headerlink&#34; title=&#34;arguments&#34;&gt;&lt;/a&gt;arguments&lt;/h3&gt;&lt;h2 id=&#34;立即执行函数&#34;&gt;&lt;a href=&#34;#立即执行函数&#34; class=&#34;headerlink&#34; title=&#34;立即执行函数&#34;&gt;&lt;/a&gt;立即执行函数&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;IIFE&lt;/strong&gt;（ 立即调用函数表达式）是一个在定义时就会立即执行的函数。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;(&lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; (&lt;span class=&#34;params&#34;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    statements&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
