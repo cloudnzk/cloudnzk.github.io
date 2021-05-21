@@ -102,6 +102,11 @@
 &lt;/blockquote&gt;
 &lt;p&gt;除了这6种简单数据类型外，还有一种引用数据类型叫Object。&lt;/p&gt;
 &lt;p&gt;因为ECMAScript的类型系统是松散的，可以用typeof操作符来确定任意变量的数据类型。&lt;/p&gt;
+&lt;p&gt;JavaScript 是一种弱类型的，动态类型的语言：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;弱类型：允许不兼容的类型进行运算，自动进行隐式转换。&lt;/li&gt;
+&lt;li&gt;动态类型：变量类型可以动态变化，由运行时变量的值决定。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;基本数据类型&#34;&gt;&lt;a href=&#34;#基本数据类型&#34; class=&#34;headerlink&#34; title=&#34;基本数据类型&#34;&gt;&lt;/a&gt;基本数据类型&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;Undefined&lt;/code&gt;：未定义&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Null&lt;/code&gt;：空对象指针&lt;/li&gt;
