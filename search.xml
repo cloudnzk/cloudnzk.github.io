@@ -71,17 +71,6 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="about/index.html"/>
-      <url>about/index.html</url>
-      
-        <content type="html"><![CDATA[<p>前端入门中：</p><ol><li>视频课入门</li><li>代码模仿，勤练习</li><li>看书/查文档补基础知识</li><li>对照前端学习路线图，每天整理笔记</li></ol><p><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2021/03/26/skbg3Zy1PxJhXuS.png" alt="frontend-1"></p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>分类</title>
       <link href="categories/index.html"/>
       <url>categories/index.html</url>
@@ -98,6 +87,17 @@
       <url>music/index.html</url>
       
         <content type="html"><![CDATA[<div class="note success modern no-icon flat"><p>遠い、遠い、笑えない話<br>久远、久远、无法玩笑之谈<br>いつか、ぼくが 居なくなったなら<br>哪一天、如果我 不再留于此<br>深い、深い 森に落ちた<br>在幽深、幽深的 森林中陷落迷茫<br>きみは一人で行くんだぜ<br>你会一个人 走下去的吧</p></div><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=520 height=86 src="//music.163.com/outchain/player?type=2&id=22810198&auto=1&height=66"></iframe>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="about/index.html"/>
+      <url>about/index.html</url>
+      
+        <content type="html"><![CDATA[<p>前端入门中：</p><ol><li>视频课入门</li><li>代码模仿，勤练习</li><li>看书/查文档补基础知识</li><li>对照前端学习路线图，每天整理笔记</li></ol><p><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2021/03/26/skbg3Zy1PxJhXuS.png" alt="frontend-1"></p>]]></content>
       
     </entry>
     
