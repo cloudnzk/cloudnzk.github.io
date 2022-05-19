@@ -45,6 +45,8 @@
         
             <a href="/about">关于</a>
         
+            <a href="/bangumis">追番</a>
+        
     </nav>
 </header>
 
@@ -112,5 +114,20 @@
 
 <script>var hingle = new Paul_Hingle({"copyright":true,"night":true});</script>
 
+    <!-- 一言API Start-->
+    <script>
+      fetch('https://v1.hitokoto.cn?c=a&c=b')
+        .then(function (res){
+          return res.json();
+        })
+        .then(function (data) {
+          var hitokoto = document.getElementById('hitokoto');
+          hitokoto.innerText = data.hitokoto + "《" + data.from + "》";
+        })
+        .catch(function (err) {
+          console.error(err);
+        })
+    </script>
+    <!-- 一言API End-->
   </body>
 </html>

@@ -45,6 +45,8 @@
         
             <a href="/about">关于</a>
         
+            <a href="/bangumis">追番</a>
+        
     </nav>
 </header>
 
@@ -52,7 +54,9 @@
     <div class="wrap min">
         <section class="home-title">
             <h1>Silentlight&#39;s blog</h1>
-            <span></span>
+            <!-- <span>Silentlight的个人小站：基于Hexo搭建、使用Hingle主题的静态博客；主要记录我的前端、科研笔记，生活所思所想等</span> -->
+            <!-- 一言 -->
+            <span id="hitokoto"></span>
             
     <div class="home-social">
     
@@ -60,7 +64,7 @@
             <i class="fa fa-github"></i>
         </a>
     
-        <a href="https://cloudnzk.github.io/" title="首页">
+        <a href="https://silentlight.vercel.app/" title="首页">
             <i class="fa fa-home"></i>
         </a>
     
@@ -130,5 +134,20 @@
 
 <script>var hingle = new Paul_Hingle({"copyright":true,"night":true});</script>
 
+    <!-- 一言API Start-->
+    <script>
+      fetch('https://v1.hitokoto.cn?c=a&c=b')
+        .then(function (res){
+          return res.json();
+        })
+        .then(function (data) {
+          var hitokoto = document.getElementById('hitokoto');
+          hitokoto.innerText = data.hitokoto + "《" + data.from + "》";
+        })
+        .catch(function (err) {
+          console.error(err);
+        })
+    </script>
+    <!-- 一言API End-->
   </body>
 </html>
