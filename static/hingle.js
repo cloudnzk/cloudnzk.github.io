@@ -94,8 +94,8 @@ var Paul_Hingle = function (config) {
     // 自动添加外链
     this.links = function () {
         var l = content.getElementsByTagName("a");
-
-        if(l){
+        // 排除追番页
+        if(l && l.className.indexOf('bangumi') === -1){
             ks.each(l, function (t) {
                 t.target = "_blank";
             });
