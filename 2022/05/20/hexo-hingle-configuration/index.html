@@ -62,7 +62,50 @@
             </div>
         </section>
         <article class="post-content">
-            
+            <p>很早之前就喜欢奇妙保罗大佬的<a target="_blank" rel="noopener" href="https://github.com/Dreamer-Paul/Single">Single</a>主题，奈何是一个<code>Typecho</code>主题，只得作罢。令人惊喜的是，作者本人在2021年又将其移植到<code>Hexo</code>中，称为<a target="_blank" rel="noopener" href="https://github.com/Dreamer-Paul/Hingle">Hingle</a>。</p>
+<blockquote>
+<p>一个简洁大气，含夜间模式的 Typecho 博客模板。</p>
+</blockquote>
+<p>正如其简介所言，<code>Hingle</code>主题就是那么简约干净，清清爽爽。另外，个人比较喜欢这款主题的配色（天空蓝太好看了），还有可爱的二次元风格背景图。以下就是本人搭建好的博客页面，是不是挺简洁美观的~</p>
+<p><img src="https://s2.loli.net/2022/05/20/oBI6S1578WiYf4V.png" alt="Hingle博客预览"></p>
+<p>话不多说，下面就直接开换。さあ、始めよう!</p>
+<h1 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h1><p>在使用这款主题之前，你应该首先安装 <code>Node.js</code>，然后将 <code>Hexo</code> 安装好，并且新建一个 <code>Hexo</code> 博客目录。</p>
+<p>这部分参考一下 <code>Hexo</code> 的<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">官方文档</a>即可，官方文档写得很详细，因此这里不再赘述。下面简单贴下 <code>Hexo</code> 安装的命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<h1 id="引入主题"><a href="#引入主题" class="headerlink" title="引入主题"></a>引入主题</h1><p>引入主题也比较简单，按照 <code>Hingle</code> 的<a target="_blank" rel="noopener" href="https://docs.paul.ren/hingle/#/?id=%e5%ae%89%e8%a3%85">官方文档</a>一步一步来做：</p>
+<ol>
+<li><p>首先将下载好的主题源码放进 <code>Hexo</code> 根目录的 <code>themes</code> 下，并将文件夹重命名为 <code>hingle</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Dreamer-Paul/Hingle.git</span><br><span class="line">mv Hingle themes/hingle</span><br></pre></td></tr></table></figure></li>
+<li><p>然后打开Hexo目录下的 <code>_config.yml</code> 文件，将里面的 <code>theme</code> 字段，更换成 <code>hingle</code> 即可</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">hingle</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>现在运行 <code>hexo g</code> 和 <code>hexo s</code> 指令，然后在浏览器打开 <code>http://localhost:4000/</code>，可以看到主题已经引入成功了。</p>
+<h1 id="主题基本配置"><a href="#主题基本配置" class="headerlink" title="主题基本配置"></a>主题基本配置</h1><p>以下讲一下主题的基本配置过程，如没有特别说明，<code>_config.yml</code> 文件都指的是主题目录下的配置文件。</p>
+<h2 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h2><p>将默认的信息改成你自己的就行，似乎没什么好说的…</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">author:</span> <span class="string">&#x27;Hingle&#x27;</span> <span class="comment"># 作者名称</span></span><br><span class="line"><span class="attr">author_avatar:</span> <span class="string">&#x27;https://sdn.geekzu.org/avatar/d22eb460ecab37fcd7205e6a3c55c228?s=200&amp;r=X&amp;d=&#x27;</span> <span class="comment"># 作者头像</span></span><br><span class="line"><span class="attr">author_text:</span> <span class="string">&#x27;请在这里设置你的作者信息&#x27;</span> <span class="comment"># 作者信息</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="主页社交链接"><a href="#主页社交链接" class="headerlink" title="主页社交链接"></a>主页社交链接</h2><p><code>icon</code> 代表的是<a target="_blank" rel="noopener" href="https://fontawesome.com/v4/icons/">font awesome 4</a>中的图标名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">social: # 社交链接</span><br><span class="line">  - title: &#x27;Github&#x27;</span><br><span class="line">    icon: &#x27;github&#x27;</span><br><span class="line">    link: &#x27;https://github.com/cloudnzk&#x27;</span><br><span class="line">  - title: &#x27;首页&#x27;</span><br><span class="line">    icon: &#x27;home&#x27;</span><br><span class="line">    link: &#x27;https://silentlight.vercel.app/&#x27;</span><br><span class="line">  - title: &#x27;音乐&#x27;</span><br><span class="line">    icon: &#x27;music&#x27;</span><br><span class="line">    link: &#x27;https://music.163.com/#/user/home?id=81845106&#x27;</span><br></pre></td></tr></table></figure>
+
+<h2 id="背景图"><a href="#背景图" class="headerlink" title="背景图"></a>背景图</h2><p>要启用背景图，去掉 <code>background</code> 前的注释即可。背景图支持懒加载，因此不用担心页面加载速度变慢的问题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background: &#x27;https://api.paugram.com/wallpaper?source=gh&#x27; # 主题背景</span><br></pre></td></tr></table></figure>
+
+<h2 id="关于页面"><a href="#关于页面" class="headerlink" title="关于页面"></a>关于页面</h2><p>现在点击导航栏上的 <code>关于我</code>，会显示 <code>404 not found</code>，因为关于页面还没有被创建出来。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span> <span class="comment"># 页眉菜单项目</span></span><br><span class="line">  <span class="string">&#x27;关于&#x27;</span><span class="string">:</span> <span class="string">/about</span></span><br><span class="line">  <span class="string">&#x27;朋友们&#x27;</span><span class="string">:</span> <span class="string">/friends</span></span><br></pre></td></tr></table></figure>
+
+<p>创建一个关于的独立页面即可，但需要注意一下页面的路径，要跟 <code>_config.yml</code> 文件中 <code>menu</code> 配置的路径对应上。以下指令是在 <code>about</code> 路径下创建一个名为 <code>index.md</code> 的文件。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page --path about/index &quot;About me&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="关于标签页显示“没有标题”的问题"><a href="#关于标签页显示“没有标题”的问题" class="headerlink" title="关于标签页显示“没有标题”的问题"></a>关于标签页显示“没有标题”的问题</h3><p>打开 <code>~/blog/themes/hingle/layout/_partial</code> 下的 <code>head.ejs</code> 文件，找到下面几行</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(<span class="title function_">is_post</span>() &amp;&amp; page.<span class="property">title</span>)&#123;</span><br><span class="line">	title = page.<span class="property">title</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后在后面加上以下代码，目的是增加对独立页面的判断与标题赋值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(<span class="title function_">is_page</span>() &amp;&amp; page.<span class="property">title</span>)&#123;</span><br><span class="line">	title = page.<span class="property">title</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="favicon图标更换"><a href="#favicon图标更换" class="headerlink" title="favicon图标更换"></a>favicon图标更换</h2><p>找到 <code>~/blog/themes/hingle/source/static/img</code> 路径下的icon.png，替换成自己的即可。如果不显示新的favicon图标，可以强制刷新一下页面，或者清理一下浏览器的缓存。</p>
+<p>至此，<code>Hingle</code> 主题的基本配置就完成了。</p>
+<h1 id="进阶配置"><a href="#进阶配置" class="headerlink" title="进阶配置"></a>进阶配置</h1>
         </article>
         <section class="post-near">
             <ul>
