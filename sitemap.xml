@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://silentlight.vercel.app/about/index.html</loc>
+    
+    <lastmod>2022-05-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://silentlight.vercel.app/2022/05/20/return-hexo/</loc>
     
     <lastmod>2022-05-21</lastmod>
@@ -14,15 +23,6 @@
     <loc>https://silentlight.vercel.app/2022/05/20/hexo-hingle-configuration/</loc>
     
     <lastmod>2022-05-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://silentlight.vercel.app/about/index.html</loc>
-    
-    <lastmod>2022-05-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
