@@ -64,16 +64,16 @@
         <article class="post-content">
             <p>很早之前就喜欢奇妙保罗大佬的 <a target="_blank" rel="noopener" href="https://github.com/Dreamer-Paul/Single">Single</a> 主题，奈何当时只支持 <code>Typecho</code> 而没有 <code>Hexo</code> 版本的，只得作罢。令人惊喜的是，作者本人在2021年又将其移植到 <code>Hexo</code> 中，称为 <a target="_blank" rel="noopener" href="https://github.com/Dreamer-Paul/Hingle">Hingle</a>。</p>
 <blockquote>
-<p>一个简洁大气，含夜间模式的 Typecho 博客模板。</p>
+<p>一个简洁大气，含夜间模式的 Hexo 博客模板。</p>
 </blockquote>
-<p>正如其简介所言，<code>Hingle</code> 主题就是那么简约干净，清清爽爽。另外，个人比较喜欢这款主题的配色（天空蓝太好看了），还有可爱的二次元风格背景图。以下就是本人搭建好的博客页面，是不是挺简洁美观的~</p>
+<p>正如其简介所言，<code>Hingle</code> 主题就是那么简约干净，清清爽爽。另外，个人比较喜欢这款主题的配色（蓝色太好看了），还有可爱的二次元风格背景图。以下就是本人搭建好的博客页面，是不是挺简洁美观的~</p>
 <p><img src="https://s2.loli.net/2022/05/20/oBI6S1578WiYf4V.png" alt="Hingle博客预览"></p>
 <p>话不多说，下面就直接开换。さあ、始めよう!</p>
 <h1 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h1><p>在使用这款主题之前，你应该首先安装 <code>Node.js</code>，然后将 <code>Hexo</code> 安装好，并且新建一个 <code>Hexo</code> 博客目录。</p>
-<p>这部分参考一下 <code>Hexo</code> 的<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">官方文档</a>即可，官方文档写得很详细，因此这里不再赘述。下面简单贴下 <code>Hexo</code> 安装的命令：</p>
+<p>这部分参考一下 <code>Hexo</code> 的 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">官方文档</a> 即可，这里不再赘述。下面简单贴下 <code>Hexo</code> 安装的命令：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
-<h1 id="引入主题"><a href="#引入主题" class="headerlink" title="引入主题"></a>引入主题</h1><p>引入主题也比较简单，按照 <code>Hingle</code> 的<a target="_blank" rel="noopener" href="https://docs.paul.ren/hingle/#/?id=%e5%ae%89%e8%a3%85">官方文档</a>一步一步来做：</p>
+<h1 id="引入主题"><a href="#引入主题" class="headerlink" title="引入主题"></a>引入主题</h1><p>引入主题也比较简单，按照 <code>Hingle</code> 的 <a target="_blank" rel="noopener" href="https://docs.paul.ren/hingle/#/?id=%e5%ae%89%e8%a3%85">官方文档</a> 一步一步来做：</p>
 <ol>
 <li><p>首先将下载好的主题源码放进 <code>Hexo</code> 根目录的 <code>themes</code> 下，并将文件夹重命名为 <code>hingle</code></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Dreamer-Paul/Hingle.git</span><br><span class="line">mv Hingle themes/hingle</span><br></pre></td></tr></table></figure></li>
@@ -82,13 +82,13 @@
 </ol>
 <p>现在运行 <code>hexo g</code> 和 <code>hexo s</code> 指令，然后在浏览器打开 <code>http://localhost:4000/</code>，可以看到主题已经引入成功了。</p>
 <h1 id="主题基本配置"><a href="#主题基本配置" class="headerlink" title="主题基本配置"></a>主题基本配置</h1><p>以下是主题的基本配置过程，如没有特别说明，<code>_config.yml</code> 文件都指的是主题目录下的配置文件。</p>
-<h2 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h2><p>将默认的信息改成你自己的就行，似乎没什么好说的…个人信息会在文章末尾显示。</p>
+<h2 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h2><p>将默认的信息改成你自己的就行，个人信息会在文章末尾显示。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">author:</span> <span class="string">&#x27;Hingle&#x27;</span> <span class="comment"># 作者名称</span></span><br><span class="line"><span class="attr">author_avatar:</span> <span class="string">&#x27;https://sdn.geekzu.org/avatar/d22eb460ecab37fcd7205e6a3c55c228?s=200&amp;r=X&amp;d=&#x27;</span> <span class="comment"># 作者头像</span></span><br><span class="line"><span class="attr">author_text:</span> <span class="string">&#x27;请在这里设置你的作者信息&#x27;</span> <span class="comment"># 作者信息</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="主页社交链接"><a href="#主页社交链接" class="headerlink" title="主页社交链接"></a>主页社交链接</h2><p><code>icon</code> 代表的是<a target="_blank" rel="noopener" href="https://fontawesome.com/v4/icons/">font awesome 4</a>中的图标名</p>
+<h2 id="主页社交链接"><a href="#主页社交链接" class="headerlink" title="主页社交链接"></a>主页社交链接</h2><p><code>icon</code> 代表的是 <a target="_blank" rel="noopener" href="https://fontawesome.com/v4/icons/">font awesome 4</a> 中的图标名</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">social:</span> <span class="comment"># 社交链接</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">&#x27;Github&#x27;</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">&#x27;github&#x27;</span></span><br><span class="line">    <span class="attr">link:</span> <span class="string">&#x27;https://github.com/cloudnzk&#x27;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">&#x27;首页&#x27;</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">&#x27;home&#x27;</span></span><br><span class="line">    <span class="attr">link:</span> <span class="string">&#x27;https://silentlight.vercel.app/&#x27;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">&#x27;音乐&#x27;</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">&#x27;music&#x27;</span></span><br><span class="line">    <span class="attr">link:</span> <span class="string">&#x27;https://music.163.com/#/user/home?id=81845106&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="背景图"><a href="#背景图" class="headerlink" title="背景图"></a>背景图</h2><p>要启用背景图，去掉 <code>background</code> 前的注释即可。背景图支持懒加载，因此不用担心页面加载速度变慢的问题。</p>
+<h2 id="背景图"><a href="#背景图" class="headerlink" title="背景图"></a>背景图</h2><p>要启用背景图，去掉 <code>background</code> 前的注释即可。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">background:</span> <span class="string">&#x27;https://api.paugram.com/wallpaper?source=gh&#x27;</span> <span class="comment"># 主题背景</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="关于页面"><a href="#关于页面" class="headerlink" title="关于页面"></a>关于页面</h2><p>现在点击导航栏上的 <code>关于我</code>，会显示 <code>404 not found</code>，因为关于页面还没有被创建出来。</p>
@@ -103,7 +103,7 @@
 <p>然后在后面加上以下代码，增加对独立页面的判断与标题赋值</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(<span class="title function_">is_page</span>() &amp;&amp; page.<span class="property">title</span>)&#123;</span><br><span class="line">	title = page.<span class="property">title</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="favicon图标更换"><a href="#favicon图标更换" class="headerlink" title="favicon图标更换"></a>favicon图标更换</h2><p>找到 <code>~/blog/themes/hingle/source/static/img</code> 路径下的icon.png，替换成自己的即可。如果不显示新的favicon图标，可以强制刷新一下页面，或者清理一下浏览器的缓存。</p>
+<h2 id="favicon图标更换"><a href="#favicon图标更换" class="headerlink" title="favicon图标更换"></a>favicon图标更换</h2><p>找到 <code>~/blog/themes/hingle/source/static/img</code> 路径下的 <code>icon.png</code>，替换成自己的即可。如果不显示新的 favicon 图标，可以强制刷新一下页面，或者清理一下浏览器的缓存。</p>
 <p>至此，<code>Hingle</code> 主题的基本配置就完成了。</p>
 <h1 id="进阶配置"><a href="#进阶配置" class="headerlink" title="进阶配置"></a>进阶配置</h1><h2 id="提高二次元浓度"><a href="#提高二次元浓度" class="headerlink" title="提高二次元浓度"></a>提高二次元浓度</h2><blockquote>
 <p>注意：本节要对 Hingle 主题进行 DIY (<del>大量魔改</del>)，请谨慎使用</p>
@@ -128,10 +128,10 @@
 <li><p>配置完成后，记得先拉取番剧数据信息：<code>hexo bangumi -u</code>，然后再 <code>hexo g</code> ，最后会生成一个 <code>bangumi.html</code> 的静态文件。</p>
 </li>
 </ol>
-<p>在第 2 步会出现 <code>hexo g</code> 失败的情况。插件跟主题不兼容的原因未明，但根据报错提示，删掉<code>~/blog/themes/hingle/layout</code> 目录下，<code>page.ejs</code> 与 <code>post.ejs</code> 的以下代码可以得到解决。</p>
+<p>在第 2 步会出现 <code>hexo g</code> 失败的情况。因为追番页面没有发表时间，所以<code>page.date</code> 为 <code>undefined</code>，调用<code>unix()</code> 方法会出错。根据报错提示，删掉<code>~/blog/themes/hingle/layout</code> 目录下，<code>page.ejs</code> 与 <code>post.ejs</code> 的以下代码可以得到解决。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 删除以下代码</span><br><span class="line">&lt;% if (moment().unix() - page.date.unix() &gt;= 15552000) &#123; %&gt;</span><br><span class="line">	&lt;blockquote&gt;这篇文章上次修改于 &lt;%= Math.ceil((moment().unix() - page.date.unix()) / 86400) %&gt; 天前，可能其部分内容已经发生变化，如有疑问可询问作者。</span><br><span class="line">	&lt;/blockquote&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 
-<p>完成以上两步后，此时我们对想看、在看、看过进行切换时，会默认打开一个新窗口，这是因为 Hingle 默认将文章的所有链接都设置成外链了：</p>
+<p>完成以上两步后，此时我们对追番页的 <code>想看</code>、<code>在看</code>、<code>看过</code> 进行切换时，会默认打开一个新窗口，这是因为 <code>Hingle</code> 默认将文章的所有链接都设置成外链了：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自动添加外链</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">links</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> l = content.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span>(l)&#123;</span><br><span class="line">    	ks.<span class="title function_">each</span>(l, <span class="keyword">function</span> (<span class="params">t</span>) &#123;</span><br><span class="line">      	t.<span class="property">target</span> = <span class="string">&quot;_blank&quot;</span>;</span><br><span class="line">    	&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <p>因此，只需要排除掉追番页的链接即可。打开 <code>~/blog/themes/hingle/source/static/</code> 下的 <code>hingle.js</code> 文件，进行如下修改：</p>
@@ -139,7 +139,7 @@
 
 <h2 id="Vercel部署"><a href="#Vercel部署" class="headerlink" title="Vercel部署"></a>Vercel部署</h2><p>以 <code>github.io</code> 结尾的域名，在国内访问经常受限，而且打开速度也非常缓慢。因此，除了部署在 <code>GitHub pages</code> 上，通常也会将 <code>Hexo</code> 博客部署到 <a target="_blank" rel="noopener" href="https://vercel.com/dashboard">Vercel</a> 上，使得博客在国内也能正常访问。</p>
 <ul>
-<li><p><code>Vercel</code> 提供了一键拉取 <code>GitHub</code> 仓库的方便功能，前提是绑定 <code>GitHub</code> 账户，然后授权 <code>Vercel</code> 操作 <code>GitHub</code> 仓库的权限。由于配置过程无比简单，请谷歌搜索解决吧。</p>
+<li><p><code>Vercel</code> 提供了一键拉取 <code>GitHub</code> 仓库的方便功能，前提是绑定 <code>GitHub</code> 账户，然后授权 <code>Vercel</code> 操作 <code>GitHub</code> 仓库的权限。</p>
 </li>
 <li><p>每当执行指令 <code>hexo d</code> 部署完成后，<code>Vercel</code> 就会拉取最新的 <code>GitHub</code> 仓库自动部署，这样超级方便有没有~</p>
 </li>
@@ -167,18 +167,19 @@
 </li>
 </ol>
 <h3 id="百度"><a href="#百度" class="headerlink" title="百度"></a>百度</h3><ol>
-<li>到百度搜索控制台添加博客域名，然后验证，验证方式跟上面谷歌的差不多</li>
+<li>到 <a target="_blank" rel="noopener" href="https://ziyuan.baidu.com/">百度搜索资源平台</a> 添加博客域名，然后验证，验证方式跟上面谷歌的差不多</li>
 <li>将下载好的 <code>HTML</code> 文件放到主题的 <code>source</code> 目录下</li>
 <li>提交 <code>baidusitemap.xml</code> 站点地图</li>
 </ol>
 <h2 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h2><p>在 <code>Hexo</code> 根目录下的 <code>_config.yml</code> 文件中配置 <code>description</code> 和 <code>keywords</code> 选项。以我的配置为例：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Silentlight&#x27;s</span> <span class="string">blog</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;正视自己的弱小，方能变得更加强大&#x27;</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;Silentlight的个人小站：基于Hexo搭建、使用Hingle主题的静态博客；主要记录我的前端、科研笔记，生活所思所想等&#x27;</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="string">前端,生活,科研,笔记</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Silentlight</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Silentlight&#x27;s</span> <span class="string">blog</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;正视自己的弱小，方能变得更加强大&#x27;</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;Silentlight的个人小站：一个基于Hexo搭建、使用Hingle主题的静态博客；主要记录我的前端、科研笔记，生活所思所想等&#x27;</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="string">前端,生活,科研,笔记</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Silentlight</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span></span><br></pre></td></tr></table></figure>
 
 
 
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
 <li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a> Hexo官方文档.</li>
 <li><a target="_blank" rel="noopener" href="https://docs.paul.ren/hingle/#/">https://docs.paul.ren/hingle/#/</a> Hingle主题官方文档</li>
+<li><a href="https://link.juejin.cn/?target=https://blog.csdn.net/victoryxa/article/details/104286446">blog.csdn.net/victoryxa/a…</a> Hexo博客添加一言</li>
 <li><a target="_blank" rel="noopener" href="https://www.hansion.win/2020/04/13/hexo-bo-ke-deng-jing-tai-wang-ye-ti-jiao-bai-du-he-google-gu-ge-shou-lu/#toc-heading-2">https://www.hansion.win/2020/04/13/hexo-bo-ke-deng-jing-tai-wang-ye-ti-jiao-bai-du-he-google-gu-ge-shou-lu/#toc-heading-2</a> Hexo博客等静态网页提交百度和Google谷歌收录</li>
 </ol>
 
