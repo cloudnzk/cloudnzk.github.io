@@ -56,6 +56,27 @@
 
   
   <url>
+    <loc>https://silentlight.vercel.app/tags/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2022-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://silentlight.vercel.app/tags/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2022-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://silentlight.vercel.app/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2022-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://silentlight.vercel.app/tags/Hexo/</loc>
     <lastmod>2022-11-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -90,28 +111,14 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://silentlight.vercel.app/tags/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2022-11-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://silentlight.vercel.app/tags/%E5%BC%80%E5%8F%91%E6%8A%80%E5%B7%A7/</loc>
-    <lastmod>2022-11-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://silentlight.vercel.app/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2022-11-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
+  
+  <url>
+    <loc>https://silentlight.vercel.app/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2022-11-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://silentlight.vercel.app/categories/%E6%95%99%E7%A8%8B/</loc>
@@ -122,13 +129,6 @@
   
   <url>
     <loc>https://silentlight.vercel.app/categories/%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2022-11-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://silentlight.vercel.app/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-11-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
