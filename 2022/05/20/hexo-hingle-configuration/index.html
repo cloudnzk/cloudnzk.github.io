@@ -81,7 +81,7 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">hingle</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <p>现在运行 <code>hexo g</code> 和 <code>hexo s</code> 指令，然后在浏览器打开 <code>http://localhost:4000/</code>，可以看到主题已经引入成功了。</p>
-<h1 id="主题基本配置"><a href="#主题基本配置" class="headerlink" title="主题基本配置"></a>主题基本配置</h1><p>以下是主题的基本配置过程，如没有特别说明，<code>_config.yml</code> 文件都指的是主题目录下的配置文件。</p>
+<h1 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h1><p>以下是主题的基本配置过程，如没有特别说明，<code>_config.yml</code> 文件都指的是主题目录下的配置文件。</p>
 <h2 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h2><p>将默认的信息改成你自己的就行，个人信息会在文章末尾显示。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">author:</span> <span class="string">&#x27;Hingle&#x27;</span> <span class="comment"># 作者名称</span></span><br><span class="line"><span class="attr">author_avatar:</span> <span class="string">&#x27;https://sdn.geekzu.org/avatar/d22eb460ecab37fcd7205e6a3c55c228?s=200&amp;r=X&amp;d=&#x27;</span> <span class="comment"># 作者头像</span></span><br><span class="line"><span class="attr">author_text:</span> <span class="string">&#x27;请在这里设置你的作者信息&#x27;</span> <span class="comment"># 作者信息</span></span><br></pre></td></tr></table></figure>
 
@@ -174,13 +174,16 @@
 <h2 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h2><p>在 <code>Hexo</code> 根目录下的 <code>_config.yml</code> 文件中配置 <code>description</code> 和 <code>keywords</code> 选项。以我的配置为例：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Silentlight&#x27;s</span> <span class="string">blog</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;正视自己的弱小，方能变得更加强大&#x27;</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;Silentlight的个人小站：一个基于Hexo搭建、使用Hingle主题的静态博客；主要记录我的前端、科研笔记，生活所思所想等&#x27;</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="string">前端,生活,科研,笔记</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Silentlight</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span></span><br></pre></td></tr></table></figure>
 
-
-
+<h1 id="bug-修复"><a href="#bug-修复" class="headerlink" title="bug 修复"></a>bug 修复</h1><h3 id="font-awesome-图标丢失"><a href="#font-awesome-图标丢失" class="headerlink" title="font-awesome 图标丢失"></a>font-awesome 图标丢失</h3><p>2022.11月回来看自己的博客，发现博客的图标全部消失了。F12 打开 Chrome 开发者工具看了下，博客的图标是使用的是 font-awesome，于是推测是引入方面出了问题。</p>
+<p><img src="https://s2.loli.net/2022/11/29/zND4lWicoSa5IPm.png"></p>
+<p>经过一步步排查，原来是 font-awesome 的 CDN 无效了，需要更新 CDN 链接。</p>
+<p>解决办法：编辑 <code>themes/hingle/layout/_partial</code> 文件夹下的 <code>head.ejs</code>，修改 font-awesome 的 CDN 链接为 <code>https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css</code></p>
+<p><img src="https://s2.loli.net/2022/11/29/lxYBKVIHwq6JFhu.png"></p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a> Hexo官方文档.</li>
-<li><a target="_blank" rel="noopener" href="https://docs.paul.ren/hingle/#/">https://docs.paul.ren/hingle/#/</a> Hingle主题官方文档</li>
-<li><a href="https://link.juejin.cn/?target=https://blog.csdn.net/victoryxa/article/details/104286446">blog.csdn.net/victoryxa/a…</a> Hexo博客添加一言</li>
-<li><a target="_blank" rel="noopener" href="https://www.hansion.win/2020/04/13/hexo-bo-ke-deng-jing-tai-wang-ye-ti-jiao-bai-du-he-google-gu-ge-shou-lu/#toc-heading-2">https://www.hansion.win/2020/04/13/hexo-bo-ke-deng-jing-tai-wang-ye-ti-jiao-bai-du-he-google-gu-ge-shou-lu/#toc-heading-2</a> Hexo博客等静态网页提交百度和Google谷歌收录</li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.paul.ren/hingle/#/">Hingle主题官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa/article/details/104286446">Hexo博客添加一言</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hansion.win/2020/04/13/hexo-bo-ke-deng-jing-tai-wang-ye-ti-jiao-bai-du-he-google-gu-ge-shou-lu/#toc-heading-2">Hexo博客等静态网页提交百度和Google谷歌收录</a></li>
 </ol>
 
         </article>
