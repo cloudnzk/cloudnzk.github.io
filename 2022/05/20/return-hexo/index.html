@@ -96,26 +96,16 @@
             </div>
         </section>
     
-
-    
-        <div id="gitalk-container"></div>
-        <link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
-<script src="https://priesttomb.github.io/js/md5.min.js"></script>
-<script type="text/javascript">
-    new Gitalk({
-        clientID: '7a84ee39e101537311e1',
-        clientSecret: '40d966621cc69b196a4189c68b91a9040e1c3a14',
-        repo: 'cloudnzk.github.io',
-        owner: 'cloudnzk',
-        admin: 'cloudnzk',
-        id: md5(location.pathname),
-        distractionFreeMode: true
-    }).render('gitalk-container')
-</script>
-    
-    </div>
 </main>
+<!-- utterances Start-->
+<script src="https://utteranc.es/client.js"
+    repo="cloudnzk/blog-comment"
+    issue-term="title"
+    theme="dark-blue"
+    crossorigin="anonymous"
+    async>
+</script>
+<!-- utterances End -->
 
     <footer>
     <div class="buttons">
@@ -149,22 +139,7 @@
 <script src="/static/hingle.js"></script>
 
 
-<script>var hingle = new Paul_Hingle({"copyright":false,"night":false});</script>
+<script>var hingle = new Paul_Hingle({"copyright":false});</script>
 
-    <!-- 一言API Start-->
-    <script>
-      fetch('https://v1.hitokoto.cn?c=a&c=b')
-        .then(function (res){
-          return res.json();
-        })
-        .then(function (data) {
-          var hitokoto = document.getElementById('hitokoto');
-          hitokoto.innerText = data.hitokoto + "《" + data.from + "》";
-        })
-        .catch(function (err) {
-          console.error(err);
-        })
-    </script>
-    <!-- 一言API End-->
   </body>
 </html>

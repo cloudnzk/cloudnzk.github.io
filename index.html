@@ -141,6 +141,21 @@
         </section>
     </div>
 </main>
+<!-- 一言API Start-->
+<script>
+    fetch('https://v1.hitokoto.cn?c=a&c=b')
+      .then(function (res){
+        return res.json();
+      })
+      .then(function (data) {
+        var hitokoto = document.getElementById('hitokoto');
+        hitokoto.innerText = data.hitokoto + "《" + data.from + "》";
+      })
+      .catch(function (err) {
+        console.error(err);
+      })
+</script>
+<!-- 一言API End-->
 
     <footer>
     <div class="buttons">
@@ -174,22 +189,7 @@
 <script src="/static/hingle.js"></script>
 
 
-<script>var hingle = new Paul_Hingle({"copyright":false,"night":false});</script>
+<script>var hingle = new Paul_Hingle({"copyright":false});</script>
 
-    <!-- 一言API Start-->
-    <script>
-      fetch('https://v1.hitokoto.cn?c=a&c=b')
-        .then(function (res){
-          return res.json();
-        })
-        .then(function (data) {
-          var hitokoto = document.getElementById('hitokoto');
-          hitokoto.innerText = data.hitokoto + "《" + data.from + "》";
-        })
-        .catch(function (err) {
-          console.error(err);
-        })
-    </script>
-    <!-- 一言API End-->
   </body>
 </html>
