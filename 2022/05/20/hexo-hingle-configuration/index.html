@@ -219,9 +219,27 @@
         
             <div class="author-info">
                 <h4>Silentlight</h4>
-                <p>24岁，事学生</p>
+                <p>24岁，事学生。本站未注明转载的文章均为原创，并采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow">CC BY-NC-SA 4.0</a> 授权协议，<span style="color: #E91E63">转载请注明来源</span>，谢谢！</p>
             </div>
         </section>
+    
+
+    
+        <div id="gitalk-container"></div>
+        <link rel="stylesheet" href="https://unpkg.com/gitalk@latest/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="https://priesttomb.github.io/js/md5.min.js"></script>
+<script type="text/javascript">
+    new Gitalk({
+        clientID: '7a84ee39e101537311e1',
+        clientSecret: '40d966621cc69b196a4189c68b91a9040e1c3a14',
+        repo: 'cloudnzk.github.io',
+        owner: 'cloudnzk',
+        admin: 'cloudnzk',
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    }).render('gitalk-container')
+</script>
     
     </div>
 </main>
@@ -258,7 +276,7 @@
 <script src="/static/hingle.js"></script>
 
 
-<script>var hingle = new Paul_Hingle({"copyright":true,"night":false});</script>
+<script>var hingle = new Paul_Hingle({"copyright":false,"night":false});</script>
 
     <!-- 一言API Start-->
     <script>
