@@ -169,7 +169,7 @@
 <td>2022.11.27</td>
 <td>2022.12.04</td>
 <td>…</td>
-<td>⭐⭐</td>
+<td>⭐⭐⭐</td>
 <td>简单</td>
 <td>动态规划</td>
 </tr>
@@ -185,9 +185,9 @@
 <tr>
 <td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/diameter-of-binary-tree/">543. 二叉树的直径</a></td>
 <td>2022.11.28</td>
+<td>2022.12.10</td>
 <td>…</td>
-<td>…</td>
-<td>⭐⭐</td>
+<td>⭐⭐⭐</td>
 <td>简单</td>
 <td>二叉树；DFS</td>
 </tr>
@@ -239,7 +239,7 @@
 <tr>
 <td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/symmetric-tree/">101. 对称二叉树</a></td>
 <td>2022.12.05</td>
-<td>…</td>
+<td>2022.12.11</td>
 <td>…</td>
 <td>⭐⭐⭐</td>
 <td>简单</td>
@@ -280,6 +280,33 @@
 <td>⭐⭐⭐</td>
 <td>简单</td>
 <td>哈希表；链表；双指针</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list/">19. 删除链表的倒数第 N 个结点</a></td>
+<td>2022.12.10</td>
+<td>…</td>
+<td>…</td>
+<td>⭐⭐</td>
+<td>中等</td>
+<td>链表；双指针</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list/">206. 反转链表</a></td>
+<td>2022.12.11</td>
+<td>…</td>
+<td>…</td>
+<td>⭐⭐</td>
+<td>简单</td>
+<td>链表；递归</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/intersection-of-two-linked-lists/">160. 相交链表</a></td>
+<td>2022.12.12</td>
+<td>…</td>
+<td>…</td>
+<td>⭐⭐</td>
+<td>简单</td>
+<td>链表；双指针；哈希表</td>
 </tr>
 </tbody></table>
 <h2 id="刷题笔记"><a href="#刷题笔记" class="headerlink" title="刷题笔记"></a>刷题笔记</h2><h3 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1.两数之和"></a>1.两数之和</h3><ul>
@@ -499,6 +526,34 @@
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> hasCycle = <span class="keyword">function</span>(<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> slow = fast = head</span><br><span class="line">    <span class="keyword">while</span>(slow &amp;&amp; fast &amp;&amp; fast.<span class="property">next</span>)&#123;</span><br><span class="line">        slow = slow.<span class="property">next</span></span><br><span class="line">        fast = fast.<span class="property">next</span>.<span class="property">next</span></span><br><span class="line">        <span class="keyword">if</span>(slow === fast)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
+<h3 id="19-删除链表的倒数第N个结点"><a href="#19-删除链表的倒数第N个结点" class="headerlink" title="19.删除链表的倒数第N个结点"></a>19.删除链表的倒数第N个结点</h3><ul>
+<li>设置快慢指针，先让快指针先走 N 步</li>
+<li>然后快慢指针同时往下走，直到快指针到达最后一个结点，此时慢指针为倒数第 N 个结点的前一个结点</li>
+<li>找到前一个结点后，即可删除倒数第 N 个结点</li>
+<li>这里要注意删除第一个结点的特殊情况</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//快慢指针</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">removeNthFromEnd</span>(<span class="params"> head ,  n </span>) &#123;</span><br><span class="line">    <span class="comment">// write code here</span></span><br><span class="line">    <span class="keyword">if</span>(head == <span class="literal">null</span>)    <span class="keyword">return</span> <span class="literal">null</span></span><br><span class="line">    <span class="keyword">let</span> slow = head</span><br><span class="line">    <span class="keyword">let</span> fast = head</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n;i++)&#123;</span><br><span class="line">        fast = fast.<span class="property">next</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 删除第1个</span></span><br><span class="line">    <span class="keyword">if</span>(fast == <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> head.<span class="property">next</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(fast.<span class="property">next</span>)&#123;</span><br><span class="line">        fast = fast.<span class="property">next</span></span><br><span class="line">        slow = slow.<span class="property">next</span></span><br><span class="line">    &#125;</span><br><span class="line">    slow.<span class="property">next</span> = slow.<span class="property">next</span>.<span class="property">next</span></span><br><span class="line">    <span class="keyword">return</span> head</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206.反转链表"></a>206.反转链表</h3><ul>
+<li><p>迭代法</p>
+<ul>
+<li>定义三个指针，分别指向当前遍历到的结点 cur、它的前一个结点 pre 及后一个结点 next</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reverseList = <span class="keyword">function</span>(<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!head || !head.<span class="property">next</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> head</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> pre = <span class="literal">null</span>,cur = head</span><br><span class="line">    <span class="keyword">while</span>(cur)&#123;</span><br><span class="line">        <span class="keyword">let</span> next = cur.<span class="property">next</span></span><br><span class="line">        cur.<span class="property">next</span> = pre</span><br><span class="line">        pre = cur</span><br><span class="line">        cur = next</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pre</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+<li><p>递归法</p>
+<p>建议看图解演示，更好理解一些</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-linked-list/solution/dong-hua-yan-shi-206-fan-zhuan-lian-biao-by-user74/">https://leetcode.cn/problems/reverse-linked-list/solution/dong-hua-yan-shi-206-fan-zhuan-lian-biao-by-user74/</a></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reverseList = <span class="keyword">function</span>(<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!head || !head.<span class="property">next</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> head</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 这里的 cur 指的是最后一个节点</span></span><br><span class="line">    <span class="keyword">let</span> cur = <span class="title function_">reverseList</span>(head.<span class="property">next</span>)</span><br><span class="line">    head.<span class="property">next</span>.<span class="property">next</span> = head</span><br><span class="line">  	<span class="comment">// 避免出现环</span></span><br><span class="line">    head.<span class="property">next</span> = <span class="literal">null</span></span><br><span class="line">    <span class="keyword">return</span> cur </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="160-相交链表"><a href="#160-相交链表" class="headerlink" title="160.相交链表"></a>160.相交链表</h3><ul>
+<li>设 <code>A</code> 链表头节点到相交处节点的长度为 a，<code>B</code> 链表头节点到相交处节点的长度为 b，相交处节点到尾节点的长度为 c，（a + c）+ b = （b + c）+ a</li>
+<li>设置两个指针，一个从 <code>A</code> 链表头节点开始迭代，另一个从 <code>B</code> 链表头节点开始迭代</li>
+<li>为了使这两个指针走过相同的长度，并在相交的节点上相遇：若有一个指针到达末尾，则将其置为另一个链表的头节点，继续往下走</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> getIntersectionNode = <span class="keyword">function</span>(<span class="params">headA, headB</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> a = headA</span><br><span class="line">    <span class="keyword">let</span> b = headB</span><br><span class="line">    <span class="keyword">while</span>(a !== b)&#123;</span><br><span class="line">        a = (a === <span class="literal">null</span>) ? headB : a.<span class="property">next</span></span><br><span class="line">        b = (b === <span class="literal">null</span>) ? headA : b.<span class="property">next</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 
         </article>
         <section class="post-near">
@@ -562,7 +617,7 @@
             </div>
         </section>
         <section class="sub-footer">
-            <p>© 2022 <a href="/">Silentlight&#39;s blog</a>. All Rights Reserved. Theme By <a href="https://github.com/Dreamer-Paul/Hingle" target="_blank" rel="nofollow">Hingle</a>.</p>
+            <p>© 2023 <a href="/">Silentlight&#39;s blog</a>. All Rights Reserved. Theme By <a href="https://github.com/Dreamer-Paul/Hingle" target="_blank" rel="nofollow">Hingle</a>.</p>
             <span>
                 本站总访问量<span id="busuanzi_value_site_pv"></span>次
             </span>
