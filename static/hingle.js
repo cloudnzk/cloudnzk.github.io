@@ -94,8 +94,8 @@ var Paul_Hingle = function (config) {
     // 自动添加外链
     this.links = function () {
         var l = content.getElementsByTagName("a");
-        // 排除追番页
-        if(l && l.className.indexOf('bangumi') === -1){
+
+        if(l){
             ks.each(l, function (t) {
                 t.target = "_blank";
             });
@@ -156,7 +156,7 @@ var Paul_Hingle = function (config) {
     // 如果开启复制内容提示
     if(config.copyright){
         document.oncopy = function () {
-            ks.notice("复制成功", {color: "yellow", overlay: true})
+            ks.notice("复制内容请注明来源并保留版权信息！", {color: "yellow", overlay: true})
         };
     }
 
@@ -164,14 +164,14 @@ var Paul_Hingle = function (config) {
     // ! Hexo 特别功能
     //
 
-    // Hexo 谷歌搜索
+    // Hexo 百度搜索
     this.hexo_search = function () {
         var form = ks.select(".head-search"), input = ks.select(".head-search input");
 
         form.onsubmit = function (ev) {
             ev.preventDefault();
 
-            window.open("https://www.google.com/search?q=site:" + location.host + " " + input.value.trim());
+            window.open("https://www.baidu.com/s?wd=site:" + location.host + " " + input.value.trim());
         }        
     }
 
