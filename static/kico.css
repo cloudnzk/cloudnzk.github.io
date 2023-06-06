@@ -4,7 +4,7 @@
 
 # Kico Style 1.0
 # By: Dreamer-Paul
-# Last Update: 2022.1.8
+# Last Update: 2021.10.3
 
 一个可口的极简响应式前端框架。
 
@@ -14,15 +14,28 @@
 
 /* 0 - 全局
 -------------------------------- */
-body, dl, dt, dd, ol, ul,
-h1, h2, h3, h4, h5, h6, p,
-pre, code, form,
+html, body,
+dl, dt, dd, ol, ul,
+h1, h2, h3, h4, h5, h6,
+pre, code, form, p,
 fieldset, legend, figure{
     margin: 0;
     padding: 0;
 }
 
 *, *:before, *:after{ box-sizing: border-box }
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section{ display: block }
+
+html{
+    color: #353535;
+    scroll-behavior: smooth;
+    font: 16px/1.5 'Microsoft Yahei', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+}
+
+html.font-s{ font-size: 14px }
+html.font-m{ font-size: 16px }
+html.font-l{ font-size: 18px }
 
 :root{
     /* 内设颜色 */
@@ -35,31 +48,16 @@ fieldset, legend, figure{
     --light-gray: #ddd;
     --lighter-gray: #eee;
 
-    /* 主色 */
-    --primary: var(--blue);
-    /* 次色 */
-    --secondly: var(--yellow);
-    /* 圆角 */
-    --radius: .5em;
-}
-
-:root{
-    color: #353535;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    font: 16px/1.5 'Microsoft Yahei', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+    --primary: var(--blue); /* 主色 */
+    --secondly: var(--yellow); /* 次色 */
 }
 
 @media screen and (max-width: 768px){
-    :root.font-auto{ font-size: 14px }
+    html.font-auto{ font-size: 14px }
 }
 
 @media screen and (min-width: 1921px){
-    :root.font-auto{ font-size: 18px }
-}
-
-@media (prefers-reduced-motion: no-preference){
-    :root{ scroll-behavior: smooth }
+    html.font-auto{ font-size: 18px }
 }
 
 /* - 选择内容 */
@@ -99,10 +97,6 @@ body::-webkit-scrollbar-track{ border-radius: 0 }
     clear: both;
     display: block;
 }
-
-.font-s{ font-size: .875em }
-.font-m{ font-size: 1.125em }
-.font-l{ font-size: 1.25em }
 
 .text-left{ text-align: left !important }
 .text-right{ text-align: right !important }
@@ -164,10 +158,9 @@ abbr[title]{
 }
 
 em, mark, kbd{
-    font-size: .875em;
+    font-size: .85em;
     padding: .25em .5em;
     border-radius: .5em;
-    border-radius: var(--radius);
 }
 
 em{
@@ -213,7 +206,6 @@ article ul, article ol, article dl{ line-height: 1.8 }
 
 /* - 按钮 */
 button{
-    margin: 0;
     outline: 0;
     font: inherit;
 }
@@ -223,8 +215,7 @@ button{
     cursor: pointer;
     background: #fff;
     padding: .5em 1em;
-    border-radius: .5em;
-    border-radius: var(--radius);
+    border-radius: 4px;
     display: inline-block;
     border: 1px solid transparent;
 }
@@ -237,7 +228,7 @@ button{
 }
 
 /* -- 按钮尺寸 */
-.btn.small{ font-size: .875em }
+.btn.small{ font-size: .85em }
 .btn.middle, .btn.large{ padding: .75em 1.5em }
 .btn.large{ font-size: 1.2em }
 
@@ -263,30 +254,28 @@ button{
 .btn.transparent{ background: transparent }
 
 /* - 代码 */
-pre, code{
-    word-break: normal;
-    font-family: 'Consolas', 'Courier New', monospace;
-}
-
-pre{
-    tab-size: 4;
-    padding: 1em;
-    color: #fff;
-    overflow: auto;
-    background-color: #333;
-    border-radius: .5em;
-    border-radius: var(--radius);
-}
+pre, code{ font-family: 'Consolas', 'Courier New', monospace }
 
 :not(pre) > code{
     color: #c40b00;
     font-size: 85%;
     word-wrap: normal;
     border-radius: .5em;
-    border-radius: var(--radius);
     padding: .25em .5em;
     word-break: break-all;
     background-color: #f7f2f4;
+}
+
+pre > code{
+    color: #fff;
+    tab-size: 4;
+    padding: 1em;
+    display: block;
+    overflow-x: auto;
+    word-break: normal;
+    font-size: inherit;
+    border-radius: 5px;
+    background-color: #333;
 }
 
 /* - 项目列表 */
@@ -310,7 +299,7 @@ a, .btn{
     -webkit-transition: color .3s, background .3s;
 }
 
-/* - 引用 */
+/* - 引用*/
 blockquote{
     margin: 0 0 1em;
     line-height: 1.8;
@@ -339,7 +328,6 @@ input[disabled], textarea[disabled]{
 }
 
 input, select, textarea{
-    margin: 0;
     outline: none;
     font: inherit;
     max-width: 100%;
@@ -351,8 +339,7 @@ input[type*="date"], input[type="email"], input[type="month"], input[type="numbe
 select, textarea{
     padding: .5em;
     color: inherit;
-    border-radius: .5em;
-    border-radius: var(--radius);
+    border-radius: 4px;
     border: #ccc 1px solid;
     border-color: var(--gray);
     min-height: calc(2.5em + 2px);
@@ -367,13 +354,10 @@ input.invalid, input:out-of-range{
     color: #fff;
     border: none;
     outline: none;
+    display: block;
     padding: .5em 1em;
-    margin-right: .5em;
-    display: inline-block;
+    background: #3498db;
     border-radius: .5em;
-    border-radius: var(--radius);
-    background-color: #3498db;
-    background-color: var(--primary);
 }
 
 input[type="range"]{
@@ -394,66 +378,61 @@ input[type="range"]:focus{
 
 input[type="range"]:active::-webkit-slider-thumb{
     border-color: #3498db;
-    border-color: var(--primary);
     background-color: #3498db;
-    background-color: var(--primary);
 }
 
 input[type="range"]:active::-moz-range-thumb{
     border-color: #3498db;
-    border-color: var(--primary);
     background-color: #3498db;
-    background-color: var(--primary);
 }
 
 input[type="range"]:focus::-ms-thumb{
-    border-color: #9c27b0;
-    background-color: #673ab7;
+    border-color: #9C27B0;
+    background-color: #673AB7;
 }
 
 input[type="range"]::-moz-focus-outer{ border: 0 }
 
 input[type="range"]::-webkit-slider-runnable-track{
+    background: #3498db;
     content: '';
     height: 2px;
     pointer-events: none;
-    background-color: #3498db;
-    background-color: var(--primary);
 }
 
 input[type="range"]::-webkit-slider-thumb{
-    width: 1em;
-    height: 1em;
+    width: 14px;
+    height: 14px;
     -webkit-appearance: none;
     appearance: none;
     background: #fff;
-    border-radius: 5em;
-    margin-top: calc(-.5em + 1px);
+    border-radius: 50px;
+    margin-top: -6px;
     border: 1px solid rgba(0, 0, 0, .15);
     transition: .3s border-color, .3s background-color;
 }
 
 input[type="range"]::-moz-range-track{
+    width: 240px;
     height: 2px;
     background: rgba(0, 50, 126, .12);
 }
 
 input[type="range"]::-moz-range-thumb{
-    width: 1em;
-    height: 1em;
+    width: 14px;
+    height: 14px;
     background: #fff;
-    border-radius: 5em;
-    margin-top: calc(-.5em + 1px);
-    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 50px;
+    border: 1px solid rgba(0, 30, 75, .12);
+    position: relative;
     transition: .3s border-color, .3s background-color;
 }
 
 input[type="range"]::-moz-range-progress{
-    border: 0;
     height: 2px;
+    background: #467fcf;
+    border: 0;
     margin-top: 0;
-    background-color: #3498db;
-    background-color: var(--primary);
 }
 
 select{
@@ -525,8 +504,8 @@ input[type="radio"], input[type="radio"]:before{ border-radius: 100% }
 input[type="checkbox"], input[type="checkbox"]:before{ border-radius: .2em }
 
 input[type="radio"]:checked:before{
-    background-color: #3498db;
-    background-color: var(--primary);
+    background: #3498db;
+    background: var(--primary);
     border: 2px solid #3498db;
     border-color: var(--primary);
     box-shadow: 0 0 0 .2em #fff inset;
@@ -534,8 +513,8 @@ input[type="radio"]:checked:before{
 
 input[type="checkbox"]:checked:before{
     box-shadow: none;
-    background-color: #3498db;
-    background-color: var(--primary);
+    background: #3498db;
+    background: var(--primary);
 }
 
 input[type="checkbox"]:checked:after{
@@ -576,8 +555,8 @@ input[type="checkbox"].switch:after{ content: normal }
 
 input[type="checkbox"].switch:checked{
     box-shadow: none;
-    background-color: #3498db;
-    background-color: var(--primary);
+    background: #3498db;
+    background: var(--primary);
     border-color: #3498db;
     border-color: var(--primary);
 }
@@ -610,7 +589,7 @@ fieldset label{
 /* -- 控件标题 */
 fieldset label > span:first-child{
     opacity: .6;
-    font-size: .875em;
+    font-size: .85em;
     white-space: nowrap;
     margin-bottom: .5rem;
     display: inline-block;
@@ -718,28 +697,22 @@ iframe{
 
 /* - 栅格系统 */
 .row{
-    row-gap: 2em;
     display: flex;
-    margin: 0 -1em;
     flex-wrap: wrap;
+    margin: 0 -1em -2em;
 }
 
-.row.s{
-    row-gap: 1em;
-    margin: 0 -.5em;
-}
-.row.m{
-    row-gap: 2.5em;
-    margin: 0 -1.25em;
-}
-.row.l{
-    row-gap: 3em;
-    margin: 0 -1.5em;
-}
+.row.s{ margin: 0 -.5em -1em }
+.row.m{ margin: 0 -1.25em -2.5em }
+.row.l{ margin: 0 -1.5em -3em }
+.row.full{ margin: 0 }
+.row.clear{ margin-bottom: 0 }
 
-.row.full{
-    row-gap: 0;
-    margin: 0;
+.row.scrollable{
+    overflow: auto;
+    margin-left: 0;
+    margin-right: 0;
+    flex-wrap: nowrap;
 }
 
 /* -- 对齐方式 */
@@ -753,41 +726,42 @@ iframe{
     flex: 0 0 100%;
     padding: 0 1em;
     max-width: 100%;
+    margin-bottom: 2em;
 }
 
 .row.s > [class*="col-"]{
     padding: 0 .5em;
+    margin-bottom: 1em;
 }
 .row.m > [class*="col-"]{
     padding: 0 1.25em;
+    margin-bottom: 2.5em;
 }
 .row.l > [class*="col-"]{
     padding: 0 1.5em;
+    margin-bottom: 3em;
 }
 .row.full > [class*="col-"]{
     padding: 0;
+    margin-bottom: 0;
 }
 
 /* -- 自适应间距栅格 */
 @media screen and (max-width: 600px){
-    .row.auto{
-        row-gap: 1em;
-        margin: 0 -.5em;
-    }
+    .row.auto{ margin: 0 -.5em -1em }
 
     .row.auto > [class*="col-"]{
         padding: 0 .5em;
+        margin-bottom: 1em;
     }
 }
 
 @media screen and (min-width: 1920px){
-    .row.auto{
-        row-gap: 2.5em;
-        margin: 0 -1.25em;
-    }
+    .row.auto{ margin: 0 -1.25em -2.5em }
 
     .row.auto > [class*="col-"]{
         padding: 0 1.25em;
+        margin-bottom: 2.5em;
     }
 }
 
@@ -1193,10 +1167,7 @@ iframe{
 
 /* - 漂浮提示 */
 [ks-tag]{ position: relative }
-[ks-tag]:before, [ks-tag]:after{
-    position: absolute;
-    pointer-events: none;
-}
+[ks-tag]:before, [ks-tag]:after{ position: absolute }
 
 /* -- 小箭头 */
 [ks-tag]:before{
@@ -1282,9 +1253,10 @@ iframe{
     opacity: 0;
     z-index: 1;
     color: #fff;
-    font-size: .85rem;
+    font-size: .85em;
+    border-radius: .5em;
     white-space: nowrap;
-    border-radius: .5rem;
+    pointer-events: none;
     padding: .25rem .5rem;
     content: attr(ks-text);
     transition: opacity .3s;
