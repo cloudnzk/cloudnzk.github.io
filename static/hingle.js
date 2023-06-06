@@ -95,7 +95,7 @@ var Paul_Hingle = function (config) {
     this.links = function () {
         var l = content.getElementsByTagName("a");
 
-        if(l && l.className.indexOf('bangumi') === -1){
+        if(l){
             ks.each(l, function (t) {
                 t.target = "_blank";
             });
