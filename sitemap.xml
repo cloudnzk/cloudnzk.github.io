@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.silentlight.tk/2023/05/28/graduate-student-summary/</loc>
+    
+    <lastmod>2023-06-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.silentlight.tk/2019/03/09/hello-world/</loc>
     
     <lastmod>2023-06-16</lastmod>
@@ -228,6 +237,13 @@
   
   <url>
     <loc>https://www.silentlight.tk/tags/%E8%AE%BA%E6%96%87/</loc>
+    <lastmod>2023-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.silentlight.tk/tags/%E6%AF%95%E4%B8%9A/</loc>
     <lastmod>2023-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
