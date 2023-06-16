@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.silentlight.tk/2022/05/20/hexo-hingle-configuration/</loc>
+    
+    <lastmod>2023-06-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.silentlight.tk/2023/05/28/graduate-student-summary/</loc>
     
     <lastmod>2023-06-16</lastmod>
@@ -77,15 +86,6 @@
     <loc>https://www.silentlight.tk/2022/12/08/leetcode-hot-100-notebook/</loc>
     
     <lastmod>2022-12-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.silentlight.tk/2022/05/20/hexo-hingle-configuration/</loc>
-    
-    <lastmod>2022-12-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

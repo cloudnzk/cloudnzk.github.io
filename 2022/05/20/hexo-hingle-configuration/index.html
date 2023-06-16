@@ -119,16 +119,6 @@ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 <p>创建一个关于的独立页面即可，但需要注意一下页面的路径，要跟 <code>_config.yml</code> 文件中 <code>menu</code> 配置的路径对应上。以下指令是在 <code>about</code> 路径下创建一个名为 <code>index.md</code> 的文件。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page --path about/index <span class="token string">"About me"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="标签页显示“没有标题”解决"><a href="#标签页显示“没有标题”解决" class="headerlink" title="标签页显示“没有标题”解决"></a>标签页显示“没有标题”解决</h3><p>打开 <code>~/blog/themes/hingle/layout/_partial</code> 下的 <code>head.ejs</code> 文件，找到下面几行</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">is_post</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> page<span class="token punctuation">.</span>title<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-	title <span class="token operator">=</span> page<span class="token punctuation">.</span>title<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>然后在后面加上以下代码，增加对独立页面的判断与标题赋值</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">is_page</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> page<span class="token punctuation">.</span>title<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-	title <span class="token operator">=</span> page<span class="token punctuation">.</span>title<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <h2 id="favicon图标更换"><a href="#favicon图标更换" class="headerlink" title="favicon图标更换"></a>favicon图标更换</h2><p>找到 <code>~/blog/themes/hingle/source/static/img</code> 路径下的 <code>icon.png</code>，替换成自己的即可。如果不显示新的 favicon 图标，可以强制刷新一下页面，或者清理一下浏览器的缓存。</p>
 <p>至此，<code>Hingle</code> 主题的基本配置就完成了。</p>
 <h1 id="进阶配置"><a href="#进阶配置" class="headerlink" title="进阶配置"></a>进阶配置</h1><h2 id="提高二次元浓度"><a href="#提高二次元浓度" class="headerlink" title="提高二次元浓度"></a>提高二次元浓度</h2><blockquote>
@@ -203,19 +193,18 @@ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 <h2 id="默认夜间模式"><a href="#默认夜间模式" class="headerlink" title="默认夜间模式"></a>默认夜间模式</h2><p>编辑 <code>themes/hingle/layout/</code> 文件夹下的 <code>layout.ejs</code>，在 <code>&lt;body&gt;</code> 标签上添加 <code>dark-theme</code> 的 CSS 样式即可</p>
 <p><img src="https://s2.loli.net/2022/12/02/zGiNFTfoAe9uSkj.png"></p>
 <p>现在 <code>Hingle</code> 的夜间模式切换有点问题，等作者啥时候有空修复一下吧 </p>
-<h2 id="Vercel部署"><a href="#Vercel部署" class="headerlink" title="Vercel部署"></a>Vercel部署</h2><blockquote>
-<p>现在 Vercel 在国内也开始被墙了…后面再想想该怎么解决</p>
-</blockquote>
-<p>以 <code>github.io</code> 结尾的域名，在国内访问经常受限，而且打开速度也非常缓慢。因此，除了部署在 <code>GitHub pages</code> 上，通常也会将 <code>Hexo</code> 博客部署到 <a target="_blank" rel="noopener" href="https://vercel.com/dashboard">Vercel</a> 上，使得博客在国内也能正常访问。</p>
+<h2 id="博客部署"><a href="#博客部署" class="headerlink" title="博客部署"></a>博客部署</h2><p>下面提供了我的整套白嫖方案，具体的步骤可搜索网络的教程解决，在此不再赘述</p>
 <ul>
-<li><p><code>Vercel</code> 提供了一键拉取 <code>GitHub</code> 仓库的方便功能，前提是绑定 <code>GitHub</code> 账户，然后授权 <code>Vercel</code> 操作 <code>GitHub</code> 仓库的权限。</p>
-</li>
-<li><p>每当执行指令 <code>hexo d</code> 部署完成后，<code>Vercel</code> 就会拉取最新的 <code>GitHub</code> 仓库自动部署，这样超级方便有没有~</p>
-</li>
-<li><p>另外，<code>Vercel</code> 还免费提供了博客的域名，白嫖就是爽！</p>
-</li>
+<li>首先将博客托管到 <code>vercel</code> 上。在 <code>vercel</code> 的 Dashboard 中导入 <code>GitHub</code> 中的博客仓库，并一键部署</li>
 </ul>
 <p><img src="https://s2.loli.net/2022/05/20/1d6crCWAEZMXfB7.png" alt="vercel部署"></p>
+<ul>
+<li><p>遗憾的是，<code>vercel</code> 现在的域名在国内无法访问。因此需要在 <code>Freenom</code> 上申请一个免费域名</p>
+</li>
+<li><p>然后在 <code>Cloudflare</code> 上配置一下域名的 <code>DNS</code> 解析。这样 <code>DNS</code> 解析时就通过<code>Cloudflare</code> 做了一层代理，使我们的域名能够在国内访问</p>
+<pre class="line-numbers language-none"><code class="language-none">A记录地址：76.76.21.98
+CNAME 记录地址：cname-china.vercel-dns.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+</ul>
 <h2 id="谷歌、百度收录"><a href="#谷歌、百度收录" class="headerlink" title="谷歌、百度收录"></a>谷歌、百度收录</h2><p>让谷歌、百度收录你的网站，让别人能搜索到你的文章</p>
 <h3 id="谷歌"><a href="#谷歌" class="headerlink" title="谷歌"></a>谷歌</h3><ol>
 <li><p>生成 <code>sitemap.xml</code> 站点地图</p>
@@ -254,11 +243,24 @@ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 <span class="token key atrule">language</span><span class="token punctuation">:</span> zh<span class="token punctuation">-</span>CN
 <span class="token key atrule">timezone</span><span class="token punctuation">:</span> <span class="token string">'Asia/Shanghai'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="bug-修复"><a href="#bug-修复" class="headerlink" title="bug 修复"></a>bug 修复</h1><h3 id="font-awesome-图标丢失"><a href="#font-awesome-图标丢失" class="headerlink" title="font-awesome 图标丢失"></a>font-awesome 图标丢失</h3><p>2022.11月回来看自己的博客，发现博客的图标全部消失了。F12 打开 Chrome 开发者工具看了下，博客的图标是使用的是 font-awesome，于是推测是引入方面出了问题。</p>
+<h1 id="bug-修复"><a href="#bug-修复" class="headerlink" title="bug 修复"></a>bug 修复</h1><blockquote>
+<p>以下两个bug，作者均已修复，可更新到最新版本使用</p>
+</blockquote>
+<h2 id="font-awesome-图标丢失"><a href="#font-awesome-图标丢失" class="headerlink" title="font-awesome 图标丢失"></a>font-awesome 图标丢失</h2><p>2022.11月回来看自己的博客，发现博客的图标全部消失了。F12 打开 Chrome 开发者工具看了下，博客的图标是使用的是 font-awesome，于是推测是引入方面出了问题。</p>
 <p><img src="https://s2.loli.net/2022/11/29/zND4lWicoSa5IPm.png"></p>
 <p>经过一步步排查，原来是 font-awesome 的 CDN 无效了，需要更新 CDN 链接。</p>
 <p>解决办法：编辑 <code>themes/hingle/layout/_partial</code> 文件夹下的 <code>head.ejs</code>，修改 font-awesome 的 CDN 链接为 <code>https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css</code></p>
 <p><img src="https://s2.loli.net/2022/11/29/lxYBKVIHwq6JFhu.png"></p>
+<h2 id="标签页显示“没有标题”解决"><a href="#标签页显示“没有标题”解决" class="headerlink" title="标签页显示“没有标题”解决"></a>标签页显示“没有标题”解决</h2><p>打开 <code>~/blog/themes/hingle/layout/_partial</code> 下的 <code>head.ejs</code> 文件，找到下面几行</p>
+<pre class="line-numbers language-none"><code class="language-none">else if(is_post() &amp;&amp; page.title)&#123;
+	title &#x3D; page.title;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>然后在后面加上以下代码，增加对独立页面的判断与标题赋值</p>
+<pre class="line-numbers language-none"><code class="language-none">else if(is_page() &amp;&amp; page.title)&#123;
+	title &#x3D; page.title;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
 <li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo官方文档</a></li>
 <li><a target="_blank" rel="noopener" href="https://docs.paul.ren/hingle/#/">Hingle主题官方文档</a></li>
