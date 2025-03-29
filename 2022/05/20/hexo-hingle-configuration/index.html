@@ -1,35 +1,555 @@
-extends includes/layout.pug
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="很早之前就喜欢奇妙保罗大佬的 Single 主题，奈何当时只支持 Typecho 而没有 Hexo 版本的，只得作罢。令人惊喜的是，作者本人在2021年又将其移植到 Hexo 中，称为 Hingle。  一个简洁大气，含夜间模式的 Hexo 博客模板。  正如其简介所言，Hingle 主题就是那么简约干净，清清爽爽。另外，个人比较喜欢这款主题的配色（蓝色太好看了），还有可爱的二次元风格背景图。以下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo Hingle 主题基础配置&amp;进阶配置">
+<meta property="og:url" content="https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/index.html">
+<meta property="og:site_name" content="Silentlight&#39;s blog">
+<meta property="og:description" content="很早之前就喜欢奇妙保罗大佬的 Single 主题，奈何当时只支持 Typecho 而没有 Hexo 版本的，只得作罢。令人惊喜的是，作者本人在2021年又将其移植到 Hexo 中，称为 Hingle。  一个简洁大气，含夜间模式的 Hexo 博客模板。  正如其简介所言，Hingle 主题就是那么简约干净，清清爽爽。另外，个人比较喜欢这款主题的配色（蓝色太好看了），还有可爱的二次元风格背景图。以下">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/05/20/oBI6S1578WiYf4V.png">
+<meta property="og:image" content="https://s2.loli.net/2022/05/20/ikLsA1Vy3rzdj4b.png">
+<meta property="og:image" content="https://s2.loli.net/2022/05/20/PbLMNU7YurVa5vJ.png">
+<meta property="og:image" content="https://s2.loli.net/2022/12/02/zGiNFTfoAe9uSkj.png">
+<meta property="og:image" content="https://s2.loli.net/2022/05/20/1d6crCWAEZMXfB7.png">
+<meta property="og:image" content="https://s2.loli.net/2022/05/20/FMB1J2drjYuIsqU.png">
+<meta property="og:image" content="https://s2.loli.net/2022/05/20/tjaEHSU1qfLZnis.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/29/zND4lWicoSa5IPm.png">
+<meta property="og:image" content="https://s2.loli.net/2022/11/29/lxYBKVIHwq6JFhu.png">
+<meta property="article:published_time" content="2022-05-20T13:52:46.000Z">
+<meta property="article:modified_time" content="2023-06-16T16:58:59.633Z">
+<meta property="article:author" content="Silentlight">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Hingle">
+<meta property="article:tag" content="博客搭建">
+<meta property="article:tag" content="主题配置">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/05/20/oBI6S1578WiYf4V.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Hexo Hingle 主题基础配置&amp;进阶配置</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
 
-    article#article-container.container.post-content
-      if theme.noticeOutdate.enable && page.noticeOutdate !== false
-        include includes/post/outdate-notice.pug
-      else
-        !=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (page.tags.length > 0 && theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+    <!-- Umami Analytics -->
 
-    if theme.reward.enable && theme.reward.QR_code
-      !=partial('includes/post/reward', {}, {cache: true})
 
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Silentlight's blog" type="application/atom+xml">
+</head>
 
-    if page.comments !== false && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/friends/">友链</a></li><!--
+     --><!--
+       --><li><a href="/bangumis/">追番</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2022/12/08/leetcode-hot-100-notebook/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2022/05/20/return-hexo/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&text=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&title=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&is_video=false&description=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hexo Hingle 主题基础配置&amp;进阶配置&body=Check out this article: https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&title=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&title=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&title=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&title=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&name=Hexo Hingle 主题基础配置&amp;进阶配置&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&t=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">前置工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%95%E5%85%A5%E4%B8%BB%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">引入主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF"><span class="toc-number">3.1.</span> <span class="toc-text">个人信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A1%B5%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5"><span class="toc-number">3.2.</span> <span class="toc-text">主页社交链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E5%9B%BE"><span class="toc-number">3.3.</span> <span class="toc-text">背景图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2"><span class="toc-number">3.4.</span> <span class="toc-text">关于页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#favicon%E5%9B%BE%E6%A0%87%E6%9B%B4%E6%8D%A2"><span class="toc-number">3.5.</span> <span class="toc-text">favicon图标更换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE"><span class="toc-number">4.</span> <span class="toc-text">进阶配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E9%AB%98%E4%BA%8C%E6%AC%A1%E5%85%83%E6%B5%93%E5%BA%A6"><span class="toc-number">4.1.</span> <span class="toc-text">提高二次元浓度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%BC%AB%E8%AF%AD%E5%BD%95"><span class="toc-number">4.1.1.</span> <span class="toc-text">动漫语录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%BD%E7%95%AA%E5%88%97%E8%A1%A8"><span class="toc-number">4.1.2.</span> <span class="toc-text">追番列表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F"><span class="toc-number">4.2.</span> <span class="toc-text">默认夜间模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2"><span class="toc-number">4.3.</span> <span class="toc-text">博客部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%B7%E6%AD%8C%E3%80%81%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95"><span class="toc-number">4.4.</span> <span class="toc-text">谷歌、百度收录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%B7%E6%AD%8C"><span class="toc-number">4.4.1.</span> <span class="toc-text">谷歌</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BE%E5%BA%A6"><span class="toc-number">4.4.2.</span> <span class="toc-text">百度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SEO%E4%BC%98%E5%8C%96"><span class="toc-number">4.5.</span> <span class="toc-text">SEO优化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#bug-%E4%BF%AE%E5%A4%8D"><span class="toc-number">5.</span> <span class="toc-text">bug 修复</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#font-awesome-%E5%9B%BE%E6%A0%87%E4%B8%A2%E5%A4%B1"><span class="toc-number">5.1.</span> <span class="toc-text">font-awesome 图标丢失</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E9%A1%B5%E6%98%BE%E7%A4%BA%E2%80%9C%E6%B2%A1%E6%9C%89%E6%A0%87%E9%A2%98%E2%80%9D%E8%A7%A3%E5%86%B3"><span class="toc-number">5.2.</span> <span class="toc-text">标签页显示“没有标题”解决</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">6.</span> <span class="toc-text">参考</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Hexo Hingle 主题基础配置&amp;进阶配置
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Silentlight</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-05-20T13:52:46.000Z" class="dt-published" itemprop="datePublished">2022-05-20</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Hexo/" rel="tag">Hexo</a>, <a class="p-category" href="/tags/Hingle/" rel="tag">Hingle</a>, <a class="p-category" href="/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" rel="tag">主题配置</a>, <a class="p-category" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p>很早之前就喜欢奇妙保罗大佬的 <a target="_blank" rel="noopener" href="https://github.com/Dreamer-Paul/Single">Single</a> 主题，奈何当时只支持 <code>Typecho</code> 而没有 <code>Hexo</code> 版本的，只得作罢。令人惊喜的是，作者本人在2021年又将其移植到 <code>Hexo</code> 中，称为 <a target="_blank" rel="noopener" href="https://github.com/Dreamer-Paul/Hingle">Hingle</a>。</p>
+<blockquote>
+<p>一个简洁大气，含夜间模式的 Hexo 博客模板。</p>
+</blockquote>
+<p>正如其简介所言，<code>Hingle</code> 主题就是那么简约干净，清清爽爽。另外，个人比较喜欢这款主题的配色（蓝色太好看了），还有可爱的二次元风格背景图。以下就是本人搭建好的博客页面，是不是挺简洁美观的~</p>
+<p><img src="https://s2.loli.net/2022/05/20/oBI6S1578WiYf4V.png" alt="Hingle博客预览"></p>
+<p>话不多说，下面就直接开换。さあ、始めよう!</p>
+<h1 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h1><p>在使用这款主题之前，你应该首先安装 <code>Node.js</code>，然后将 <code>Hexo</code> 安装好，并且新建一个 <code>Hexo</code> 博客目录。</p>
+<p>这部分参考一下 <code>Hexo</code> 的 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">官方文档</a> 即可，这里不再赘述。下面简单贴下 <code>Hexo</code> 安装的命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-cli -g
+hexo init blog
+<span class="token builtin class-name">cd</span> blog
+<span class="token function">npm</span> <span class="token function">install</span>
+hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="引入主题"><a href="#引入主题" class="headerlink" title="引入主题"></a>引入主题</h1><p>引入主题也比较简单，按照 <code>Hingle</code> 的 <a target="_blank" rel="noopener" href="https://docs.paul.ren/hingle/#/?id=%e5%ae%89%e8%a3%85">官方文档</a> 一步一步来做：</p>
+<ol>
+<li><p>首先将下载好的主题源码放进 <code>Hexo</code> 根目录的 <code>themes</code> 下，并将文件夹重命名为 <code>hingle</code></p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/Dreamer-Paul/Hingle.git
+<span class="token function">mv</span> Hingle themes/hingle<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li><p>然后打开Hexo目录下的 <code>_config.yml</code> 文件，将里面的 <code>theme</code> 字段，更换成 <code>hingle</code> 即可</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">theme</span><span class="token punctuation">:</span> hingle<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+</ol>
+<p>现在运行 <code>hexo g</code> 和 <code>hexo s</code> 指令，然后在浏览器打开 <code>http://localhost:4000/</code>，可以看到主题已经引入成功了。</p>
+<h1 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h1><p>以下是主题的基本配置过程，如没有特别说明，<code>_config.yml</code> 文件都指的是主题目录下的配置文件。</p>
+<h2 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h2><p>将默认的信息改成你自己的就行，个人信息会在文章末尾显示。</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">author</span><span class="token punctuation">:</span> <span class="token string">'Hingle'</span> <span class="token comment"># 作者名称</span>
+<span class="token key atrule">author_avatar</span><span class="token punctuation">:</span> <span class="token string">'https://sdn.geekzu.org/avatar/d22eb460ecab37fcd7205e6a3c55c228?s=200&amp;r=X&amp;d='</span> <span class="token comment"># 作者头像</span>
+<span class="token key atrule">author_text</span><span class="token punctuation">:</span> <span class="token string">'请在这里设置你的作者信息'</span> <span class="token comment"># 作者信息</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="主页社交链接"><a href="#主页社交链接" class="headerlink" title="主页社交链接"></a>主页社交链接</h2><p><code>icon</code> 代表的是 <a target="_blank" rel="noopener" href="https://fontawesome.com/v4/icons/">font awesome 4</a> 中的图标名</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">social</span><span class="token punctuation">:</span> <span class="token comment"># 社交链接</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'Github'</span>
+    <span class="token key atrule">icon</span><span class="token punctuation">:</span> <span class="token string">'github'</span>
+    <span class="token key atrule">link</span><span class="token punctuation">:</span> <span class="token string">'https://github.com/cloudnzk'</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'首页'</span>
+    <span class="token key atrule">icon</span><span class="token punctuation">:</span> <span class="token string">'home'</span>
+    <span class="token key atrule">link</span><span class="token punctuation">:</span> <span class="token string">'https://silentlight.vercel.app/'</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">'音乐'</span>
+    <span class="token key atrule">icon</span><span class="token punctuation">:</span> <span class="token string">'music'</span>
+    <span class="token key atrule">link</span><span class="token punctuation">:</span> <span class="token string">'https://music.163.com/#/user/home?id=81845106'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="背景图"><a href="#背景图" class="headerlink" title="背景图"></a>背景图</h2><p>要启用背景图，去掉 <code>background</code> 前的注释即可。</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">background</span><span class="token punctuation">:</span> <span class="token string">'https://api.paugram.com/wallpaper?source=gh'</span> <span class="token comment"># 主题背景</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="关于页面"><a href="#关于页面" class="headerlink" title="关于页面"></a>关于页面</h2><p>现在点击导航栏上的 <code>关于我</code>，会显示 <code>404 not found</code>，因为关于页面还没有被创建出来。</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">menu</span><span class="token punctuation">:</span> <span class="token comment"># 页眉菜单项目</span>
+  <span class="token key atrule">'关于'</span><span class="token punctuation">:</span> /about
+  <span class="token key atrule">'朋友们'</span><span class="token punctuation">:</span> /friends<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>创建一个关于的独立页面即可，但需要注意一下页面的路径，要跟 <code>_config.yml</code> 文件中 <code>menu</code> 配置的路径对应上。以下指令是在 <code>about</code> 路径下创建一个名为 <code>index.md</code> 的文件。</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new page --path about/index <span class="token string">"About me"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="favicon图标更换"><a href="#favicon图标更换" class="headerlink" title="favicon图标更换"></a>favicon图标更换</h2><p>找到 <code>~/blog/themes/hingle/source/static/img</code> 路径下的 <code>icon.png</code>，替换成自己的即可。如果不显示新的 favicon 图标，可以强制刷新一下页面，或者清理一下浏览器的缓存。</p>
+<p>至此，<code>Hingle</code> 主题的基本配置就完成了。</p>
+<h1 id="进阶配置"><a href="#进阶配置" class="headerlink" title="进阶配置"></a>进阶配置</h1><h2 id="提高二次元浓度"><a href="#提高二次元浓度" class="headerlink" title="提高二次元浓度"></a>提高二次元浓度</h2><blockquote>
+<p>注意：本节要对 Hingle 主题进行 DIY (<del>大量魔改</del>)，请谨慎使用</p>
+</blockquote>
+<ol>
+<li><p>首页展示动漫经典语录</p>
+<p><img src="https://s2.loli.net/2022/05/20/ikLsA1Vy3rzdj4b.png" alt="动漫语录"></p>
+</li>
+<li><p>展示追番列表</p>
+<p><img src="https://s2.loli.net/2022/05/20/PbLMNU7YurVa5vJ.png" alt="追番列表"></p>
+</li>
+</ol>
+<h3 id="动漫语录"><a href="#动漫语录" class="headerlink" title="动漫语录"></a>动漫语录</h3><p>进入主题目录，找到 <code>layout</code> 目录中的 <code>layout.ejs</code>文件，把以下代码加入到 <code>&lt;/body&gt;</code> 标签之前：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 一言<span class="token constant">API</span> Start<span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+  <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://v1.hitokoto.cn?c=a&amp;c=b'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">var</span> hitokoto <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'hitokoto'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    hitokoto<span class="token punctuation">.</span>innerText <span class="token operator">=</span> data<span class="token punctuation">.</span>hitokoto <span class="token operator">+</span> <span class="token string">"《"</span> <span class="token operator">+</span> data<span class="token punctuation">.</span>from <span class="token operator">+</span> <span class="token string">"》"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  	console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 一言<span class="token constant">API</span> End<span class="token operator">--</span><span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然后对同目录的 <code>index.ejs</code> 进行如下修改</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>span<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">%=</span> config<span class="token punctuation">.</span>description <span class="token operator">%</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 一言 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">"hitokoto"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="追番列表"><a href="#追番列表" class="headerlink" title="追番列表"></a>追番列表</h3><ol>
+<li><p>先安装 <a target="_blank" rel="noopener" href="https://github.com/HCLonely/hexo-bilibili-bangumi">hexo-bilibili-bangumi</a> 插件，并进行配置。配置过程省略，请参考文档。</p>
+</li>
+<li><p>配置完成后，记得先拉取番剧数据信息：<code>hexo bangumi -u</code>，然后再 <code>hexo g</code> ，最后会生成一个 <code>bangumi.html</code> 的静态文件。</p>
+</li>
+</ol>
+<p>在第 2 步会出现 <code>hexo g</code> 失败的情况。因为追番页面没有发表时间，所以<code>page.date</code> 为 <code>undefined</code>，调用<code>unix()</code> 方法会出错。根据报错提示，删掉<code>~/blog/themes/hingle/layout</code> 目录下，<code>page.ejs</code> 与 <code>post.ejs</code> 的以下代码可以得到解决。</p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 删除以下代码
+&lt;% if (moment().unix() - page.date.unix() &gt;&#x3D; 15552000) &#123; %&gt;
+	&lt;blockquote&gt;这篇文章上次修改于 &lt;%&#x3D; Math.ceil((moment().unix() - page.date.unix()) &#x2F; 86400) %&gt; 天前，可能其部分内容已经发生变化，如有疑问可询问作者。
+	&lt;&#x2F;blockquote&gt;
+&lt;% &#125; %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>完成以上两步后，此时我们对追番页的 <code>想看</code>、<code>在看</code>、<code>看过</code> 进行切换时，会默认打开一个新窗口，这是因为 <code>Hingle</code> 默认将文章的所有链接都设置成外链了：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 自动添加外链</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">links</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">var</span> l <span class="token operator">=</span> content<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    	ks<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">t</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      	t<span class="token punctuation">.</span>target <span class="token operator">=</span> <span class="token string">"_blank"</span><span class="token punctuation">;</span>
+    	<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>因此，只需要排除掉追番页的链接即可。打开 <code>~/blog/themes/hingle/source/static/</code> 下的 <code>hingle.js</code> 文件，进行如下修改：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 自动添加外链</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">links</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">var</span> l <span class="token operator">=</span> content<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 排除追番页</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>l <span class="token operator">&amp;&amp;</span> l<span class="token punctuation">.</span>className<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'bangumi'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    	ks<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">t</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      	t<span class="token punctuation">.</span>target <span class="token operator">=</span> <span class="token string">"_blank"</span><span class="token punctuation">;</span>
+    	<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="默认夜间模式"><a href="#默认夜间模式" class="headerlink" title="默认夜间模式"></a>默认夜间模式</h2><p>编辑 <code>themes/hingle/layout/</code> 文件夹下的 <code>layout.ejs</code>，在 <code>&lt;body&gt;</code> 标签上添加 <code>dark-theme</code> 的 CSS 样式即可</p>
+<p><img src="https://s2.loli.net/2022/12/02/zGiNFTfoAe9uSkj.png"></p>
+<p>现在 <code>Hingle</code> 的夜间模式切换有点问题，等作者啥时候有空修复一下吧 </p>
+<h2 id="博客部署"><a href="#博客部署" class="headerlink" title="博客部署"></a>博客部署</h2><p>下面提供了我的整套白嫖方案，具体的步骤可搜索网络的教程解决，在此不再赘述</p>
+<ul>
+<li>首先将博客托管到 <code>vercel</code> 上。在 <code>vercel</code> 的 Dashboard 中导入 <code>GitHub</code> 中的博客仓库，并一键部署</li>
+</ul>
+<p><img src="https://s2.loli.net/2022/05/20/1d6crCWAEZMXfB7.png" alt="vercel部署"></p>
+<ul>
+<li><p>遗憾的是，<code>vercel</code> 现在的域名在国内无法访问。因此需要在 <code>Freenom</code> 上申请一个免费域名</p>
+</li>
+<li><p>然后在 <code>Cloudflare</code> 上配置一下域名的 <code>DNS</code> 解析。这样 <code>DNS</code> 解析时就通过<code>Cloudflare</code> 做了一层代理，使我们的域名能够在国内访问</p>
+<pre class="line-numbers language-none"><code class="language-none">A记录地址：76.76.21.98
+CNAME 记录地址：cname-china.vercel-dns.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+</ul>
+<h2 id="谷歌、百度收录"><a href="#谷歌、百度收录" class="headerlink" title="谷歌、百度收录"></a>谷歌、百度收录</h2><p>让谷歌、百度收录你的网站，让别人能搜索到你的文章</p>
+<h3 id="谷歌"><a href="#谷歌" class="headerlink" title="谷歌"></a>谷歌</h3><ol>
+<li><p>生成 <code>sitemap.xml</code> 站点地图</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-sitemap --save
+<span class="token function">npm</span> <span class="token function">install</span> hexo-generator-baidu-sitemap --save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中加入以下配置</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">sitemap</span><span class="token punctuation">:</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> sitemap.xml
+<span class="token key atrule">baidusitemap</span><span class="token punctuation">:</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> baidusitemap.xml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然后用 <code>hexo g</code> 即可生成站点地图，可以看到 <code>public</code> 目录下多出了两个 <code>XML</code> 文件：<code>sitemap.xml</code> 和 <code>baidusitemap.xml</code></p>
+</li>
+<li><p>到<a target="_blank" rel="noopener" href="https://search.google.com/search-console/about">Google Search Console</a>进行验证，选择网址前缀验证，输入 <code>vercel</code> 分配的博客域名，点击继续</p>
+<p><img src="https://s2.loli.net/2022/05/20/FMB1J2drjYuIsqU.png" alt="谷歌验证"></p>
+</li>
+<li><p>将下载好的 <code>HTML</code> 文件放到主题的 <code>source</code> 目录下</p>
+</li>
+<li><p>提交 <code>sitemap.xml</code> 站点地图</p>
+<p><img src="https://s2.loli.net/2022/05/20/tjaEHSU1qfLZnis.png" alt="谷歌地图"></p>
+</li>
+</ol>
+<h3 id="百度"><a href="#百度" class="headerlink" title="百度"></a>百度</h3><ol>
+<li>到 <a target="_blank" rel="noopener" href="https://ziyuan.baidu.com/">百度搜索资源平台</a> 添加博客域名，然后验证，验证方式跟上面谷歌的差不多</li>
+<li>将下载好的 <code>HTML</code> 文件放到主题的 <code>source</code> 目录下</li>
+<li>提交 <code>baidusitemap.xml</code> 站点地图</li>
+</ol>
+<h2 id="SEO优化"><a href="#SEO优化" class="headerlink" title="SEO优化"></a>SEO优化</h2><p>在 <code>Hexo</code> 根目录下的 <code>_config.yml</code> 文件中配置 <code>description</code> 和 <code>keywords</code> 选项。以我的配置为例：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Site</span>
+<span class="token key atrule">title</span><span class="token punctuation">:</span> Silentlight's blog
+<span class="token key atrule">subtitle</span><span class="token punctuation">:</span> <span class="token string">'正视自己的弱小，方能变得更加强大'</span>
+<span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">'Silentlight的个人小站：一个基于Hexo搭建、使用Hingle主题的静态博客；主要记录我的前端、科研笔记，生活所思所想等'</span>
+<span class="token key atrule">keywords</span><span class="token punctuation">:</span> 前端<span class="token punctuation">,</span>生活<span class="token punctuation">,</span>科研<span class="token punctuation">,</span>笔记
+<span class="token key atrule">author</span><span class="token punctuation">:</span> Silentlight
+<span class="token key atrule">language</span><span class="token punctuation">:</span> zh<span class="token punctuation">-</span>CN
+<span class="token key atrule">timezone</span><span class="token punctuation">:</span> <span class="token string">'Asia/Shanghai'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="bug-修复"><a href="#bug-修复" class="headerlink" title="bug 修复"></a>bug 修复</h1><blockquote>
+<p>以下两个bug，作者均已修复，可更新到最新版本使用</p>
+</blockquote>
+<h2 id="font-awesome-图标丢失"><a href="#font-awesome-图标丢失" class="headerlink" title="font-awesome 图标丢失"></a>font-awesome 图标丢失</h2><p>2022.11月回来看自己的博客，发现博客的图标全部消失了。F12 打开 Chrome 开发者工具看了下，博客的图标是使用的是 font-awesome，于是推测是引入方面出了问题。</p>
+<p><img src="https://s2.loli.net/2022/11/29/zND4lWicoSa5IPm.png"></p>
+<p>经过一步步排查，原来是 font-awesome 的 CDN 无效了，需要更新 CDN 链接。</p>
+<p>解决办法：编辑 <code>themes/hingle/layout/_partial</code> 文件夹下的 <code>head.ejs</code>，修改 font-awesome 的 CDN 链接为 <code>https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css</code></p>
+<p><img src="https://s2.loli.net/2022/11/29/lxYBKVIHwq6JFhu.png"></p>
+<h2 id="标签页显示“没有标题”解决"><a href="#标签页显示“没有标题”解决" class="headerlink" title="标签页显示“没有标题”解决"></a>标签页显示“没有标题”解决</h2><p>打开 <code>~/blog/themes/hingle/layout/_partial</code> 下的 <code>head.ejs</code> 文件，找到下面几行</p>
+<pre class="line-numbers language-none"><code class="language-none">else if(is_post() &amp;&amp; page.title)&#123;
+	title &#x3D; page.title;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>然后在后面加上以下代码，增加对独立页面的判断与标题赋值</p>
+<pre class="line-numbers language-none"><code class="language-none">else if(is_page() &amp;&amp; page.title)&#123;
+	title &#x3D; page.title;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.paul.ren/hingle/#/">Hingle主题官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/victoryxa/article/details/104286446">Hexo博客添加一言</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hansion.win/2020/04/13/hexo-bo-ke-deng-jing-tai-wang-ye-ti-jiao-bai-du-he-google-gu-ge-shou-lu/#toc-heading-2">Hexo博客等静态网页提交百度和Google谷歌收录</a></li>
+</ol>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/friends/">友链</a></li>
+        
+          <li><a href="/bangumis/">追番</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">前置工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%95%E5%85%A5%E4%B8%BB%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">引入主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF"><span class="toc-number">3.1.</span> <span class="toc-text">个人信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A1%B5%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5"><span class="toc-number">3.2.</span> <span class="toc-text">主页社交链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E5%9B%BE"><span class="toc-number">3.3.</span> <span class="toc-text">背景图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2"><span class="toc-number">3.4.</span> <span class="toc-text">关于页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#favicon%E5%9B%BE%E6%A0%87%E6%9B%B4%E6%8D%A2"><span class="toc-number">3.5.</span> <span class="toc-text">favicon图标更换</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE"><span class="toc-number">4.</span> <span class="toc-text">进阶配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E9%AB%98%E4%BA%8C%E6%AC%A1%E5%85%83%E6%B5%93%E5%BA%A6"><span class="toc-number">4.1.</span> <span class="toc-text">提高二次元浓度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%BC%AB%E8%AF%AD%E5%BD%95"><span class="toc-number">4.1.1.</span> <span class="toc-text">动漫语录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%BD%E7%95%AA%E5%88%97%E8%A1%A8"><span class="toc-number">4.1.2.</span> <span class="toc-text">追番列表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%A4%9C%E9%97%B4%E6%A8%A1%E5%BC%8F"><span class="toc-number">4.2.</span> <span class="toc-text">默认夜间模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2"><span class="toc-number">4.3.</span> <span class="toc-text">博客部署</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%B7%E6%AD%8C%E3%80%81%E7%99%BE%E5%BA%A6%E6%94%B6%E5%BD%95"><span class="toc-number">4.4.</span> <span class="toc-text">谷歌、百度收录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%B7%E6%AD%8C"><span class="toc-number">4.4.1.</span> <span class="toc-text">谷歌</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BE%E5%BA%A6"><span class="toc-number">4.4.2.</span> <span class="toc-text">百度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SEO%E4%BC%98%E5%8C%96"><span class="toc-number">4.5.</span> <span class="toc-text">SEO优化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#bug-%E4%BF%AE%E5%A4%8D"><span class="toc-number">5.</span> <span class="toc-text">bug 修复</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#font-awesome-%E5%9B%BE%E6%A0%87%E4%B8%A2%E5%A4%B1"><span class="toc-number">5.1.</span> <span class="toc-text">font-awesome 图标丢失</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E9%A1%B5%E6%98%BE%E7%A4%BA%E2%80%9C%E6%B2%A1%E6%9C%89%E6%A0%87%E9%A2%98%E2%80%9D%E8%A7%A3%E5%86%B3"><span class="toc-number">5.2.</span> <span class="toc-text">标签页显示“没有标题”解决</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">6.</span> <span class="toc-text">参考</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&text=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&title=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&is_video=false&description=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hexo Hingle 主题基础配置&amp;进阶配置&body=Check out this article: https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&title=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&title=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&title=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&title=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&name=Hexo Hingle 主题基础配置&amp;进阶配置&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://cloudnzk.github.io/2022/05/20/hexo-hingle-configuration/&t=Hexo Hingle 主题基础配置&amp;进阶配置"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2025
+    Silentlight
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/friends/">友链</a></li><!--
+     --><!--
+       --><li><a href="/bangumis/">追番</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'cloudnzk/blog-comment';
+      var utterances_issue_term = 'title';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>

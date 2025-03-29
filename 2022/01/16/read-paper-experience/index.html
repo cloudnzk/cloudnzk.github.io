@@ -1,35 +1,458 @@
-extends includes/layout.pug
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="文献检索在哪找文献 中文论文  1.知网（推荐）  博硕论文 可通过云大图书馆免费下载论文   2.百度学术  知网找不到的中文论文来这找     英文论文  谷歌学术 可通过谷歌学术镜像访问，建议访问原网站   其他渠道  1.综述论文下面引用的那些文献  2.GitHub、公众号、知乎、blog上的论文列表 https:&#x2F;&#x2F;github.com&#x2F;THUNLP-MT&#x2F;MT-Reading-Li">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何读文献">
+<meta property="og:url" content="https://cloudnzk.github.io/2022/01/16/read-paper-experience/index.html">
+<meta property="og:site_name" content="Silentlight&#39;s blog">
+<meta property="og:description" content="文献检索在哪找文献 中文论文  1.知网（推荐）  博硕论文 可通过云大图书馆免费下载论文   2.百度学术  知网找不到的中文论文来这找     英文论文  谷歌学术 可通过谷歌学术镜像访问，建议访问原网站   其他渠道  1.综述论文下面引用的那些文献  2.GitHub、公众号、知乎、blog上的论文列表 https:&#x2F;&#x2F;github.com&#x2F;THUNLP-MT&#x2F;MT-Reading-Li">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/06/16/JDSPTj1WrdZqlzB.png">
+<meta property="article:published_time" content="2022-01-16T08:17:11.000Z">
+<meta property="article:modified_time" content="2023-06-16T14:43:56.420Z">
+<meta property="article:author" content="Silentlight">
+<meta property="article:tag" content="科研">
+<meta property="article:tag" content="研究生">
+<meta property="article:tag" content="论文">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/06/16/JDSPTj1WrdZqlzB.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>如何读文献</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
 
-    article#article-container.container.post-content
-      if theme.noticeOutdate.enable && page.noticeOutdate !== false
-        include includes/post/outdate-notice.pug
-      else
-        !=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (page.tags.length > 0 && theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+    <!-- Umami Analytics -->
 
-    if theme.reward.enable && theme.reward.QR_code
-      !=partial('includes/post/reward', {}, {cache: true})
 
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Silentlight's blog" type="application/atom+xml">
+</head>
 
-    if page.comments !== false && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/friends/">友链</a></li><!--
+     --><!--
+       --><li><a href="/bangumis/">追番</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2022/05/20/return-hexo/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2019/03/09/hello-world/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cloudnzk.github.io/2022/01/16/read-paper-experience/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&text=如何读文献"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&title=如何读文献"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&is_video=false&description=如何读文献"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=如何读文献&body=Check out this article: https://cloudnzk.github.io/2022/01/16/read-paper-experience/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&title=如何读文献"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&title=如何读文献"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&title=如何读文献"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&title=如何读文献"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&name=如何读文献&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&t=如何读文献"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2"><span class="toc-number">1.</span> <span class="toc-text">文献检索</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%93%AA%E6%89%BE%E6%96%87%E7%8C%AE"><span class="toc-number">1.1.</span> <span class="toc-text">在哪找文献</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%B7%E6%AD%8C%E5%AD%A6%E6%9C%AF%E6%A3%80%E7%B4%A2%E6%8A%80%E5%B7%A7"><span class="toc-number">1.2.</span> <span class="toc-text">谷歌学术检索技巧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">文献管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Endnote%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-number">2.1.</span> <span class="toc-text">Endnote基本使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%8C%AE%E5%90%8C%E6%AD%A5"><span class="toc-number">2.2.</span> <span class="toc-text">文献同步</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB"><span class="toc-number">3.</span> <span class="toc-text">文献阅读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A5%E4%BA%91%E5%88%92%E7%BA%BF%E7%BF%BB%E8%AF%91"><span class="toc-number">3.1.</span> <span class="toc-text">知云划线翻译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%85%E8%AF%BB%E9%A1%BA%E5%BA%8F%EF%BC%9A%E6%91%98%E8%A6%81%E3%80%81%E7%BB%93%E8%AE%BA%E3%80%81%E5%BC%95%E8%A8%80%E3%80%81%E8%AE%A8%E8%AE%BA%E3%80%81%E7%BB%93%E6%9E%9C%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-number">3.2.</span> <span class="toc-text">阅读顺序：摘要、结论、引言、讨论、结果和方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%88%E6%B3%9B%E8%AF%BB%EF%BC%8C%E7%84%B6%E5%90%8E%E9%80%89%E6%8B%A9%E9%87%8D%E8%A6%81%E7%9A%84%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB"><span class="toc-number">3.3.</span> <span class="toc-text">先泛读，然后选择重要的文献精读</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0"><span class="toc-number">4.</span> <span class="toc-text">文献笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%AE%B0%E7%AC%94%E8%AE%B0"><span class="toc-number">4.1.</span> <span class="toc-text">为什么要记笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E7%9F%A5%E8%AF%86%E5%BA%93"><span class="toc-number">4.2.</span> <span class="toc-text">建立知识库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86%E9%AB%98%E4%BA%AE%E7%9A%84%E5%8F%A5%E5%AD%90%E5%85%A8%E9%83%A8%E7%BF%BB%E8%AF%91%E4%B8%BA%E4%B8%AD%E6%96%87"><span class="toc-number">4.3.</span> <span class="toc-text">将高亮的句子全部翻译为中文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%8F%E4%B8%AA%E5%88%86%E7%B1%BB%E5%8D%95%E7%8B%AC%E5%BC%80%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E8%A1%A8%E6%A0%BC%E8%AE%B0%E5%BD%95%E7%AC%94%E8%AE%B0"><span class="toc-number">4.4.</span> <span class="toc-text">每个分类单独开一个文件或表格记录笔记</span></a></li></ol></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        如何读文献
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Silentlight</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-01-16T08:17:11.000Z" class="dt-published" itemprop="datePublished">2022-01-16</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/%E7%BB%8F%E9%AA%8C/">经验</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/" rel="tag">研究生</a>, <a class="p-category" href="/tags/%E7%A7%91%E7%A0%94/" rel="tag">科研</a>, <a class="p-category" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p><img src="https://s2.loli.net/2023/06/16/JDSPTj1WrdZqlzB.png" alt="读文献"></p>
+<h2 id="文献检索"><a href="#文献检索" class="headerlink" title="文献检索"></a>文献检索</h2><h3 id="在哪找文献"><a href="#在哪找文献" class="headerlink" title="在哪找文献"></a>在哪找文献</h3><ul>
+<li><p>中文论文</p>
+<ul>
+<li><p>1.知网（推荐）</p>
+<ul>
+<li>博硕论文</li>
+<li>可通过云大图书馆免费下载论文</li>
+</ul>
+</li>
+<li><p>2.百度学术</p>
+<ul>
+<li>知网找不到的中文论文来这找</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>英文论文</p>
+<ul>
+<li>谷歌学术</li>
+<li>可通过谷歌学术镜像访问，建议访问原网站</li>
+</ul>
+</li>
+<li><p>其他渠道</p>
+<ul>
+<li><p>1.综述论文下面引用的那些文献</p>
+</li>
+<li><p>2.GitHub、公众号、知乎、blog上的论文列表</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/THUNLP-MT/MT-Reading-List#meta_learning">https://github.com/THUNLP-MT/MT-Reading-List#meta_learning</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="谷歌学术检索技巧"><a href="#谷歌学术检索技巧" class="headerlink" title="谷歌学术检索技巧"></a>谷歌学术检索技巧</h3><ul>
+<li><p>关键词搜索</p>
+<ul>
+<li>根据研究问题，想出几个关键词；用空格分开组合搜索</li>
+</ul>
+</li>
+<li><p>按日期筛选</p>
+<ul>
+<li>查找近年来的最新文献</li>
+</ul>
+</li>
+<li><p>高级搜索</p>
+<ul>
+<li>精确搜索，结果更准确</li>
+</ul>
+</li>
+<li><p>相关文章</p>
+<ul>
+<li>找到类似的文献</li>
+</ul>
+</li>
+<li><p>被引用次数</p>
+<ul>
+<li>看其他文献怎么评论该文献</li>
+</ul>
+</li>
+</ul>
+<h2 id="文献管理"><a href="#文献管理" class="headerlink" title="文献管理"></a>文献管理</h2><h3 id="Endnote基本使用"><a href="#Endnote基本使用" class="headerlink" title="Endnote基本使用"></a>Endnote基本使用</h3><p>软件包分享，需要校内IP下载</p>
+<ul>
+<li><p>从谷歌学术导入文献</p>
+</li>
+<li><p>关联PDF文件</p>
+<ul>
+<li>以后读文献、高亮文献都从Endnote打开，统一管理</li>
+</ul>
+</li>
+<li><p>文献分类</p>
+<ul>
+<li>建立索引，方便查找</li>
+<li>集中时间看同一类的论文，便于比较</li>
+</ul>
+</li>
+<li><p>一句话总结这篇文献，方便下次阅读</p>
+</li>
+</ul>
+<h3 id="文献同步"><a href="#文献同步" class="headerlink" title="文献同步"></a>文献同步</h3><ul>
+<li><p>登录Endnote账号同步</p>
+</li>
+<li><p>百度网盘工作空间同步</p>
+<ul>
+<li>同步Endnote存文献的那个文件夹</li>
+</ul>
+</li>
+<li><p>GitHub Desktop</p>
+</li>
+</ul>
+<h2 id="文献阅读"><a href="#文献阅读" class="headerlink" title="文献阅读"></a>文献阅读</h2><h3 id="知云划线翻译"><a href="#知云划线翻译" class="headerlink" title="知云划线翻译"></a>知云划线翻译</h3><ul>
+<li>选有道或者谷歌医学引擎</li>
+<li>阅读的过程中高亮重要句子</li>
+</ul>
+<h3 id="阅读顺序：摘要、结论、引言、讨论、结果和方法"><a href="#阅读顺序：摘要、结论、引言、讨论、结果和方法" class="headerlink" title="阅读顺序：摘要、结论、引言、讨论、结果和方法"></a>阅读顺序：摘要、结论、引言、讨论、结果和方法</h3><h3 id="先泛读，然后选择重要的文献精读"><a href="#先泛读，然后选择重要的文献精读" class="headerlink" title="先泛读，然后选择重要的文献精读"></a>先泛读，然后选择重要的文献精读</h3><ul>
+<li>在Endnote分组：重要/有些重要/不重要</li>
+</ul>
+<h2 id="文献笔记"><a href="#文献笔记" class="headerlink" title="文献笔记"></a>文献笔记</h2><h3 id="为什么要记笔记"><a href="#为什么要记笔记" class="headerlink" title="为什么要记笔记"></a>为什么要记笔记</h3><ul>
+<li>1.需要重复阅读某篇文章时。提高阅读文献的效率，减少重复工作</li>
+<li>2.读完某篇文章的思考和收获，文章有哪些点可以借鉴</li>
+<li>建议重要的文章记下笔记，不重要的高亮一下就行了</li>
+</ul>
+<h3 id="建立知识库"><a href="#建立知识库" class="headerlink" title="建立知识库"></a>建立知识库</h3><ul>
+<li>Notion（推荐）</li>
+<li>Excel表格（推荐）</li>
+<li>GitHub repo</li>
+</ul>
+<h3 id="将高亮的句子全部翻译为中文"><a href="#将高亮的句子全部翻译为中文" class="headerlink" title="将高亮的句子全部翻译为中文"></a>将高亮的句子全部翻译为中文</h3><ul>
+<li>总结与归纳，记下要点：根据句子翻译提炼重点</li>
+<li>同时记录读这篇文章的体会、想法，或者与其他文献的关联比较，或者该文献的亮点与不足等</li>
+</ul>
+<h3 id="每个分类单独开一个文件或表格记录笔记"><a href="#每个分类单独开一个文件或表格记录笔记" class="headerlink" title="每个分类单独开一个文件或表格记录笔记"></a>每个分类单独开一个文件或表格记录笔记</h3><ul>
+<li>便于比较和分析</li>
+</ul>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/friends/">友链</a></li>
+        
+          <li><a href="/bangumis/">追番</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2"><span class="toc-number">1.</span> <span class="toc-text">文献检索</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%93%AA%E6%89%BE%E6%96%87%E7%8C%AE"><span class="toc-number">1.1.</span> <span class="toc-text">在哪找文献</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%B7%E6%AD%8C%E5%AD%A6%E6%9C%AF%E6%A3%80%E7%B4%A2%E6%8A%80%E5%B7%A7"><span class="toc-number">1.2.</span> <span class="toc-text">谷歌学术检索技巧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">文献管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Endnote%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-number">2.1.</span> <span class="toc-text">Endnote基本使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%8C%AE%E5%90%8C%E6%AD%A5"><span class="toc-number">2.2.</span> <span class="toc-text">文献同步</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB"><span class="toc-number">3.</span> <span class="toc-text">文献阅读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A5%E4%BA%91%E5%88%92%E7%BA%BF%E7%BF%BB%E8%AF%91"><span class="toc-number">3.1.</span> <span class="toc-text">知云划线翻译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%85%E8%AF%BB%E9%A1%BA%E5%BA%8F%EF%BC%9A%E6%91%98%E8%A6%81%E3%80%81%E7%BB%93%E8%AE%BA%E3%80%81%E5%BC%95%E8%A8%80%E3%80%81%E8%AE%A8%E8%AE%BA%E3%80%81%E7%BB%93%E6%9E%9C%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-number">3.2.</span> <span class="toc-text">阅读顺序：摘要、结论、引言、讨论、结果和方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%88%E6%B3%9B%E8%AF%BB%EF%BC%8C%E7%84%B6%E5%90%8E%E9%80%89%E6%8B%A9%E9%87%8D%E8%A6%81%E7%9A%84%E6%96%87%E7%8C%AE%E7%B2%BE%E8%AF%BB"><span class="toc-number">3.3.</span> <span class="toc-text">先泛读，然后选择重要的文献精读</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0"><span class="toc-number">4.</span> <span class="toc-text">文献笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%AE%B0%E7%AC%94%E8%AE%B0"><span class="toc-number">4.1.</span> <span class="toc-text">为什么要记笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E7%9F%A5%E8%AF%86%E5%BA%93"><span class="toc-number">4.2.</span> <span class="toc-text">建立知识库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%86%E9%AB%98%E4%BA%AE%E7%9A%84%E5%8F%A5%E5%AD%90%E5%85%A8%E9%83%A8%E7%BF%BB%E8%AF%91%E4%B8%BA%E4%B8%AD%E6%96%87"><span class="toc-number">4.3.</span> <span class="toc-text">将高亮的句子全部翻译为中文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%8F%E4%B8%AA%E5%88%86%E7%B1%BB%E5%8D%95%E7%8B%AC%E5%BC%80%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E6%88%96%E8%A1%A8%E6%A0%BC%E8%AE%B0%E5%BD%95%E7%AC%94%E8%AE%B0"><span class="toc-number">4.4.</span> <span class="toc-text">每个分类单独开一个文件或表格记录笔记</span></a></li></ol></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cloudnzk.github.io/2022/01/16/read-paper-experience/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&text=如何读文献"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&title=如何读文献"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&is_video=false&description=如何读文献"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=如何读文献&body=Check out this article: https://cloudnzk.github.io/2022/01/16/read-paper-experience/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&title=如何读文献"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&title=如何读文献"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&title=如何读文献"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&title=如何读文献"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&name=如何读文献&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://cloudnzk.github.io/2022/01/16/read-paper-experience/&t=如何读文献"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2025
+    Silentlight
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/friends/">友链</a></li><!--
+     --><!--
+       --><li><a href="/bangumis/">追番</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'cloudnzk/blog-comment';
+      var utterances_issue_term = 'title';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>
