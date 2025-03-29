@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="在度过人生的每一阶段后，都会尝试记录一些东西，作为经历过的证明。一方面写给未来的自己看，留作回忆，另一方面也写给后来人看，希望能给他们一些启发，少走一些弯路。 由于本人文笔不好，并且很懒，所以不写煽情的文字，不写长篇大论。只写实用的要点，想到什么就写什么。 研一篇 大多数课好像都没什么用，硬要说的话…算法设计与分析、计算机网络对以后找工作用处最大。神经网络与应用，工程数学，论文写作指导这些对搞科研">
+<meta property="og:type" content="article">
+<meta property="og:title" content="研究生期间的经验教训总结">
+<meta property="og:url" content="https://cloudnzk.github.io/2023/05/28/summary-postgraduate/index.html">
+<meta property="og:site_name" content="Silentlight&#39;s blog">
+<meta property="og:description" content="在度过人生的每一阶段后，都会尝试记录一些东西，作为经历过的证明。一方面写给未来的自己看，留作回忆，另一方面也写给后来人看，希望能给他们一些启发，少走一些弯路。 由于本人文笔不好，并且很懒，所以不写煽情的文字，不写长篇大论。只写实用的要点，想到什么就写什么。 研一篇 大多数课好像都没什么用，硬要说的话…算法设计与分析、计算机网络对以后找工作用处最大。神经网络与应用，工程数学，论文写作指导这些对搞科研">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-28T11:32:28.000Z">
+<meta property="article:modified_time" content="2025-03-29T11:48:57.565Z">
+<meta property="article:author" content="Silentlight">
+<meta property="article:tag" content="科研">
+<meta property="article:tag" content="总结">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>研究生期间的经验教训总结</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Silentlight's blog" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/friends/">友链</a></li><!--
+     --><!--
+       --><li><a href="/bangumis/">追番</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2023/07/29/python-start/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2023/05/28/picture-bed-summary/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&text=研究生期间的经验教训总结"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&title=研究生期间的经验教训总结"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&is_video=false&description=研究生期间的经验教训总结"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=研究生期间的经验教训总结&body=Check out this article: https://cloudnzk.github.io/2023/05/28/summary-postgraduate/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&title=研究生期间的经验教训总结"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&title=研究生期间的经验教训总结"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&title=研究生期间的经验教训总结"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&title=研究生期间的经验教训总结"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&name=研究生期间的经验教训总结&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&t=研究生期间的经验教训总结"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E4%B8%80%E7%AF%87"><span class="toc-number">1.</span> <span class="toc-text">研一篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E4%BA%8C%E7%AF%87"><span class="toc-number">2.</span> <span class="toc-text">研二篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%91%E7%A0%94%E7%AF%87"><span class="toc-number">3.</span> <span class="toc-text">科研篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E7%AF%87"><span class="toc-number">4.</span> <span class="toc-text">毕业论文篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B2%E5%AE%A1%E7%AF%87"><span class="toc-number">5.</span> <span class="toc-text">盲审篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E7%AD%94%E8%BE%A9%E7%AF%87"><span class="toc-number">6.</span> <span class="toc-text">预答辩篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%9APPT"><span class="toc-number">6.1.</span> <span class="toc-text">做PPT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B2PPT"><span class="toc-number">6.2.</span> <span class="toc-text">讲PPT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%94%E8%BE%A9%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87"><span class="toc-number">6.3.</span> <span class="toc-text">答辩前的准备</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AD%94%E8%BE%A9%E7%AF%87"><span class="toc-number">7.</span> <span class="toc-text">答辩篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E8%AE%B0"><span class="toc-number">8.</span> <span class="toc-text">后记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E7%9A%84%E5%8A%A8%E6%BC%AB"><span class="toc-number">9.</span> <span class="toc-text">推荐的动漫</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E7%9A%84%E5%AF%84%E8%AF%AD"><span class="toc-number">10.</span> <span class="toc-text">最后的寄语</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        研究生期间的经验教训总结
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Silentlight</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-05-28T11:32:28.000Z" class="dt-published" itemprop="datePublished">2023-05-28</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/%E7%BB%8F%E9%AA%8C/">经验</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E6%80%BB%E7%BB%93/" rel="tag">总结</a>, <a class="p-category" href="/tags/%E7%A7%91%E7%A0%94/" rel="tag">科研</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p>在度过人生的每一阶段后，都会尝试记录一些东西，作为经历过的证明。一方面写给未来的自己看，留作回忆，另一方面也写给后来人看，希望能给他们一些启发，少走一些弯路。</p>
+<p>由于本人文笔不好，并且很懒，所以不写煽情的文字，不写长篇大论。只写实用的要点，想到什么就写什么。</p>
+<h2 id="研一篇"><a href="#研一篇" class="headerlink" title="研一篇"></a>研一篇</h2><ol>
+<li>大多数课好像都没什么用，硬要说的话…<strong>算法设计与分析</strong>、计算机网络对以后找工作用处最大。神经网络与应用，工程数学，论文写作指导这些对搞科研也有点用处，如果能在研一把<strong>深度学习</strong>、<strong>机器翻译</strong>和<strong>数学基础</strong>这些学好，个人觉得用处很大；</li>
+<li>最后悔的事情是，研一在课堂上浪费了不少时间（<del>玩手机</del>）。如果可以的话，要么好好听课，要么用平板学习自己科研方向的东西，专注一些；</li>
+<li>个人认为，在研一阶段，打好<code>基础</code>是最重要的。何为基础？可以问问老师哈哈哈，I don’t know too.</li>
+</ol>
+<h2 id="研二篇"><a href="#研二篇" class="headerlink" title="研二篇"></a>研二篇</h2><ol>
+<li>小论文碰到拒稿也不要灰心，失败乃是人生的常态是也。可以根据修改意见<code>进一步修改</code>，转投其他期刊会议；</li>
+<li>小论文录用了并不是结束，而是刚刚开始。后面该开始做毕业论文啦；</li>
+<li>秋招的时候，找到科研与找工作的平衡点。在找工作的期间<code>不要忘记了科研</code>啊，抽时间读论文做实验跟找工作并不冲突；</li>
+<li>我当时是10月底才开始做毕设实验，实在是太晚了！后面做论文也太赶差点就延毕了。<code>毕不了业，找到工作也没用</code>；</li>
+<li>总之在这个阶段<code>不要太混</code>。太懒，太摆烂的话后面可是要吃大亏的</li>
+</ol>
+<h2 id="科研篇"><a href="#科研篇" class="headerlink" title="科研篇"></a>科研篇</h2><ol>
+<li><code>及早准备，尽量逼着自己往前赶</code>。越早入门越好，越早找到科研方向越好，越早做完实验越好。永远别想着把所有的知识或基础都学完，才着手科研，很多东西都是一边实践一边学习得到的；</li>
+<li>无论是搞科研还是干其他什么事情，<code>踏踏实实</code>才是真。我在做科研的时候还是过于浮躁了，太难的事情总是不肯做，所以到最后的毕业论文阶段坎坷不断啊…</li>
+<li>要摆正做科研的态度，<code>认真上心</code>起来啊，尽量收起那种玩乐的心理。做科研很耗费时间和精力，要花很多时间去尝试才能得到想要的结果，所以得沉下心去做事情；</li>
+<li>如果可以的话，<code>多跟别人交流</code>。同门也好同学也好老师也好，与人交流能打开你的思路，闭塞的话会兜兜转转很久；</li>
+<li><code>多看论文</code>。如果缺乏idea或者思路，一定是论文看少了；</li>
+<li>选择一个适宜科研的<code>环境</code>。除了实验室之外，图书馆也是很推荐的。改论文的时候我在图书馆蹲了一两个月，个人比较喜欢那里的氛围，安静不吵，能够沉浸在自己的世界中；</li>
+<li><code>不要害怕尝试，不要害怕失败，不要只想不做</code>。像做菜一样，没有人一开始就能学会所有东西，都是靠不断地去试不断去做，锻炼得到的；</li>
+<li>学会<code>做好规划/计划</code>，一步一个脚印。循序渐进，一个阶段做好一个阶段的事情</li>
+<li>无论是做科研还是学习，保持<code>专注沉浸</code>的状态，尽量不被其他东西干扰。这种状态我现在也没达到，慢慢来吧，毕竟做科研也是一件很枯燥的事情啊…</li>
+</ol>
+<h2 id="毕业论文篇"><a href="#毕业论文篇" class="headerlink" title="毕业论文篇"></a>毕业论文篇</h2><ol>
+<li>时间点：<strong>论文预评审</strong> 2月底下旬，<strong>论文盲审提交</strong> 3月下旬，<strong>论文盲审送审</strong> 4月中旬，<strong>论文修改</strong> 4月下旬，<strong>论文答辩</strong> 5月上旬/中旬；</li>
+<li>写的时候，可以<code>参考别人</code>的硕士论文看看怎么写的；</li>
+<li><code>早点交初稿</code>，一开始不要太过于追求质量，毕业论文都是改出来的；早点写完初稿给老师看，后面才会有修改的时间啊；</li>
+<li><code>战胜拖延症</code>，虽然说deadline是第一生产力，但那是在刀尖的边缘，在悬崖的边上跳舞；</li>
+<li>尽早，<code>积极主动跟老师交流</code>论文修改；</li>
+<li>盲审提交前可以使用<strong>知网个人查重</strong>，挺准的，1.5元/千字，论文重复率要求<code>小于10%</code>；</li>
+<li>写论文前做好知识储备，<code>厚积薄发</code>；实验这些都做好，模型原理都搞清楚，就好写了。如果并不是这样（类似我），前面欠的债后面很难补上；</li>
+<li><code>不要存在侥幸心理</code>，工作量不足/研究不够深入/没有创新点放到严格的老师那里，是有可能会被毙掉的。毕业有很多关要闯，你运气好过了这关，下一关你运气还有没有那么好就不知道了；</li>
+<li>在这个阶段会很辛苦，赶毕业论文的时候熬夜可能是常态。请<code>坚持下去！</code>压力往往会激发你的潜力，在这样巨大的压力下我已经崩溃过很多回了，有时候想过很多次主动延毕，但也不是咬咬牙坚持下来了吗？如果主动放弃了才是真正令人后悔的事情。</li>
+</ol>
+<h2 id="盲审篇"><a href="#盲审篇" class="headerlink" title="盲审篇"></a>盲审篇</h2><p>经历这次盲审，给我的体会是：</p>
+<ol>
+<li>运气真的很重要。自己的运气真的蛮好，一没抽到教育部盲审，二没被送到专门做这方面的同行老师的手上；</li>
+<li>对专硕而言，创新点不是最重要的，工作量和逻辑才是最重要的；（这点看情况，不排除碰到严格的老师看重创新这点）</li>
+<li>格式也很重要，体现的是你的态度。弄好格式至少能给老师多点印象分；</li>
+<li>如果不想被送到同样做这个小方向的老师手上，作者研究方向可以写泛一点，因为是根据这个分配老师的；</li>
+<li>论文提交送审了就别胡思乱想了，该玩就玩等结果就行。尽人事，听天命。</li>
+</ol>
+<h2 id="预答辩篇"><a href="#预答辩篇" class="headerlink" title="预答辩篇"></a>预答辩篇</h2><p>做好充足的准备能增加你的信心，提前演练能让你预料到可能发生的情况，并在正式的答辩中做得更好</p>
+<h3 id="做PPT"><a href="#做PPT" class="headerlink" title="做PPT"></a>做PPT</h3><p>准备答辩的第一件事就是做 PPT 了。做 PPT 其实很快，一两天即可，在完成预答辩后还需要对 PPT 做一定的修改。</p>
+<ol>
+<li>按照答辩的时长控制 PPT 的<code>页数</code>。对硕士研究生而言，15分钟的演讲20~30张即可；</li>
+<li>内容编排方面，要有<code>逻辑</code>形成上下环环相扣的感觉，可以按照下面的脉络进行：1.研究背景和意义（为什么做），2.研究内容（针对研究问题应该从哪几个方面改进，这里列一下大纲即可，在研究方法那里再展开讲），3.研究方法（做了什么），4.研究结果（得到了什么实验结果或者结论）</li>
+<li>内容做到<code>详略得当</code>，研究背景与意义，研究内容这些一张即可，不必长篇大论。重点是看你做了什么东西，怎么做的。</li>
+<li>PPT 做成<code>简洁风格</code>，不要用花里胡哨的主题，也不要用动画，纯属浪费时间；</li>
+<li>好的 PPT 应该是图文结合，不要放密密麻麻的文字，只需放<code>key point</code>（重点）的文字即可；</li>
+<li>PPT <code>字体</code>个人推荐的是微软雅黑，字体大小方面：标题28，正文16或18，根据你的文字多少灵活调整；</li>
+</ol>
+<h3 id="讲PPT"><a href="#讲PPT" class="headerlink" title="讲PPT"></a>讲PPT</h3><p>做到<code>有逻辑</code>。 PPT 只能说要<code>多多练习</code>吧，多练习才能找到感觉，其实没什么技巧。</p>
+<ol>
+<li><p>参加<strong>预答辩</strong>，在老师面前讲一遍，根据老师的建议回去调整；</p>
+</li>
+<li><p>自己<strong>排练计时</strong>练习，完整地讲一遍。后面可以挑讲得不好的部分再练习；</p>
+</li>
+<li><p>不用把PPT的全部内容都念出来，亦不用事无巨细地讲，<code>讲重点</code>的就OK了；</p>
+</li>
+<li><p>如果自己不能确定的东西，最好避开不讲或者简略地跳过，不要暴露你的漏洞；</p>
+</li>
+<li><p>如果 PPT 的<strong>逻辑</strong>或结构编排有问题，请及时<code>调整</code>。切记：是PPT将就人而不是人将就PPT；</p>
+</li>
+<li><p>在自己演练的过程，可以把讲的内容写成一篇<strong>答辩稿</strong>。到时候直接背答辩稿就可以了</p>
+</li>
+</ol>
+<h3 id="答辩前的准备"><a href="#答辩前的准备" class="headerlink" title="答辩前的准备"></a>答辩前的准备</h3><p>答辩最重要的还是最后的提问环节，老师也是根据你的<code>论文质量</code>，<code>你的回答</code>来给你打分的。</p>
+<ol>
+<li><p>答辩之前要多看几遍自己的论文，一定要<code>熟悉自己的论文！</code></p>
+</li>
+<li><p><code>提前想好会被问到的问题</code>，提前想好怎么去应对；</p>
+</li>
+<li><p>记得答辩前一天准备好所有要提交的材料，把答辩 PPT 放进U盘里，避免到时候手忙脚乱；</p>
+</li>
+<li><p>注意下自己的形象，男生记得刮胡子，理下发看起来清爽一些，女生画点淡妆也是可以的。衣服没有要求，简洁干净即可。</p>
+</li>
+<li><p>最后保持一颗<strong>平常心</strong>就行，自信地上吧！</p>
+</li>
+</ol>
+<h2 id="答辩篇"><a href="#答辩篇" class="headerlink" title="答辩篇"></a>答辩篇</h2><ol>
+<li><code>只答不辩，疯狂道歉</code>是基本原则</li>
+<li>答辩最重要的是后面的<code>回答环节</code>，所以一定要<code>熟悉你的论文内容</code>，不能一问三不知</li>
+<li>讲PPT不是很重要，因为老师在你讲的过程中一直在翻看论文。所以只需要较为<code>流畅地在规定时间内讲完</code>就行了</li>
+<li>面带微笑，保持谦虚有礼貌的态度</li>
+<li>保持<code>自信</code>，声音洪亮</li>
+<li>第一个答辩也不用紧张，<code>提前做好准备</code>什么都不怕。这时候老师还没进入状态，而且没有参照的人，因此不过的概率真的很小</li>
+</ol>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><ol>
+<li>不要以为时间还有很多，其实后面还有很多东西要忙。“你将遇到的不幸、是你所蹉跎时间的报应”</li>
+<li>不要把时间浪费在无意义的事情上，时光短暂。早上睡了很多懒觉真的挺后悔，如果可以重来，我想成为一个<code>自律</code>的人啊；</li>
+<li>迭代思维：慢慢完善，并非一蹴而就；在做毕业论文的时候体会到的；</li>
+<li>缓存思维：人所能处理的信息是有限的，把最重要的部分记录下来；在做笔记的时候体会到的；</li>
+<li>实践思维：自己动手做了，才是你的东西；在学习前端的时候体会到的；</li>
+<li>读研是一件没有标准答案的事情，但无论如何都会有结果，好结果 or 坏结果取决于你自己。不要跟别人比较，每个人都有属于自己的步调。规划好你自己的道路，做好自己手头的事情；</li>
+<li>唯有努力不可辜负，努力过就一定会有收获</li>
+</ol>
+<h2 id="推荐的动漫"><a href="#推荐的动漫" class="headerlink" title="推荐的动漫"></a>推荐的动漫</h2><p>在研究生期间对我影响很深的动漫，相信也能对你有一些启发</p>
+<ol>
+<li>四叠半神话大系</li>
+<li>3月的狮子（一二季）</li>
+<li>虫师</li>
+<li>蜂蜜与四叶草</li>
+<li>CLANNAD</li>
+<li>银魂</li>
+</ol>
+<h2 id="最后的寄语"><a href="#最后的寄语" class="headerlink" title="最后的寄语"></a>最后的寄语</h2><p>珍惜你最后的研究生生活，去完成更多有意义的事情。不断追求改变也好，按部就班完成毕业任务也好，趁你现在还有时间…</p>
+<blockquote>
+<p>记于即将毕业之际，2023.05.28，昆明. written by silentlight</p>
+</blockquote>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/friends/">友链</a></li>
+        
+          <li><a href="/bangumis/">追番</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E4%B8%80%E7%AF%87"><span class="toc-number">1.</span> <span class="toc-text">研一篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%94%E4%BA%8C%E7%AF%87"><span class="toc-number">2.</span> <span class="toc-text">研二篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%91%E7%A0%94%E7%AF%87"><span class="toc-number">3.</span> <span class="toc-text">科研篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87%E7%AF%87"><span class="toc-number">4.</span> <span class="toc-text">毕业论文篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B2%E5%AE%A1%E7%AF%87"><span class="toc-number">5.</span> <span class="toc-text">盲审篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E7%AD%94%E8%BE%A9%E7%AF%87"><span class="toc-number">6.</span> <span class="toc-text">预答辩篇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%9APPT"><span class="toc-number">6.1.</span> <span class="toc-text">做PPT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B2PPT"><span class="toc-number">6.2.</span> <span class="toc-text">讲PPT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AD%94%E8%BE%A9%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87"><span class="toc-number">6.3.</span> <span class="toc-text">答辩前的准备</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AD%94%E8%BE%A9%E7%AF%87"><span class="toc-number">7.</span> <span class="toc-text">答辩篇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E8%AE%B0"><span class="toc-number">8.</span> <span class="toc-text">后记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E7%9A%84%E5%8A%A8%E6%BC%AB"><span class="toc-number">9.</span> <span class="toc-text">推荐的动漫</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E7%9A%84%E5%AF%84%E8%AF%AD"><span class="toc-number">10.</span> <span class="toc-text">最后的寄语</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&text=研究生期间的经验教训总结"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&title=研究生期间的经验教训总结"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&is_video=false&description=研究生期间的经验教训总结"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=研究生期间的经验教训总结&body=Check out this article: https://cloudnzk.github.io/2023/05/28/summary-postgraduate/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&title=研究生期间的经验教训总结"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&title=研究生期间的经验教训总结"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&title=研究生期间的经验教训总结"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&title=研究生期间的经验教训总结"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&name=研究生期间的经验教训总结&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://cloudnzk.github.io/2023/05/28/summary-postgraduate/&t=研究生期间的经验教训总结"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2025
+    Silentlight
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/friends/">友链</a></li><!--
+     --><!--
+       --><li><a href="/bangumis/">追番</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'cloudnzk/blog-comment';
+      var utterances_issue_term = 'title';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>
