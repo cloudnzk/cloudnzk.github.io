@@ -1,267 +1,35 @@
-<!DOCTYPE html>
-<html>
-  <head>
-     
-    <meta charset="UTF-8">
-    <title>如何读文献 - Silentlight&#39;s blog</title>
-    <link rel="shortcut icon" href="/static/img/icon.png">
-    <link rel="icon" href="/static/img/icon.png" sizes="192x192"/>
-    
-<link rel="stylesheet" href="/static/kico.css">
-<link rel="stylesheet" href="/static/hingle.css">
+extends includes/layout.pug
 
-    
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+block content
+  #post
+    if top_img === false
+      include includes/header/post-info.pug
 
-    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
-    <meta property="og:site_name" content="Silentlight&#39;s blog">
-    <meta property="og:title" content="如何读文献"/>
-    
-    <style>body:before{ content: ''; background-image: url(https://api.paugram.com/wallpaper?source=gh) }</style>
-    
-<meta name="generator" content="Hexo 5.4.2"></head>
+    article#article-container.container.post-content
+      if theme.noticeOutdate.enable && page.noticeOutdate !== false
+        include includes/post/outdate-notice.pug
+      else
+        !=page.content
+    include includes/post/post-copyright.pug
+    .tag_share
+      if (page.tags.length > 0 && theme.post_meta.post.tags)
+        .post-meta__tag-list
+          each item, index in page.tags.data
+            a(href=url_for(item.path)).post-meta__tags #[=item.name]
+      include includes/third-party/share/index.pug
 
-  <body class="dark-theme">
-  <!-- <body> -->
-    <header>
-    <div class="head-title">
-        <h4>Silentlight&#39;s blog</h4>
-    </div>
-    <div class="head-action">
-        <div class="toggle-btn"></div>
-        <div class="light-btn"></div>
-        <div class="search-btn"></div>
-    </div>
-    <form class="head-search" method="post">
-        <input type="text" name="s" placeholder="搜索什么？">
-    </form>
-    <nav class="head-menu">
-        <a href="/">首页</a>
-        <div class="has-child">
-            <a>分类</a>
-            <div class="sub-menu">
-                <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><a class="category-link" href="/categories/%E7%BB%8F%E9%AA%8C/">经验</a><a class="category-link" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
-            </div>
-        </div>
-        
-            <a href="/about">关于</a>
-        
-            <a href="/bangumis">追番</a>
-        
-            <a href="/friends">朋友们</a>
-        
-    </nav>
-</header>
+    if theme.reward.enable && theme.reward.QR_code
+      !=partial('includes/post/reward', {}, {cache: true})
 
-    <main>
-    <div class="wrap min">
-        <section class="post-title">
-            <h2>如何读文献</h2>
-            <div class="post-meta">
-                <time class="date">2022.01.16</time>
-            
-                <span class="category"><a class="category-link" href="/categories/%E7%BB%8F%E9%AA%8C/">经验</a></span>
-            
-            <!-- <span class="eye">
-                <span id="busuanzi_value_page_pv"></span>
-              </span> -->
-            </div>
-        </section>
-        <article class="post-content">
-            <p><img src="https://s2.loli.net/2023/06/16/JDSPTj1WrdZqlzB.png" alt="读文献"></p>
-<h2 id="文献检索"><a href="#文献检索" class="headerlink" title="文献检索"></a>文献检索</h2><h3 id="在哪找文献"><a href="#在哪找文献" class="headerlink" title="在哪找文献"></a>在哪找文献</h3><ul>
-<li><p>中文论文</p>
-<ul>
-<li><p>1.知网（推荐）</p>
-<ul>
-<li>博硕论文</li>
-<li>可通过云大图书馆免费下载论文</li>
-</ul>
-</li>
-<li><p>2.百度学术</p>
-<ul>
-<li>知网找不到的中文论文来这找</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>英文论文</p>
-<ul>
-<li>谷歌学术</li>
-<li>可通过谷歌学术镜像访问，建议访问原网站</li>
-</ul>
-</li>
-<li><p>其他渠道</p>
-<ul>
-<li><p>1.综述论文下面引用的那些文献</p>
-</li>
-<li><p>2.GitHub、公众号、知乎、blog上的论文列表</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/THUNLP-MT/MT-Reading-List#meta_learning">https://github.com/THUNLP-MT/MT-Reading-List#meta_learning</a></p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="谷歌学术检索技巧"><a href="#谷歌学术检索技巧" class="headerlink" title="谷歌学术检索技巧"></a>谷歌学术检索技巧</h3><ul>
-<li><p>关键词搜索</p>
-<ul>
-<li>根据研究问题，想出几个关键词；用空格分开组合搜索</li>
-</ul>
-</li>
-<li><p>按日期筛选</p>
-<ul>
-<li>查找近年来的最新文献</li>
-</ul>
-</li>
-<li><p>高级搜索</p>
-<ul>
-<li>精确搜索，结果更准确</li>
-</ul>
-</li>
-<li><p>相关文章</p>
-<ul>
-<li>找到类似的文献</li>
-</ul>
-</li>
-<li><p>被引用次数</p>
-<ul>
-<li>看其他文献怎么评论该文献</li>
-</ul>
-</li>
-</ul>
-<h2 id="文献管理"><a href="#文献管理" class="headerlink" title="文献管理"></a>文献管理</h2><h3 id="Endnote基本使用"><a href="#Endnote基本使用" class="headerlink" title="Endnote基本使用"></a>Endnote基本使用</h3><p>软件包分享，需要校内IP下载</p>
-<ul>
-<li><p>从谷歌学术导入文献</p>
-</li>
-<li><p>关联PDF文件</p>
-<ul>
-<li>以后读文献、高亮文献都从Endnote打开，统一管理</li>
-</ul>
-</li>
-<li><p>文献分类</p>
-<ul>
-<li>建立索引，方便查找</li>
-<li>集中时间看同一类的论文，便于比较</li>
-</ul>
-</li>
-<li><p>一句话总结这篇文献，方便下次阅读</p>
-</li>
-</ul>
-<h3 id="文献同步"><a href="#文献同步" class="headerlink" title="文献同步"></a>文献同步</h3><ul>
-<li><p>登录Endnote账号同步</p>
-</li>
-<li><p>百度网盘工作空间同步</p>
-<ul>
-<li>同步Endnote存文献的那个文件夹</li>
-</ul>
-</li>
-<li><p>GitHub Desktop</p>
-</li>
-</ul>
-<h2 id="文献阅读"><a href="#文献阅读" class="headerlink" title="文献阅读"></a>文献阅读</h2><h3 id="知云划线翻译"><a href="#知云划线翻译" class="headerlink" title="知云划线翻译"></a>知云划线翻译</h3><ul>
-<li>选有道或者谷歌医学引擎</li>
-<li>阅读的过程中高亮重要句子</li>
-</ul>
-<h3 id="阅读顺序：摘要、结论、引言、讨论、结果和方法"><a href="#阅读顺序：摘要、结论、引言、讨论、结果和方法" class="headerlink" title="阅读顺序：摘要、结论、引言、讨论、结果和方法"></a>阅读顺序：摘要、结论、引言、讨论、结果和方法</h3><h3 id="先泛读，然后选择重要的文献精读"><a href="#先泛读，然后选择重要的文献精读" class="headerlink" title="先泛读，然后选择重要的文献精读"></a>先泛读，然后选择重要的文献精读</h3><ul>
-<li>在Endnote分组：重要/有些重要/不重要</li>
-</ul>
-<h2 id="文献笔记"><a href="#文献笔记" class="headerlink" title="文献笔记"></a>文献笔记</h2><h3 id="为什么要记笔记"><a href="#为什么要记笔记" class="headerlink" title="为什么要记笔记"></a>为什么要记笔记</h3><ul>
-<li>1.需要重复阅读某篇文章时。提高阅读文献的效率，减少重复工作</li>
-<li>2.读完某篇文章的思考和收获，文章有哪些点可以借鉴</li>
-<li>建议重要的文章记下笔记，不重要的高亮一下就行了</li>
-</ul>
-<h3 id="建立知识库"><a href="#建立知识库" class="headerlink" title="建立知识库"></a>建立知识库</h3><ul>
-<li>Notion（推荐）</li>
-<li>Excel表格（推荐）</li>
-<li>GitHub repo</li>
-</ul>
-<h3 id="将高亮的句子全部翻译为中文"><a href="#将高亮的句子全部翻译为中文" class="headerlink" title="将高亮的句子全部翻译为中文"></a>将高亮的句子全部翻译为中文</h3><ul>
-<li>总结与归纳，记下要点：根据句子翻译提炼重点</li>
-<li>同时记录读这篇文章的体会、想法，或者与其他文献的关联比较，或者该文献的亮点与不足等</li>
-</ul>
-<h3 id="每个分类单独开一个文件或表格记录笔记"><a href="#每个分类单独开一个文件或表格记录笔记" class="headerlink" title="每个分类单独开一个文件或表格记录笔记"></a>每个分类单独开一个文件或表格记录笔记</h3><ul>
-<li>便于比较和分析</li>
-</ul>
+    //- ad
+    if theme.ad && theme.ad.post
+      .ads-wrap!=theme.ad.post
 
-        </article>
-        <section class="post-near">
-            <ul>
-                
-                    <li>上一篇: <a href="/2022/05/20/return-hexo/">重拾Hexo博客，谈谈感想</a></li>
-                
-                
-                    <li>下一篇: <a href="/2019/03/09/hello-world/">Hello World</a></li>
-                
-            </ul>
-        </section>
-        
-            <section class="post-tags">
-            <a class="-none-link" href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/" rel="tag">研究生</a><a class="-none-link" href="/tags/%E7%A7%91%E7%A0%94/" rel="tag">科研</a><a class="-none-link" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a>
-            </section>
-        
-    
-        <section class="post-author">
-        
-            <figure class="author-avatar">
-                <img src="http://p1.music.126.net/y-kt2zjGxUmxwQlLnt9yyA==/3396391420105110.jpg?param=177y177" alt="Silentlight" />
-            </figure>
-        
-            <div class="author-info">
-                <h4>Silentlight</h4>
-                <p>本站未注明转载的文章均为原创，并采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow">CC BY-NC-SA 4.0</a> 授权协议，<span style="color: #E91E63">转载请注明来源</span>，谢谢！</p>
-            </div>
-        </section>
-    
-</main>
-<!-- utterances Start-->
-<script src="https://utteranc.es/client.js"
-    repo="cloudnzk/blog-comment"
-    issue-term="title"
-    theme="dark-blue"
-    crossorigin="anonymous"
-    async>
-</script>
-<!-- utterances End -->
+    if theme.post_pagination
+      include includes/pagination.pug
+    if theme.related_post && theme.related_post.enable
+      != related_posts(page,site.posts)
 
-    <footer>
-    <div class="buttons">
-        <a class="to-top" href="#"></a>
-    </div>
-    <div class="wrap min">
-        <section class="widget">
-            <div class="row">
-                <div class="col-m-4">
-                    <h3 class="title-recent">最新文章：</h3>
-                    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2023/06/08/introduce-frontend/">邂逅前端与学习建议</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/05/28/picture-bed-summary/">盘点使用过的图床</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/08/leetcode-hot-100-notebook/">Leetcode 热题 HOT 100 百日刷题打卡</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/20/hexo-hingle-configuration/">Hexo Hingle 主题基础配置&进阶配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/20/return-hexo/">重拾Hexo博客，谈谈感想</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/16/read-paper-experience/">如何读文献</a></li></ul>
-                </div>
-                <div class="col-m-4">
-                    <h3 class="title-date">时光机：</h3>
-                    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li></ul>
-                </div>
-                <div class="col-m-4">
-                    <h3 class="title-tags">标签云：</h3>
-                    <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Hingle/" style="font-size: 10px;">Hingle</a> <a href="/tags/LeetCode/" style="font-size: 10px;">LeetCode</a> <a href="/tags/coderwhy/" style="font-size: 10px;">coderwhy</a> <a href="/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">主题配置</a> <a href="/tags/%E5%88%B7%E9%A2%98/" style="font-size: 10px;">刷题</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 10px;">博客搭建</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 10px;">图床</a> <a href="/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">实用工具</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 10px;">感悟</a> <a href="/tags/%E7%9B%98%E7%82%B9/" style="font-size: 10px;">盘点</a> <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/" style="font-size: 10px;">研究生</a> <a href="/tags/%E7%A7%91%E7%A0%94/" style="font-size: 10px;">科研</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 10px;">论文</a> <a href="/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">课程笔记</a>
-                </div>
-            </div>
-        </section>
-        <section class="sub-footer">
-            <p>© 2025 <a href="/">Silentlight&#39;s blog</a>. All Rights Reserved. Theme By <a href="https://github.com/Dreamer-Paul/Hingle" target="_blank" rel="nofollow">Hingle</a>.</p>
-            <!-- <span>
-                本站总访问量<span id="busuanzi_container_site_pv"></span>次
-            </span>
-            <span>
-                本站访客数<span id="busuanzi_value_site_pv"></span>人次
-            </span> -->
-        </section>
-    </div>
-</footer>
-
-
-<script src="/static/kico.js"></script>
-<script src="/static/hingle.js"></script>
-
-
-<script>var hingle = new Paul_Hingle({"copyright":false,"night":true});</script>
-
-    <!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
-  </body>
-</html>
+    if page.comments !== false && theme.comments.use
+      - var commentsJsLoad = true
+      !=partial('includes/third-party/comments/index', {}, {cache: true})

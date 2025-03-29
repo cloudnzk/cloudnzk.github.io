@@ -1,252 +1,35 @@
-<!DOCTYPE html>
-<html>
-  <head>
-     
-    <meta charset="UTF-8">
-    <title>盘点使用过的图床 - Silentlight&#39;s blog</title>
-    <link rel="shortcut icon" href="/static/img/icon.png">
-    <link rel="icon" href="/static/img/icon.png" sizes="192x192"/>
-    
-<link rel="stylesheet" href="/static/kico.css">
-<link rel="stylesheet" href="/static/hingle.css">
+extends includes/layout.pug
 
-    
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+block content
+  #post
+    if top_img === false
+      include includes/header/post-info.pug
 
-    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
-    <meta property="og:site_name" content="Silentlight&#39;s blog">
-    <meta property="og:title" content="盘点使用过的图床"/>
-    
-    <style>body:before{ content: ''; background-image: url(https://api.paugram.com/wallpaper?source=gh) }</style>
-    
-<meta name="generator" content="Hexo 5.4.2"></head>
+    article#article-container.container.post-content
+      if theme.noticeOutdate.enable && page.noticeOutdate !== false
+        include includes/post/outdate-notice.pug
+      else
+        !=page.content
+    include includes/post/post-copyright.pug
+    .tag_share
+      if (page.tags.length > 0 && theme.post_meta.post.tags)
+        .post-meta__tag-list
+          each item, index in page.tags.data
+            a(href=url_for(item.path)).post-meta__tags #[=item.name]
+      include includes/third-party/share/index.pug
 
-  <body class="dark-theme">
-  <!-- <body> -->
-    <header>
-    <div class="head-title">
-        <h4>Silentlight&#39;s blog</h4>
-    </div>
-    <div class="head-action">
-        <div class="toggle-btn"></div>
-        <div class="light-btn"></div>
-        <div class="search-btn"></div>
-    </div>
-    <form class="head-search" method="post">
-        <input type="text" name="s" placeholder="搜索什么？">
-    </form>
-    <nav class="head-menu">
-        <a href="/">首页</a>
-        <div class="has-child">
-            <a>分类</a>
-            <div class="sub-menu">
-                <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><a class="category-link" href="/categories/%E7%BB%8F%E9%AA%8C/">经验</a><a class="category-link" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a><a class="category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
-            </div>
-        </div>
-        
-            <a href="/about">关于</a>
-        
-            <a href="/bangumis">追番</a>
-        
-            <a href="/friends">朋友们</a>
-        
-    </nav>
-</header>
+    if theme.reward.enable && theme.reward.QR_code
+      !=partial('includes/post/reward', {}, {cache: true})
 
-    <main>
-    <div class="wrap min">
-        <section class="post-title">
-            <h2>盘点使用过的图床</h2>
-            <div class="post-meta">
-                <time class="date">2023.05.28</time>
-            
-                <span class="category"><a class="category-link" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a></span>
-            
-            <!-- <span class="eye">
-                <span id="busuanzi_value_page_pv"></span>
-              </span> -->
-            </div>
-        </section>
-        <article class="post-content">
-            <h1 id="盘点使用过的图床"><a href="#盘点使用过的图床" class="headerlink" title="盘点使用过的图床"></a>盘点使用过的图床</h1><p>由于平时偶尔会写写博客，所以使用过很多的图床工具，在文章里展示图片。下面总结了一下使用过的图床工具。</p>
-<p>挑选图床工具通常需要考虑三个因素：<code>价格</code>、<code>稳定性</code>和<code>访问速度</code>。三者不可兼得，如果要求图片稳定不丢失而且访问速度快的，一般都要充值</p>
-<table>
-<thead>
-<tr>
-<th>图床名称</th>
-<th>收费与否</th>
-<th>稳定性</th>
-<th>访问速度</th>
-<th>部署难度</th>
-<th>是否支持PicGo</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>阿里OSS</td>
-<td>按量计费或购买资源包</td>
-<td>高</td>
-<td>快</td>
-<td>较难</td>
-<td>是</td>
-</tr>
-<tr>
-<td>七牛云</td>
-<td>10GB免费额度</td>
-<td>高</td>
-<td>快</td>
-<td>较难</td>
-<td>是</td>
-</tr>
-<tr>
-<td>SM.MS</td>
-<td>5GB免费额度</td>
-<td>较高</td>
-<td>较快</td>
-<td>简单</td>
-<td>是</td>
-</tr>
-<tr>
-<td>路过</td>
-<td>免费</td>
-<td>中等</td>
-<td>较快</td>
-<td>简单</td>
-<td>否</td>
-</tr>
-<tr>
-<td>GitHub</td>
-<td>免费</td>
-<td>高</td>
-<td>慢</td>
-<td>中等</td>
-<td>是</td>
-</tr>
-</tbody></table>
-<h2 id="阿里云OSS"><a href="#阿里云OSS" class="headerlink" title="阿里云OSS"></a>阿里云OSS</h2><ul>
-<li>个人目前正在使用的一个图床工具，价格便宜，对于<code>访问量小</code>的博客站非常适合。收费 = <code>存储费用</code> + <code>流量费用</code> + <code>请求费用</code>。</li>
-<li>存储费用分为两种计费方式：第一种是<code>按量计费</code>，0.12每月每GB；第二种是买<code>资源包</code>，9块40GB一年，还是挺划算的。</li>
-<li>流量费用是 00:00-08:00（闲时）：0.25元/GB，08:00-24:00（忙时）：0.50元/GB</li>
-<li>请求费用：请求次数×0.01÷10000，每万次请求0.01元，对于小站而言几乎可以忽略不计</li>
-<li>类似的产品还有<code>腾讯云COS</code>，没用过就不做评价了</li>
-</ul>
-<h2 id="七牛云"><a href="#七牛云" class="headerlink" title="七牛云"></a>七牛云</h2><ul>
-<li>身份认证后可以获得每月10GB的免费存储额度，可以白嫖</li>
-<li>但需要注意的是，需要<code>自备域名</code>。否则等30天测试域名到期后，上传的文件会自动清空</li>
-</ul>
-<h2 id="SM-MS"><a href="#SM-MS" class="headerlink" title="SM.MS"></a>SM.MS</h2><ul>
-<li>个人比较喜欢，最常用的一个<code>免费图床</code>，提供免费5GB的存储额度，其实也够用了</li>
-<li>在国内的访问稳定性不能确定，未来有被封锁或者开发者跑路的可能性，但可能性也比较小，因为这个图床已经稳定运行8年多了。目前SM.MS提供了中国国内的专用域名，在国内也能正常访问</li>
-</ul>
-<h2 id="路过图床"><a href="#路过图床" class="headerlink" title="路过图床"></a>路过图床</h2><ul>
-<li>上传的图片有可能被删除，解释权完全在于服务提供者的手上。而且登录账户居然找不到以前上传过的图片…避雷</li>
-<li>所以想要长期存储的就别用这个了，上传一些<code>临时</code>图片可以试用下</li>
-</ul>
-<h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><ul>
-<li>由于 SM.MS 白嫖版限制图片最大5MB，所以超过5MB的我都上传到GitHub上</li>
-<li>优点是完全免费，上传的图片不用害怕丢失，但缺点在于用国内网络访问实在是太<code>慢</code>了！</li>
-</ul>
-<hr>
-<h2 id="免费图床推荐"><a href="#免费图床推荐" class="headerlink" title="免费图床推荐"></a>免费图床推荐</h2><h3 id="Catbox"><a href="#Catbox" class="headerlink" title="Catbox"></a>Catbox</h3><ul>
-<li>国外网站，已经稳定运行了8年之久</li>
-<li>完全免费，可以白嫖。速度尚可</li>
-<li>没有空间限制，最大上传200MB以内文件</li>
-<li>负面消息：曾经屏蔽了大陆的IP</li>
-</ul>
-<h3 id="Imgbb"><a href="#Imgbb" class="headerlink" title="Imgbb"></a>Imgbb</h3><ul>
-<li>国外图床网站，至少稳定运行了5年以上</li>
-<li>完全免费，可以白嫖。速度一般，要求速度的建议用国内的CDN图床</li>
-<li>没有空间限制，最大上传32MB以内的图片</li>
-<li>对图片内容比较宽松，随便发涩图</li>
-</ul>
-<h3 id="流浪图床"><a href="#流浪图床" class="headerlink" title="流浪图床"></a>流浪图床</h3><ul>
-<li>班友们喜欢用的一个图床，胜在免费可以白嫖</li>
-<li>没有空间限制，最大上传5MB以内的图片</li>
-<li>提供者是个人开发者，完全是为爱发电，稳定性未知</li>
-</ul>
-<blockquote>
-<p>如果还有好用的图床，也可以在评论区推荐给我哦~</p>
-</blockquote>
+    //- ad
+    if theme.ad && theme.ad.post
+      .ads-wrap!=theme.ad.post
 
-        </article>
-        <section class="post-near">
-            <ul>
-                
-                    <li>上一篇: <a href="/2023/06/08/introduce-frontend/">邂逅前端与学习建议</a></li>
-                
-                
-                    <li>下一篇: <a href="/2022/12/08/leetcode-hot-100-notebook/">Leetcode 热题 HOT 100 百日刷题打卡</a></li>
-                
-            </ul>
-        </section>
-        
-            <section class="post-tags">
-            <a class="-none-link" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a><a class="-none-link" href="/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" rel="tag">实用工具</a><a class="-none-link" href="/tags/%E7%9B%98%E7%82%B9/" rel="tag">盘点</a>
-            </section>
-        
-    
-        <section class="post-author">
-        
-            <figure class="author-avatar">
-                <img src="http://p1.music.126.net/y-kt2zjGxUmxwQlLnt9yyA==/3396391420105110.jpg?param=177y177" alt="Silentlight" />
-            </figure>
-        
-            <div class="author-info">
-                <h4>Silentlight</h4>
-                <p>本站未注明转载的文章均为原创，并采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow">CC BY-NC-SA 4.0</a> 授权协议，<span style="color: #E91E63">转载请注明来源</span>，谢谢！</p>
-            </div>
-        </section>
-    
-</main>
-<!-- utterances Start-->
-<script src="https://utteranc.es/client.js"
-    repo="cloudnzk/blog-comment"
-    issue-term="title"
-    theme="dark-blue"
-    crossorigin="anonymous"
-    async>
-</script>
-<!-- utterances End -->
+    if theme.post_pagination
+      include includes/pagination.pug
+    if theme.related_post && theme.related_post.enable
+      != related_posts(page,site.posts)
 
-    <footer>
-    <div class="buttons">
-        <a class="to-top" href="#"></a>
-    </div>
-    <div class="wrap min">
-        <section class="widget">
-            <div class="row">
-                <div class="col-m-4">
-                    <h3 class="title-recent">最新文章：</h3>
-                    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2023/06/08/introduce-frontend/">邂逅前端与学习建议</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/05/28/picture-bed-summary/">盘点使用过的图床</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/12/08/leetcode-hot-100-notebook/">Leetcode 热题 HOT 100 百日刷题打卡</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/20/hexo-hingle-configuration/">Hexo Hingle 主题基础配置&进阶配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/05/20/return-hexo/">重拾Hexo博客，谈谈感想</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/01/16/read-paper-experience/">如何读文献</a></li></ul>
-                </div>
-                <div class="col-m-4">
-                    <h3 class="title-date">时光机：</h3>
-                    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">六月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li></ul>
-                </div>
-                <div class="col-m-4">
-                    <h3 class="title-tags">标签云：</h3>
-                    <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Hingle/" style="font-size: 10px;">Hingle</a> <a href="/tags/LeetCode/" style="font-size: 10px;">LeetCode</a> <a href="/tags/coderwhy/" style="font-size: 10px;">coderwhy</a> <a href="/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">主题配置</a> <a href="/tags/%E5%88%B7%E9%A2%98/" style="font-size: 10px;">刷题</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 10px;">博客搭建</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 10px;">图床</a> <a href="/tags/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/" style="font-size: 10px;">实用工具</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 10px;">感悟</a> <a href="/tags/%E7%9B%98%E7%82%B9/" style="font-size: 10px;">盘点</a> <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/" style="font-size: 10px;">研究生</a> <a href="/tags/%E7%A7%91%E7%A0%94/" style="font-size: 10px;">科研</a> <a href="/tags/%E8%AE%BA%E6%96%87/" style="font-size: 10px;">论文</a> <a href="/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">课程笔记</a>
-                </div>
-            </div>
-        </section>
-        <section class="sub-footer">
-            <p>© 2025 <a href="/">Silentlight&#39;s blog</a>. All Rights Reserved. Theme By <a href="https://github.com/Dreamer-Paul/Hingle" target="_blank" rel="nofollow">Hingle</a>.</p>
-            <!-- <span>
-                本站总访问量<span id="busuanzi_container_site_pv"></span>次
-            </span>
-            <span>
-                本站访客数<span id="busuanzi_value_site_pv"></span>人次
-            </span> -->
-        </section>
-    </div>
-</footer>
-
-
-<script src="/static/kico.js"></script>
-<script src="/static/hingle.js"></script>
-
-
-<script>var hingle = new Paul_Hingle({"copyright":false,"night":true});</script>
-
-    <!-- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
-  </body>
-</html>
+    if page.comments !== false && theme.comments.use
+      - var commentsJsLoad = true
+      !=partial('includes/third-party/comments/index', {}, {cache: true})
