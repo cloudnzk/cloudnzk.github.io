@@ -44,11 +44,11 @@
   </entry>
   
   <entry>
-    <title>free-picture-bed</title>
+    <title>免费图床推荐</title>
     <link href="https://cloudnzk.github.io/2024/11/10/free-picture-bed/"/>
     <id>https://cloudnzk.github.io/2024/11/10/free-picture-bed/</id>
     <published>2024-11-10T12:30:40.000Z</published>
-    <updated>2025-03-29T12:31:58.294Z</updated>
+    <updated>2025-03-29T12:35:55.080Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>免费图床只适合临时使用的场景（例如在班固米论坛发图），因为免费图床服务都存在跑路倒闭的可能性。长期使用还是选阿里云或者腾讯云的对象存储吧，买个存储包一年也就10块钱，平时同步自己的笔记其实也用不了多少流量。==数据无价，免费的才是最贵的。==</p></blockquote><h2 id="SM-MS"><a href="#SM-MS" class="headerlink" title="SM.MS"></a>SM.MS</h2><p>速度平均在 100~150ms 之间，如果只能选一个图床用，我首先推荐它。稳定性好，在 v2ex 发布，在国内用的人也很多，不用担心跑路。 图片大小限制在5MB内。</p><p><img src="https://s2.loli.net/2024/11/10/w8MHlBfiqvbejUD.png" alt="截屏2024-11-10 13.34.33.png"></p><h2 id="IMG-TG"><a href="#IMG-TG" class="headerlink" title="IMG.TG"></a>IMG.TG</h2><p>有免费版和收费版，免费版控制了上传的频率。在国内访问的速度是4个里面最快的。可以作为SM.MS的替补。19年稳定运营至今，不过做图床太烧钱了，还是有跑路的可能性…另外 IMG.TG 没有 PicGo 的插件，使用就没那么便利了。图片大小限制在5MB内</p><p><img src="https://s2.loli.net/2024/11/10/JyP1dNDxEgscaTu.png" alt="截屏2024-11-10 13.15.16.png"></p><h2 id="ImgBB"><a href="#ImgBB" class="headerlink" title="ImgBB"></a>ImgBB</h2><p>国外图床，速度没有上面两个快，免费版的图片有时候会给你显示缩略图。自己记笔记可以用用，用来做博客的图床就不推荐了。唯一的优点是老牌图床比较稳定，不会马上就删库跑路的那种。最大可以传32MB内的图片。</p><p><img src="https://s2.loli.net/2024/11/10/kHzomGl5DPtwhBf.png" alt="截屏2024-11-10 13.27.03.png"></p><h2 id="catbox"><a href="#catbox" class="headerlink" title="catbox"></a>catbox</h2><p>猫箱是一个国外的图床，不仅可以传图片，还可以传其他类型的文件，最大200MB！但缺点是在国内随时可能会被墙，这种事情谁都说不定。没有 PicGo 的插件。</p><p><img src="https://s2.loli.net/2024/11/10/Lx48ufswr261Ggq.png" alt="截屏2024-11-10 12.07.39.png"></p>]]></content>
     
