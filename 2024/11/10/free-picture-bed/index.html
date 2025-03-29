@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="免费图床只适合临时使用的场景（例如在班固米论坛发图），因为免费图床服务都存在跑路倒闭的可能性。长期使用还是选阿里云或者腾讯云的对象存储吧，买个存储包一年也就10块钱，平时同步自己的笔记其实也用不了多少流量。&#x3D;&#x3D;数据无价，免费的才是最贵的。&#x3D;&#x3D;  SM.MS速度平均在 100~150ms 之间，如果只能选一个图床用，我首先推荐它。稳定性好，在 v2ex 发布，在国内用的人也很多，不用担心跑路。 图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="free-picture-bed">
+<meta property="og:url" content="https://cloudnzk.github.io/2024/11/10/free-picture-bed/index.html">
+<meta property="og:site_name" content="Silentlight&#39;s blog">
+<meta property="og:description" content="免费图床只适合临时使用的场景（例如在班固米论坛发图），因为免费图床服务都存在跑路倒闭的可能性。长期使用还是选阿里云或者腾讯云的对象存储吧，买个存储包一年也就10块钱，平时同步自己的笔记其实也用不了多少流量。&#x3D;&#x3D;数据无价，免费的才是最贵的。&#x3D;&#x3D;  SM.MS速度平均在 100~150ms 之间，如果只能选一个图床用，我首先推荐它。稳定性好，在 v2ex 发布，在国内用的人也很多，不用担心跑路。 图">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2024/11/10/w8MHlBfiqvbejUD.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/10/JyP1dNDxEgscaTu.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/10/kHzomGl5DPtwhBf.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/10/Lx48ufswr261Ggq.png">
+<meta property="article:published_time" content="2024-11-10T12:30:40.000Z">
+<meta property="article:modified_time" content="2025-03-29T12:31:58.294Z">
+<meta property="article:author" content="Silentlight">
+<meta property="article:tag" content="图床">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2024/11/10/w8MHlBfiqvbejUD.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>free-picture-bed</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Silentlight's blog" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/friends/">友链</a></li><!--
+     --><!--
+       --><li><a href="/bangumis/">追番</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2025/03/29/blog-restart/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2023/07/29/python-start/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cloudnzk.github.io/2024/11/10/free-picture-bed/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&text=free-picture-bed"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&title=free-picture-bed"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&is_video=false&description=free-picture-bed"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=free-picture-bed&body=Check out this article: https://cloudnzk.github.io/2024/11/10/free-picture-bed/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&title=free-picture-bed"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&title=free-picture-bed"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&title=free-picture-bed"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&title=free-picture-bed"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&name=free-picture-bed&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&t=free-picture-bed"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SM-MS"><span class="toc-number">1.</span> <span class="toc-text">SM.MS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IMG-TG"><span class="toc-number">2.</span> <span class="toc-text">IMG.TG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ImgBB"><span class="toc-number">3.</span> <span class="toc-text">ImgBB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#catbox"><span class="toc-number">4.</span> <span class="toc-text">catbox</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        free-picture-bed
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Silentlight</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-11-10T12:30:40.000Z" class="dt-published" itemprop="datePublished">2024-11-10</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <blockquote>
+<p>免费图床只适合临时使用的场景（例如在班固米论坛发图），因为免费图床服务都存在跑路倒闭的可能性。长期使用还是选阿里云或者腾讯云的对象存储吧，买个存储包一年也就10块钱，平时同步自己的笔记其实也用不了多少流量。==数据无价，免费的才是最贵的。==</p>
+</blockquote>
+<h2 id="SM-MS"><a href="#SM-MS" class="headerlink" title="SM.MS"></a>SM.MS</h2><p>速度平均在 100~150ms 之间，如果只能选一个图床用，我首先推荐它。稳定性好，在 v2ex 发布，在国内用的人也很多，不用担心跑路。 图片大小限制在5MB内。</p>
+<p><img src="https://s2.loli.net/2024/11/10/w8MHlBfiqvbejUD.png" alt="截屏2024-11-10 13.34.33.png"></p>
+<h2 id="IMG-TG"><a href="#IMG-TG" class="headerlink" title="IMG.TG"></a>IMG.TG</h2><p>有免费版和收费版，免费版控制了上传的频率。在国内访问的速度是4个里面最快的。可以作为SM.MS的替补。19年稳定运营至今，不过做图床太烧钱了，还是有跑路的可能性…另外 IMG.TG 没有 PicGo 的插件，使用就没那么便利了。图片大小限制在5MB内</p>
+<p><img src="https://s2.loli.net/2024/11/10/JyP1dNDxEgscaTu.png" alt="截屏2024-11-10 13.15.16.png"></p>
+<h2 id="ImgBB"><a href="#ImgBB" class="headerlink" title="ImgBB"></a>ImgBB</h2><p>国外图床，速度没有上面两个快，免费版的图片有时候会给你显示缩略图。自己记笔记可以用用，用来做博客的图床就不推荐了。唯一的优点是老牌图床比较稳定，不会马上就删库跑路的那种。最大可以传32MB内的图片。</p>
+<p><img src="https://s2.loli.net/2024/11/10/kHzomGl5DPtwhBf.png" alt="截屏2024-11-10 13.27.03.png"></p>
+<h2 id="catbox"><a href="#catbox" class="headerlink" title="catbox"></a>catbox</h2><p>猫箱是一个国外的图床，不仅可以传图片，还可以传其他类型的文件，最大200MB！但缺点是在国内随时可能会被墙，这种事情谁都说不定。没有 PicGo 的插件。</p>
+<p><img src="https://s2.loli.net/2024/11/10/Lx48ufswr261Ggq.png" alt="截屏2024-11-10 12.07.39.png"></p>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/friends/">友链</a></li>
+        
+          <li><a href="/bangumis/">追番</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SM-MS"><span class="toc-number">1.</span> <span class="toc-text">SM.MS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IMG-TG"><span class="toc-number">2.</span> <span class="toc-text">IMG.TG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ImgBB"><span class="toc-number">3.</span> <span class="toc-text">ImgBB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#catbox"><span class="toc-number">4.</span> <span class="toc-text">catbox</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cloudnzk.github.io/2024/11/10/free-picture-bed/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&text=free-picture-bed"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&title=free-picture-bed"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&is_video=false&description=free-picture-bed"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=free-picture-bed&body=Check out this article: https://cloudnzk.github.io/2024/11/10/free-picture-bed/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&title=free-picture-bed"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&title=free-picture-bed"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&title=free-picture-bed"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&title=free-picture-bed"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&name=free-picture-bed&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://cloudnzk.github.io/2024/11/10/free-picture-bed/&t=free-picture-bed"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2025
+    Silentlight
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/friends/">友链</a></li><!--
+     --><!--
+       --><li><a href="/bangumis/">追番</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'cloudnzk/blog-comment';
+      var utterances_issue_term = 'title';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>

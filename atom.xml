@@ -44,13 +44,38 @@
   </entry>
   
   <entry>
-    <title>python-start</title>
+    <title>free-picture-bed</title>
+    <link href="https://cloudnzk.github.io/2024/11/10/free-picture-bed/"/>
+    <id>https://cloudnzk.github.io/2024/11/10/free-picture-bed/</id>
+    <published>2024-11-10T12:30:40.000Z</published>
+    <updated>2025-03-29T12:31:58.294Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>免费图床只适合临时使用的场景（例如在班固米论坛发图），因为免费图床服务都存在跑路倒闭的可能性。长期使用还是选阿里云或者腾讯云的对象存储吧，买个存储包一年也就10块钱，平时同步自己的笔记其实也用不了多少流量。==数据无价，免费的才是最贵的。==</p></blockquote><h2 id="SM-MS"><a href="#SM-MS" class="headerlink" title="SM.MS"></a>SM.MS</h2><p>速度平均在 100~150ms 之间，如果只能选一个图床用，我首先推荐它。稳定性好，在 v2ex 发布，在国内用的人也很多，不用担心跑路。 图片大小限制在5MB内。</p><p><img src="https://s2.loli.net/2024/11/10/w8MHlBfiqvbejUD.png" alt="截屏2024-11-10 13.34.33.png"></p><h2 id="IMG-TG"><a href="#IMG-TG" class="headerlink" title="IMG.TG"></a>IMG.TG</h2><p>有免费版和收费版，免费版控制了上传的频率。在国内访问的速度是4个里面最快的。可以作为SM.MS的替补。19年稳定运营至今，不过做图床太烧钱了，还是有跑路的可能性…另外 IMG.TG 没有 PicGo 的插件，使用就没那么便利了。图片大小限制在5MB内</p><p><img src="https://s2.loli.net/2024/11/10/JyP1dNDxEgscaTu.png" alt="截屏2024-11-10 13.15.16.png"></p><h2 id="ImgBB"><a href="#ImgBB" class="headerlink" title="ImgBB"></a>ImgBB</h2><p>国外图床，速度没有上面两个快，免费版的图片有时候会给你显示缩略图。自己记笔记可以用用，用来做博客的图床就不推荐了。唯一的优点是老牌图床比较稳定，不会马上就删库跑路的那种。最大可以传32MB内的图片。</p><p><img src="https://s2.loli.net/2024/11/10/kHzomGl5DPtwhBf.png" alt="截屏2024-11-10 13.27.03.png"></p><h2 id="catbox"><a href="#catbox" class="headerlink" title="catbox"></a>catbox</h2><p>猫箱是一个国外的图床，不仅可以传图片，还可以传其他类型的文件，最大200MB！但缺点是在国内随时可能会被墙，这种事情谁都说不定。没有 PicGo 的插件。</p><p><img src="https://s2.loli.net/2024/11/10/Lx48ufswr261Ggq.png" alt="截屏2024-11-10 12.07.39.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;免费图床只适合临时使用的场景（例如在班固米论坛发图），因为免费图床服务都存在跑路倒闭的可能性。长期使用还是选阿里云或者腾讯云的对象存储吧，买个存储包一年也就10块钱，平时同步自己的笔记其实也用不了多少流量。==数据无价，免费的才是最贵的。==&lt;/p</summary>
+      
+    
+    
+    
+    <category term="软件" scheme="https://cloudnzk.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="图床" scheme="https://cloudnzk.github.io/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python入门推荐资料</title>
     <link href="https://cloudnzk.github.io/2023/07/29/python-start/"/>
     <id>https://cloudnzk.github.io/2023/07/29/python-start/</id>
     <published>2023-07-29T11:55:09.000Z</published>
-    <updated>2025-03-29T11:57:20.532Z</updated>
+    <updated>2025-03-29T12:04:22.317Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>写这篇的原因是：老有人问我Python入门推荐什么资料。问到了就直接发这篇给他。</p></blockquote><p>书籍：Python编程 从入门到实践 ，这本适合入门</p><p>看文档学习：</p><ol><li>廖雪峰的Python教程，对小白很友好</li><li>菜鸟教程</li><li>Python官方文档。不懂的可以来查查文档，虽然说我一直都是谷歌搜</li><li>Python - 100天从新手到大师，<a target="_blank" rel="noopener" href="https://github.com/jackfrued/Python-100-Days">https://github.com/jackfrued/Python-100-Days</a></li></ol><p>练习：</p><ol><li><p>freecodecamp，<a target="_blank" rel="noopener" href="https://www.freecodecamp.org/chinese/learn/scientific-computing-with-python/">https://www.freecodecamp.org/chinese/learn/scientific-computing-with-python/</a></p></li><li><p>GitHub上也有很多，可以找找。做点练习好一点，不然看了也不会用</p></li></ol><p>视频：</p><ol><li>B站上有很多好的视频，直接选播放量高的看</li><li>中国大学MOOC，学院派。像我之前看过一个北理工的还行。<a target="_blank" rel="noopener" href="https://www.icourse163.org/course/BIT-268001?from=searchPage&amp;outVendor=zw_mooc_pcssjg_#/info">https://www.icourse163.org/course/BIT-268001?from=searchPage&amp;outVendor=zw_mooc_pcssjg_#/info</a></li><li>英文好的可以去找找国外课程，YouTube就有很多，而且质量比国内的高</li></ol>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>写这篇的原因是：老有人问我Python入门推荐什么资料。问到了就直接发这篇给他。</p></blockquote><h2 id="书籍"><a href="#书籍" class="headerlink" title="书籍"></a>书籍</h2><p>Python编程 从入门到实践 ，这本适合入门</p><h2 id="看文档学习"><a href="#看文档学习" class="headerlink" title="看文档学习"></a>看文档学习</h2><ol><li>廖雪峰的Python教程，对小白很友好</li><li>菜鸟教程</li><li>Python官方文档。不懂的可以来查查文档，虽然说我一直都是谷歌搜</li><li>Python - 100天从新手到大师，<a target="_blank" rel="noopener" href="https://github.com/jackfrued/Python-100-Days">https://github.com/jackfrued/Python-100-Days</a></li></ol><h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><ol><li><p>freecodecamp，<a target="_blank" rel="noopener" href="https://www.freecodecamp.org/chinese/learn/scientific-computing-with-python/">https://www.freecodecamp.org/chinese/learn/scientific-computing-with-python/</a></p></li><li><p>GitHub上也有很多，可以找找。做点练习好一点，不然看了也不会用</p></li></ol><h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><ol><li>B站上有很多好的视频，直接选播放量高的看</li><li>中国大学MOOC，学院派。像我之前看过一个北理工的还行。<a target="_blank" rel="noopener" href="https://www.icourse163.org/course/BIT-268001?from=searchPage&amp;outVendor=zw_mooc_pcssjg_#/info">https://www.icourse163.org/course/BIT-268001?from=searchPage&amp;outVendor=zw_mooc_pcssjg_#/info</a></li><li>英文好的可以去找找国外课程，YouTube就有很多，而且质量比国内的高</li></ol>]]></content>
     
     
       
@@ -58,10 +83,7 @@
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;写这篇的原因是：老有人问我Python入门推荐什么资料。问到了就直接发这篇给他。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;书籍：Python编程 从入门到实践 ，这本适合入门&lt;/p&gt;
-&lt;p&gt;看文档学习：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;廖雪峰的Pyth</summary>
+&lt;h2 id=&quot;书籍&quot;&gt;&lt;a href=&quot;#书籍&quot; class=&quot;headerlink&quot; title=&quot;书籍&quot;&gt;&lt;/a&gt;书籍&lt;/h</summary>
       
     
     
