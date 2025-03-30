@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cloudnzk.github.io/friends/index.html</loc>
+    
+    <lastmod>2025-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnzk.github.io/2025/03/30/AI-coding-share/</loc>
     
     <lastmod>2025-03-30</lastmod>
@@ -93,15 +102,6 @@
   
   <url>
     <loc>https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/</loc>
-    
-    <lastmod>2025-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://cloudnzk.github.io/friends/index.html</loc>
     
     <lastmod>2025-03-30</lastmod>
     
