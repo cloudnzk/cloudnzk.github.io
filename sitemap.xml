@@ -209,27 +209,6 @@
 
   
   <url>
-    <loc>https://silentlight.xyz/tags/Hexo/</loc>
-    <lastmod>2025-03-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://silentlight.xyz/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2025-03-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://silentlight.xyz/tags/%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2025-03-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://silentlight.xyz/tags/AI/</loc>
     <lastmod>2025-03-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -251,6 +230,20 @@
   </url>
   
   <url>
+    <loc>https://silentlight.xyz/tags/Hexo/</loc>
+    <lastmod>2025-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://silentlight.xyz/tags/%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2025-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://silentlight.xyz/tags/Hingle/</loc>
     <lastmod>2025-03-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -266,6 +259,13 @@
   
   <url>
     <loc>https://silentlight.xyz/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2025-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://silentlight.xyz/tags/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2025-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -358,6 +358,13 @@
 
   
   <url>
+    <loc>https://silentlight.xyz/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://silentlight.xyz/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2025-03-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -366,13 +373,6 @@
   
   <url>
     <loc>https://silentlight.xyz/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2025-03-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://silentlight.xyz/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
