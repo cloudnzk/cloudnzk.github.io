@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cloudnzk.github.io/baidu_verify_codeva-2PTsNEPxZ3.html</loc>
+    
+    <lastmod>2025-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnzk.github.io/2025/03/29/blog-restart/</loc>
     
     <lastmod>2025-03-30</lastmod>
@@ -251,13 +260,6 @@
   </url>
   
   <url>
-    <loc>https://cloudnzk.github.io/tags/%E5%9B%BE%E5%BA%8A/</loc>
-    <lastmod>2025-03-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cloudnzk.github.io/tags/Hingle/</loc>
     <lastmod>2025-03-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -273,6 +275,13 @@
   
   <url>
     <loc>https://cloudnzk.github.io/tags/%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2025-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnzk.github.io/tags/%E5%9B%BE%E5%BA%8A/</loc>
     <lastmod>2025-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -328,20 +337,6 @@
   </url>
   
   <url>
-    <loc>https://cloudnzk.github.io/tags/%E7%A7%91%E7%A0%94/</loc>
-    <lastmod>2025-03-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cloudnzk.github.io/tags/%E8%AE%BA%E6%96%87/</loc>
-    <lastmod>2025-03-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cloudnzk.github.io/tags/%E6%84%9F%E6%82%9F/</loc>
     <lastmod>2025-03-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -349,7 +344,21 @@
   </url>
   
   <url>
+    <loc>https://cloudnzk.github.io/tags/%E7%A7%91%E7%A0%94/</loc>
+    <lastmod>2025-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cloudnzk.github.io/tags/%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2025-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cloudnzk.github.io/tags/%E8%AE%BA%E6%96%87/</loc>
     <lastmod>2025-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -365,14 +374,14 @@
   </url>
   
   <url>
-    <loc>https://cloudnzk.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://cloudnzk.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2025-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cloudnzk.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
+    <loc>https://cloudnzk.github.io/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
