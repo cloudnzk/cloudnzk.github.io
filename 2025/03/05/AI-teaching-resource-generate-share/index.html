@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="背景介绍在传统的教学工作中，教师需要备课写教案、做PPT，或者有录微课的需求。如果单纯使用全人工的方式，费时费力且效率低下。因此，将当前最先进的AI技术或工具应用到我们的教学工作中，可以大大提高教师的工作效率。例如，采用AI自动化生成结合人工润色修改的方式，来制作教案、PPT、微课视频等。 下面展示了一个应用案例。该案例完全使用AI自动化一键生成，并没有经过人工的修改。可以看到，AI生成的内容质量">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI生成教学资源案例">
+<meta property="og:url" content="https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/index.html">
+<meta property="og:site_name" content="Silentlight&#39;s blog">
+<meta property="og:description" content="背景介绍在传统的教学工作中，教师需要备课写教案、做PPT，或者有录微课的需求。如果单纯使用全人工的方式，费时费力且效率低下。因此，将当前最先进的AI技术或工具应用到我们的教学工作中，可以大大提高教师的工作效率。例如，采用AI自动化生成结合人工润色修改的方式，来制作教案、PPT、微课视频等。 下面展示了一个应用案例。该案例完全使用AI自动化一键生成，并没有经过人工的修改。可以看到，AI生成的内容质量">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2025/03/30/PSEyi2BHogKnxhT.png">
+<meta property="og:image" content="https://s2.loli.net/2025/03/30/M9kAFjKZPJSxyhD.png">
+<meta property="og:image" content="https://s2.loli.net/2025/03/30/65vfzoBGUiVkACJ.png">
+<meta property="article:published_time" content="2025-03-05T01:47:55.000Z">
+<meta property="article:modified_time" content="2025-03-30T08:14:07.989Z">
+<meta property="article:author" content="Silentlight">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="教学">
+<meta property="article:tag" content="分享">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2025/03/30/PSEyi2BHogKnxhT.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>AI生成教学资源案例</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="Silentlight's blog" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/friends/">友链</a></li><!--
+     --><!--
+       --><li><a href="/bangumis/">追番</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2025/03/29/blog-restart/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2024/11/10/free-picture-bed/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&text=AI生成教学资源案例"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&title=AI生成教学资源案例"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&is_video=false&description=AI生成教学资源案例"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=AI生成教学资源案例&body=Check out this article: https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&title=AI生成教学资源案例"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&title=AI生成教学资源案例"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&title=AI生成教学资源案例"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&title=AI生成教学资源案例"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&name=AI生成教学资源案例&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&t=AI生成教学资源案例"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">背景介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%83%BD%E5%A4%9F%E8%A7%A3%E5%86%B3%E7%9A%84%E7%97%9B%E7%82%B9-%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">能够解决的痛点&#x2F;问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A9%E7%94%A8AI%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E9%97%AE%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">利用AI的优点和问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">3.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-number">3.2.</span> <span class="toc-text">问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9Adeepseek%E7%94%9F%E6%88%90PPT%E6%96%87%E6%A1%88"><span class="toc-number">4.</span> <span class="toc-text">第一步：deepseek生成PPT文案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E6%A0%B9%E6%8D%AE%E6%96%87%E6%A1%88%E7%94%9F%E6%88%90PPT"><span class="toc-number">5.</span> <span class="toc-text">第二步：根据文案生成PPT</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9AAI-studios-%E6%95%B0%E5%AD%97%E4%BA%BA%E8%AE%B2%E8%A7%A3PPT"><span class="toc-number">6.</span> <span class="toc-text">第三步：AI studios 数字人讲解PPT</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        AI生成教学资源案例
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Silentlight</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2025-03-05T01:47:55.000Z" class="dt-published" itemprop="datePublished">2025-03-05</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/AI/" rel="tag">AI</a>, <a class="p-category" href="/tags/%E5%88%86%E4%BA%AB/" rel="tag">分享</a>, <a class="p-category" href="/tags/%E6%95%99%E5%AD%A6/" rel="tag">教学</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h1 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h1><p>在传统的教学工作中，教师需要备课写教案、做PPT，或者有录微课的需求。如果单纯使用全人工的方式，费时费力且效率低下。因此，将当前最先进的AI技术或工具应用到我们的教学工作中，可以大大提高教师的工作效率。例如，采用AI自动化生成结合人工润色修改的方式，来制作教案、PPT、微课视频等。</p>
+<p>下面展示了一个应用案例。该案例完全使用AI自动化一键生成，并没有经过人工的修改。可以看到，AI生成的内容质量较高。如果再经过一些人工修改，就能满足教学的需要。</p>
+<h1 id="能够解决的痛点-问题"><a href="#能够解决的痛点-问题" class="headerlink" title="能够解决的痛点/问题"></a>能够解决的痛点/问题</h1><ul>
+<li>解放教师生产力，自动化重复性工作</li>
+<li>能够为学生提供更丰富的学习资源，例如微课视频</li>
+</ul>
+<h1 id="利用AI的优点和问题"><a href="#利用AI的优点和问题" class="headerlink" title="利用AI的优点和问题"></a>利用AI的优点和问题</h1><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ul>
+<li>自动化生成，效率很高，节省了教师网上搜资料整理的时间</li>
+<li>生成的内容质量较高，而且内容丰富，知识覆盖面广</li>
+</ul>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li>内容质量问题。即生成的内容可能有一些不是我们想要的，需要经过人工修改。如何让AI工具能够更好地理解我们的需求，从而降低人工修改的成本？</li>
+<li>如何更好地利用AI工具与AI工具的协作，优化生成内容的流程？</li>
+</ul>
+<h1 id="第一步：deepseek生成PPT文案"><a href="#第一步：deepseek生成PPT文案" class="headerlink" title="第一步：deepseek生成PPT文案"></a>第一步：deepseek生成PPT文案</h1><p><img src="https://s2.loli.net/2025/03/30/PSEyi2BHogKnxhT.png"></p>
+<p>生成的文件如下：</p>
+<p><a target="_blank" rel="noopener" href="https://docs.qq.com/doc/DTWZTYU9icFlnVUx1">https://docs.qq.com/doc/DTWZTYU9icFlnVUx1</a></p>
+<h1 id="第二步：根据文案生成PPT"><a href="#第二步：根据文案生成PPT" class="headerlink" title="第二步：根据文案生成PPT"></a>第二步：根据文案生成PPT</h1><p>上传第一步deepseek生成的PPT文案，可以直接由文本生成PPT幻灯片</p>
+<p><img src="https://s2.loli.net/2025/03/30/M9kAFjKZPJSxyhD.png"></p>
+<p>生成的PPT如下：</p>
+<p><a target="_blank" rel="noopener" href="https://docs.qq.com/slide/DTUxNSWZESWpBUFRm">https://docs.qq.com/slide/DTUxNSWZESWpBUFRm</a></p>
+<p>智谱清言每天只有一次免费生成。可以使用Kimi生成PPT，Kimi是免费无限制使用的</p>
+<h1 id="第三步：AI-studios-数字人讲解PPT"><a href="#第三步：AI-studios-数字人讲解PPT" class="headerlink" title="第三步：AI studios 数字人讲解PPT"></a>第三步：AI studios 数字人讲解PPT</h1><p>将生成的PPT送入 AI studios，可以用PPT生成一段教学微课</p>
+<p><img src="https://s2.loli.net/2025/03/30/65vfzoBGUiVkACJ.png"></p>
+<p>下面是根据PPT生成的视频：</p>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114248881670347&bvid=BV1ctZvYREZP&cid=29141108875&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="400px"></iframe>
+
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/categories/">分类</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/friends/">友链</a></li>
+        
+          <li><a href="/bangumis/">追番</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">背景介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%83%BD%E5%A4%9F%E8%A7%A3%E5%86%B3%E7%9A%84%E7%97%9B%E7%82%B9-%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">能够解决的痛点&#x2F;问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A9%E7%94%A8AI%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E9%97%AE%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">利用AI的优点和问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">3.1.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-number">3.2.</span> <span class="toc-text">问题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9Adeepseek%E7%94%9F%E6%88%90PPT%E6%96%87%E6%A1%88"><span class="toc-number">4.</span> <span class="toc-text">第一步：deepseek生成PPT文案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E6%A0%B9%E6%8D%AE%E6%96%87%E6%A1%88%E7%94%9F%E6%88%90PPT"><span class="toc-number">5.</span> <span class="toc-text">第二步：根据文案生成PPT</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9AAI-studios-%E6%95%B0%E5%AD%97%E4%BA%BA%E8%AE%B2%E8%A7%A3PPT"><span class="toc-number">6.</span> <span class="toc-text">第三步：AI studios 数字人讲解PPT</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&text=AI生成教学资源案例"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&title=AI生成教学资源案例"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&is_video=false&description=AI生成教学资源案例"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=AI生成教学资源案例&body=Check out this article: https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&title=AI生成教学资源案例"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&title=AI生成教学资源案例"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&title=AI生成教学资源案例"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&title=AI生成教学资源案例"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&name=AI生成教学资源案例&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://cloudnzk.github.io/2025/03/05/AI-teaching-resource-generate-share/&t=AI生成教学资源案例"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2019-2025
+    Silentlight
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/friends/">友链</a></li><!--
+     --><!--
+       --><li><a href="/bangumis/">追番</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'cloudnzk/blog-comment';
+      var utterances_issue_term = 'title';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"display":{"position":"right","width":150,"height":250},"mobile":{"show":false},"model":{"jsonPath":"/live2dw/assets/aoba.model.json"},"log":false});</script></body>
+</html>
